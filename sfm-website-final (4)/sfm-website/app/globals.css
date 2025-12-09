@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sfm-navy: #051c3b;
+  --sfm-azure: #05436e;
+  --sfm-gold: #bc9833;
+  --sfm-gold-dark: #9a7d2a; /* Darker gold for better contrast on white */
+  --sfm-cream: #faf9f7;
+  --sfm-text: #1a1a1a;
+  --sfm-text-muted: #4a5568; /* Better contrast than gray-500 */
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: white;
+  color: var(--sfm-text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Add padding for mobile sticky CTA */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* Typography */
+.font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+.tm { font-size: 0.5em; vertical-align: super; font-weight: 400; }
+
+/* Dividers */
+.divider-gold { width: 60px; height: 2px; background: var(--sfm-gold); }
+.divider-azure { width: 60px; height: 2px; background: var(--sfm-azure); }
+
+/* Global Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--sfm-azure);
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--sfm-navy);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  z-index: 100;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Visibility transition helper */
+.transition-visibility {
+  transition: visibility 0s linear 0.3s;
+}
+.transition-visibility.visible {
+  transition-delay: 0s;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 text-white text-sm tracking-wide font-medium;
+  @apply transition-all duration-300;
+  background-color: var(--sfm-gold);
+}
+.btn-primary:hover {
+  background-color: var(--sfm-gold-dark);
+}
+.btn-primary:focus-visible {
+  @apply outline-none ring-2 ring-sfm-gold ring-offset-2;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-8 py-4 border border-sfm-navy text-sfm-navy text-sm tracking-wide font-medium;
+  @apply transition-all duration-300 hover:bg-sfm-navy hover:text-white;
+}
+.btn-secondary:focus-visible {
+  @apply outline-none ring-2 ring-sfm-navy ring-offset-2;
+}
+
+.btn-secondary-white {
+  @apply inline-flex items-center justify-center px-8 py-4 border border-white text-white text-sm tracking-wide font-medium;
+  @apply transition-all duration-300 hover:bg-white hover:text-sfm-navy;
+}
+.btn-secondary-white:focus-visible {
+  @apply outline-none ring-2 ring-white ring-offset-2 ring-offset-sfm-navy;
+}
+
+/* Cards */
+.card {
+  @apply bg-white border border-gray-100 p-8 transition-all duration-300;
+  @apply hover:border-sfm-azure/30 hover:shadow-lg;
+}
+.card:focus-within {
+  @apply border-sfm-azure/50 shadow-lg;
+}
+
+.card-featured {
+  @apply bg-white border-2 border-sfm-gold p-8 relative;
+}
+.card-featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--sfm-gold);
+}
+
+/* Promise cards */
+.promise-card {
+  @apply p-6 bg-white border-l-4 border-sfm-azure;
+  @apply transition-all duration-300 hover:border-sfm-gold hover:shadow-md;
+}
+
+/* Form inputs */
+.input {
+  @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 text-sfm-navy;
+  @apply placeholder:text-gray-500 transition-all duration-300;
+  @apply focus:outline-none focus:border-sfm-azure focus:bg-white focus:ring-2 focus:ring-sfm-azure/20;
+}
+
+/* Better text contrast utilities */
+.text-muted {
+  color: var(--sfm-text-muted);
+}
+
+/* Improved white text on dark backgrounds - ensure sufficient contrast */
+.text-white-accessible {
+  color: rgba(255, 255, 255, 0.95);
+}
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { 
+  animation: fadeIn 0.6s ease-out forwards; 
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* Reduced motion: disable animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --sfm-gold: #8b7020;
+    --sfm-azure: #033c5e;
+  }
+  
+  .btn-primary {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--sfm-gold);
+  color: white;
+}
+
+/* Link underlines for better accessibility in content areas */
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose a:hover {
+  text-decoration-thickness: 2px;
+}
