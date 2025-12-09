@@ -4,20 +4,24 @@ import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope } from 'lu
 
 export default function HomePage() {
   return (
-    <>
-      {/* Hero - Single clear message */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image 
-            src="/images/sfm-background.png" 
-            alt="Dr. Yaw Nkrumah seated at a warm wood desk in a bright, modern medical office with Sankofa bird sculpture" 
-            fill
-            priority
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-sfm-navy/95 via-sfm-navy/60 to-sfm-navy/20" />
-        </div>
+  <>
+    {/* Hero - Single clear message */}
+    <section className="relative min-h-screen flex items-center">
+      {/* Background Image */}
+<div className="absolute inset-0">
+  <Image
+    src="/images/sfm-background.png"
+    alt="Dr. Yaw Nkrumah seated at a warm wood desk in a bright, modern medical office with Sankofa bird sculpture"
+    fill
+    priority
+    className="object-cover"
+  />
+
+  {/* Dark overlay for readability */}
+  <div className="absolute inset-0 bg-black/40" />
+</div>
+
+
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
           <div className="max-w-2xl">
