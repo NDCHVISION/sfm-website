@@ -13,7 +13,8 @@ export default function ResourcesPage() {
       title="Patient Resources"
       description="Educational guides, health tools, and resources to support your wellness journey. We're building a comprehensive library for our patients."
       icon={<BookOpen size={48} strokeWidth={1.5} />}
-      expectedDate="2025"
+      expectedDate="Late 2025-Early 2026
+      "
     />
   )
 }

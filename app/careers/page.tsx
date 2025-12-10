@@ -13,7 +13,7 @@ export default function CareersPage() {
       title="Careers"
       description="Join our team building the future of primary care. We're looking for people who believe in continuity, precision, and dignity in medicine."
       icon={<Briefcase size={48} strokeWidth={1.5} />}
-      expectedDate="2025"
+      expectedDate="Early 2026"
     />
   )
 }
