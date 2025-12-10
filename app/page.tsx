@@ -11,51 +11,52 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero - Single clear message */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/sfm-background.png"
-            alt="Dr. Yaw Nkrumah seated at a warm wood desk in a bright, modern medical office with Sankofa bird sculpture"
-            fill
-            priority
-            className="object-cover"
-          />
+{/* Hero - Single clear message */}
+<section className="relative min-h-screen flex items-center">
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/sfm-background.png"
+      alt="Dr. Yaw Nkrumah seated at a warm wood desk in a bright, modern medical office with Sankofa bird sculpture"
+      fill
+      priority
+      className="object-cover"
+    />
 
-          {/* Dark gradient overlay for strong readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
-        </div>
+    {/* Stronger solid overlay for guaranteed contrast */}
+    <div className="absolute inset-0 bg-black/70" />
+  </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
-          <div className="max-w-2xl">
-            <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-6 animate-fade-in">
-              Virtual Primary Care • Washington State
-            </p>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
+    {/* Text card for clarity on all screens */}
+    <div className="max-w-xl bg-sfm-navy/90 border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm animate-fade-in">
+      <p className="text-sfm-gold text-xs md:text-sm tracking-[0.3em] uppercase mb-4">
+        Virtual Primary Care • Washington State
+      </p>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 animate-fade-in delay-100 drop-shadow-lg">
-              Medicine That
-              <br />
-              Remembers<span className="tm">™</span>
-            </h1>
+      <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+        Medicine That
+        <br />
+        Remembers<span className="tm">™</span>
+      </h1>
 
-            <p className="text-xl text-white/90 mb-10 leading-relaxed animate-fade-in delay-200 drop-shadow-md">
-              Premium virtual primary care built on continuity, precision, and legacy. One physician who
-              knows your history. Every visit. HIPAA-compliant telehealth for adults across Washington State.
-            </p>
+      <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+        Premium virtual primary care built on continuity, precision, and legacy. One physician who
+        knows your history. Every visit. HIPAA-compliant telehealth for adults across Washington State.
+      </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-300">
-              <Link href="/contact" className="btn-primary">
-                Join Waitlist
-                <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
-              </Link>
-              <Link href="/services" className="btn-secondary-white">
-                View Services &amp; Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link href="/contact" className="btn-primary">
+          Join Waitlist
+          <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+        </Link>
+        <Link href="/services" className="btn-secondary-white">
+          View Services &amp; Pricing
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Patient Promises - Ethics as benefits */}
       <section className="py-24 bg-white">
