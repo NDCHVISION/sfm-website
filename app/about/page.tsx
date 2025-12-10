@@ -369,7 +369,7 @@ export default function AboutPage() {
             <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
               Sankofa Family Medicine is a virtual-first primary care clinic serving adults 
               across Washington State. Founded by Dr. Yaw Nkrumah, we deliver{' '}
-              <strong className="text-sfm-gold">Medicine That Remembersâ„¢</strong>: care built on 
+              <strong className="text-sfm-gold">Medicine That Remembers</strong>: care built on 
               continuity, memory, dignity, and meaningful physician-patient relationships.
             </p>
 
@@ -377,7 +377,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
                 <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold" aria-hidden="true" />
-                Medicine That Remembersâ„¢
+                Medicine That Remembers
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
                 HIPAA-Compliant Telehealth
@@ -515,7 +515,7 @@ export default function AboutPage() {
                 Your primary care doctor should not add to that burden.
               </p>
               <p>
-                <strong className="text-sfm-gold">Medicine That Remembersâ„¢</strong>{' '}
+                <strong className="text-sfm-gold">Medicine That Remembers</strong>{' '}
                 is our answer to healthcare&apos;s continuity gap. Sankofa Family Medicine is
                 designed from the ground up to retain the details that shape your health
                 story and to deliver consistent, virtual primary care that feels human.
@@ -865,4 +865,3 @@ export default function AboutPage() {
     </>
   )
 }
-
