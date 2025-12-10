@@ -242,7 +242,7 @@ export default function SankofaOSPage() {
                 <br />
                 <span className="text-white/30">billing codes.</span>
                 <br />
-                <span className="bg-gradient-to-r from-sfm-gold via-amber-300 to-sfm-gold bg-clip-text text-transparent">
+                <span className="text-sfm-gold">
                   Ours remembers patients.
                 </span>
               </h1>
