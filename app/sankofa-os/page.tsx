@@ -1,130 +1,60 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import {
-  ArrowRight,
-  Heart,
-  FileText,
-  Shield,
-  Scale,
-  UserCheck,
-  Users,
-  Zap,
-  Globe,
-} from 'lucide-react'
+import { ArrowRight, Lock, Fingerprint, Sparkles } from 'lucide-react'
 import type { Metadata } from 'next'
 
 // =============================================================================
 // COMPREHENSIVE STRUCTURED DATA FOR SEO + AI DISCOVERY
 // =============================================================================
 
-// Primary Organization Schema
+// Software Application Schema for Sankofa OS
+const softwareJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': 'https://sankofafamilymedicine.com/sankofa-os/#software',
+  name: 'Sankofa OS',
+  alternateName: 'Clinical Memory Infrastructure',
+  description:
+    'Sankofa OS is clinical memory infrastructure for healthcare organizations. Unlike traditional EHRs designed for billing, Sankofa OS is built to remember patient context, track care plan adherence, detect clinical drift, and surface what matters at the point of care. Currently in development by Sankofa Family Medicine.',
+  applicationCategory: 'HealthApplication',
+  operatingSystem: 'Web-based',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/PreOrder',
+    price: '0',
+    priceCurrency: 'USD',
+    description: 'Early access waitlist - pricing to be announced',
+  },
+  creator: {
+    '@type': 'MedicalOrganization',
+    '@id': 'https://sankofafamilymedicine.com/#organization',
+    name: 'Sankofa Family Medicine',
+  },
+  featureList: [
+    'Clinical memory infrastructure',
+    'Patient context preservation',
+    'Care plan tracking',
+    'Clinical drift detection',
+    'Pre-visit intelligence',
+    'Patient data agency',
+    'HIPAA compliant',
+    'EHR integration layer',
+  ],
+  releaseNotes: 'Currently in development. Early access opening soon.',
+  softwareVersion: 'Pre-release',
+  screenshot: 'https://sankofafamilymedicine.com/images/sankofa-os-preview.png',
+}
+
+// Organization Schema
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MedicalOrganization',
   '@id': 'https://sankofafamilymedicine.com/#organization',
   name: 'Sankofa Family Medicine',
-  alternateName: 'SFM',
   description:
-    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers™ — a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. The clinic offers telehealth visits, chronic disease management, precision medicine, and genetic testing.',
+    'Virtual-first primary care clinic and healthcare technology company developing Sankofa OS clinical memory infrastructure.',
   url: 'https://sankofafamilymedicine.com',
-  logo: {
-    '@type': 'ImageObject',
-    url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
-    width: 512,
-    height: 512,
-  },
-  image: 'https://sankofafamilymedicine.com/images/sfm-background.png',
-  medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'PreventiveMedicine'],
-  priceRange: '$$',
-  currenciesAccepted: 'USD',
-  paymentAccepted: 'Credit Card, Debit Card, HSA, FSA',
-  areaServed: {
-    '@type': 'State',
-    name: 'Washington',
-    sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressRegion: 'WA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 47.6062,
-    longitude: -122.3321,
-  },
-  founder: {
-    '@type': 'Physician',
-    '@id': 'https://sankofafamilymedicine.com/#founder',
-    name: 'Dr. Yaw Nkrumah',
-    givenName: 'Yaw',
-    familyName: 'Nkrumah',
-    honorificPrefix: 'Dr.',
-    honorificSuffix: 'MD',
-    jobTitle: 'Founder and Primary Care Physician',
-    medicalSpecialty: ['PrimaryCare', 'FamilyPractice'],
-    worksFor: {
-      '@id': 'https://sankofafamilymedicine.com/#organization',
-    },
-  },
-  sameAs: [
-    'https://www.linkedin.com/company/sankofa-family-medicine',
-  ],
-  isAcceptingNewPatients: true,
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Primary Care Services',
-    itemListElement: [
-      {
-        '@type': 'OfferCatalog',
-        name: 'Virtual Primary Care',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'MedicalTherapy',
-              name: 'Telehealth Primary Care Visit',
-              description: 'Comprehensive virtual primary care consultation with Dr. Nkrumah',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'MedicalTherapy',
-              name: 'Chronic Disease Management',
-              description: 'Ongoing virtual management of chronic conditions including diabetes, hypertension, and thyroid disorders',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'MedicalTherapy',
-              name: 'Precision Medicine',
-              description: 'Genetic testing and metabolic optimization for personalized treatment plans',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  knowsAbout: [
-    'Primary Care',
-    'Family Medicine',
-    'Telehealth',
-    'Virtual Healthcare',
-    'Chronic Disease Management',
-    'Precision Medicine',
-    'Genetic Testing',
-    'Preventive Care',
-    'Direct Primary Care',
-    'Patient-Centered Care',
-  ],
-  slogan: 'Medicine That Remembers™',
-  brand: {
-    '@type': 'Brand',
-    name: 'Medicine That Remembers',
-    slogan: 'Go back, retrieve what matters, carry it forward.',
-  },
+  logo: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
+  sameAs: ['https://www.linkedin.com/company/sankofa-family-medicine'],
 }
 
 // FAQ Schema for AI and Featured Snippets
@@ -134,61 +64,81 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Sankofa Family Medicine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers™ — a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. Unlike traditional practices with rotating providers, patients see the same physician (Dr. Nkrumah) for every visit.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does Medicine That Remembers mean?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Medicine That Remembers™ is Sankofa Family Medicine\'s care philosophy. It means the clinic is designed to retain the details that shape your health: your history, your context, your goals, and your preferences. This approach addresses healthcare\'s continuity gap where patients are forced to repeat themselves because information gets lost between visits.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the Sankofa principle?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa is an Akan principle from West Africa, represented by a bird looking back while moving forward. Its meaning is: go back, retrieve what matters, and carry it into your future. The Sankofa bird moves forward with intention, reaching back only for what will serve the journey ahead. This principle of retaining what is essential while building what is new sits at the center of the clinic\'s care model.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who can receive care at Sankofa Family Medicine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine serves adults (18 and older) who reside in Washington State. The practice is 100% virtual, delivering care through HIPAA-compliant telehealth visits. Patients do not need to live near a physical office location.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does Sankofa Family Medicine accept insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine operates as a direct primary care practice and does not bill insurance directly. Patients pay transparent prices for care. The clinic accepts credit cards, debit cards, HSA, and FSA payments. This model allows for longer visits, same-physician continuity, and freedom from insurance-driven time constraints.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What services does Sankofa Family Medicine offer?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine offers comprehensive virtual primary care including: telehealth consultations, chronic disease management (diabetes, hypertension, thyroid disorders), precision medicine with genetic testing, metabolic optimization, preventive care, secure messaging with your physician, and care coordination. All care is delivered by Dr. Yaw Nkrumah.',
-      },
-    },
-    {
-      '@type': 'Question',
       name: 'What is Sankofa OS?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa OS is clinical memory infrastructure currently in development at Sankofa Family Medicine. It is designed to solve healthcare\'s continuity problem by building memory into clinical workflows. Unlike traditional EHRs optimized for billing, Sankofa OS surfaces what matters: patient history, context, and goals. The system is being developed for eventual licensing to other healthcare organizations.',
+        text: 'Sankofa OS is clinical memory infrastructure — a software layer designed to solve healthcare\'s continuity problem. Unlike traditional Electronic Health Records (EHRs) that are optimized for billing and documentation, Sankofa OS is built to remember patient context, track care plan adherence, detect when care drifts from goals, and surface relevant information at the point of care. It is being developed by Sankofa Family Medicine.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is Sankofa OS different from an EHR?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Traditional EHRs were built for billing, compliance, and documentation volume. Sankofa OS is built for memory. It focuses on preserving patient context across visits, tracking whether care plans are followed, detecting clinical drift before it becomes a problem, and giving patients agency over their health data. It is designed to work alongside existing EHRs as an intelligence layer, not replace them.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What problem does Sankofa OS solve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sankofa OS addresses healthcare\'s continuity crisis. Patients are forced to repeat their stories at every visit because systems don\'t remember context. Care plans drift without detection. Physicians spend more time on documentation than patient care. Clinical adherence and coordination failures cost the healthcare system hundreds of billions annually. Sankofa OS is designed to solve this by building memory into clinical infrastructure.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Sankofa OS available now?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sankofa OS is currently in development. Sankofa Family Medicine is building an early access cohort of physicians, medical directors, and health systems who want to influence the product roadmap. Those interested can join the waitlist for early access.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is building Sankofa OS?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sankofa OS is being developed by Sankofa Family Medicine, a virtual-first primary care clinic founded by Dr. Yaw Nkrumah. The system is being built inside a practicing clinic, meaning every design decision is informed by real physician workflows and real patient relationships — not theoretical assumptions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Sankofa OS HIPAA compliant?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Sankofa OS is being built with HIPAA compliance as a foundational requirement. The architecture includes encryption at rest and in transit, role-based access controls, comprehensive audit logging, and patient-controlled data permissions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does the name Sankofa mean?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sankofa is an Akan principle from West Africa meaning "go back, retrieve what matters, and carry it forward." It is represented by a bird looking back while moving forward. This principle of retaining what is essential while building what is new is the philosophical foundation of both Sankofa Family Medicine and Sankofa OS.',
       },
     },
   ],
+}
+
+// WebPage Schema
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://sankofafamilymedicine.com/sankofa-os/#webpage',
+  url: 'https://sankofafamilymedicine.com/sankofa-os',
+  name: 'Sankofa OS | Clinical Memory Infrastructure for Healthcare',
+  description:
+    'Sankofa OS is clinical memory infrastructure — what EHRs were never designed to do. Built for physicians who refuse to forget their patients. Early access opening soon.',
+  isPartOf: {
+    '@id': 'https://sankofafamilymedicine.com/#website',
+  },
+  about: {
+    '@id': 'https://sankofafamilymedicine.com/sankofa-os/#software',
+  },
+  datePublished: '2024-01-01',
+  dateModified: new Date().toISOString().split('T')[0],
+  inLanguage: 'en-US',
 }
 
 // Breadcrumb Schema
@@ -205,34 +155,10 @@ const breadcrumbJsonLd = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'About',
-      item: 'https://sankofafamilymedicine.com/about',
+      name: 'Sankofa OS',
+      item: 'https://sankofafamilymedicine.com/sankofa-os',
     },
   ],
-}
-
-// WebPage Schema
-const webPageJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'AboutPage',
-  '@id': 'https://sankofafamilymedicine.com/about/#webpage',
-  url: 'https://sankofafamilymedicine.com/about',
-  name: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
-  description:
-    'Learn about Sankofa Family Medicine, a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers™ — care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
-  isPartOf: {
-    '@id': 'https://sankofafamilymedicine.com/#website',
-  },
-  about: {
-    '@id': 'https://sankofafamilymedicine.com/#organization',
-  },
-  primaryImageOfPage: {
-    '@type': 'ImageObject',
-    url: 'https://sankofafamilymedicine.com/images/sankofa-bird.png',
-  },
-  datePublished: '2024-01-01',
-  dateModified: new Date().toISOString().split('T')[0],
-  inLanguage: 'en-US',
 }
 
 // =============================================================================
@@ -240,61 +166,58 @@ const webPageJsonLd = {
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
+  title: 'Sankofa OS | Clinical Memory Infrastructure for Healthcare',
   description:
-    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers™ — care built on continuity, memory, dignity, and meaningful physician-patient relationships with Dr. Yaw Nkrumah.',
+    'Sankofa OS is clinical memory infrastructure — what EHRs were never designed to do. Memory, intelligence, and patient control built into clinical workflows. Early access for physicians and health systems opening soon.',
   keywords: [
-    'Sankofa Family Medicine',
-    'virtual primary care Washington State',
-    'telehealth doctor Washington',
-    'online primary care WA',
-    'virtual family medicine clinic',
-    'direct primary care telehealth',
-    'Dr. Yaw Nkrumah',
-    'Medicine That Remembers',
-    'virtual doctor Washington State',
-    'telehealth primary care',
-    'online doctor visit Washington',
-    'chronic disease management telehealth',
-    'precision medicine Washington',
-    'genetic testing primary care',
-    'HIPAA compliant telehealth',
-    'adult primary care Washington',
+    'Sankofa OS',
+    'clinical memory infrastructure',
+    'healthcare technology',
+    'EHR alternative',
+    'clinical memory',
+    'healthcare software',
+    'patient context',
+    'care continuity technology',
+    'clinical intelligence',
+    'healthcare innovation',
+    'physician technology',
+    'health system software',
+    'care plan tracking',
+    'clinical drift detection',
+    'HIPAA compliant healthcare software',
+    'patient data agency',
+    'healthcare AI',
+    'medical software',
   ],
-  authors: [{ name: 'Dr. Yaw Nkrumah', url: 'https://sankofafamilymedicine.com/founder' }],
+  authors: [{ name: 'Sankofa Family Medicine', url: 'https://sankofafamilymedicine.com' }],
   creator: 'Sankofa Family Medicine',
   publisher: 'Sankofa Family Medicine',
-  formatDetection: {
-    telephone: true,
-    email: true,
-    address: true,
-  },
   alternates: {
-    canonical: 'https://sankofafamilymedicine.com/about',
+    canonical: 'https://sankofafamilymedicine.com/sankofa-os',
   },
   openGraph: {
-    title: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
+    title: 'Sankofa OS | Clinical Memory Infrastructure',
     description:
-      'Medicine That Remembers™ for adults across Washington State. Virtual-first primary care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
-    url: 'https://sankofafamilymedicine.com/about',
+      'EHRs were built for billing. We are building for memory. Sankofa OS is clinical memory infrastructure for healthcare. Early access opening soon.',
+    url: 'https://sankofafamilymedicine.com/sankofa-os',
     siteName: 'Sankofa Family Medicine',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: 'https://sankofafamilymedicine.com/images/sfm-og-about.png',
+        url: 'https://sankofafamilymedicine.com/images/sankofa-os-og.png',
         width: 1200,
         height: 630,
-        alt: 'Sankofa Family Medicine - Virtual Primary Care in Washington State - Medicine That Remembers',
+        alt: 'Sankofa OS - Clinical Memory Infrastructure - Your EHR remembers billing codes. Ours remembers patients.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Sankofa Family Medicine | Virtual Primary Care',
+    title: 'Sankofa OS | Clinical Memory Infrastructure',
     description:
-      'Medicine That Remembers™ — virtual-first primary care for adults across Washington State.',
-    images: ['https://sankofafamilymedicine.com/images/sfm-og-about.png'],
+      'EHRs were built for billing. We are building for memory. Early access opening soon.',
+    images: ['https://sankofafamilymedicine.com/images/sankofa-os-og.png'],
   },
   robots: {
     index: true,
@@ -307,21 +230,20 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    // Add your verification codes here
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-  },
 }
 
 // =============================================================================
 // PAGE COMPONENT
 // =============================================================================
 
-export default function AboutPage() {
+export default function SankofaOSPage() {
   return (
     <>
       {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -332,536 +254,363 @@ export default function AboutPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      {/* Main Content */}
-      <main id="main-content">
-        {/* Hero Section */}
-        <section 
-          className="relative pt-32 pb-20 bg-sfm-navy overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-60"
-            aria-hidden="true"
+      <div className="bg-[#0a0a0f] min-h-screen overflow-hidden">
+        {/* Grain overlay */}
+        <div
+          className="pointer-events-none fixed inset-0 z-50 opacity-[0.015]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          }}
+          aria-hidden="true"
+        />
+
+        <main id="main-content">
+          {/* ===== HERO SECTION ===== */}
+          <section 
+            className="relative min-h-screen flex items-center justify-center px-6"
+            aria-labelledby="hero-heading"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
-          </div>
-
-          <div className="max-w-5xl mx-auto px-6 text-center relative">
-            <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">
-              About Sankofa Family Medicine
-            </p>
-            <h1 
-              id="hero-heading"
-              className="font-display text-5xl md:text-6xl text-white mb-6"
-            >
-              Virtual Primary Care in Washington State
-            </h1>
-            <div className="divider-gold mx-auto mb-8" aria-hidden="true" />
-            
-            {/* AI-Optimized Lead Paragraph - Clear, factual, extractable */}
-            <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
-              Sankofa Family Medicine is a virtual-first primary care clinic serving adults 
-              across Washington State. Founded by Dr. Yaw Nkrumah, we deliver{' '}
-              <strong className="text-sfm-gold">Medicine That Remembers™</strong> — care built on 
-              continuity, memory, dignity, and meaningful physician-patient relationships.
-            </p>
-
-            {/* Trust Signals */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold" aria-hidden="true" />
-                Medicine That Remembers™
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
-                HIPAA-Compliant Telehealth
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
-                Adults 18+ in Washington State
-              </span>
-            </div>
-
-            {/* Key Stats - Clear data points for AI extraction */}
-            <div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left sm:text-center"
-              aria-label="Key statistics"
-            >
-              <div>
-                <p className="text-3xl font-display text-white">1</p>
-                <p className="text-sm text-white/70">Physician for your entire care journey</p>
-              </div>
-              <div>
-                <p className="text-3xl font-display text-white">100%</p>
-                <p className="text-sm text-white/70">Virtual primary care via telehealth</p>
-              </div>
-              <div>
-                <p className="text-3xl font-display text-white">0</p>
-                <p className="text-sm text-white/70">Insurance billing — transparent direct pay</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* The Sankofa Principle - Educational Content for AI */}
-        <section 
-          className="py-24 bg-white"
-          aria-labelledby="sankofa-principle-heading"
-        >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">
-                  The Foundation
-                </p>
-                <h2 
-                  id="sankofa-principle-heading"
-                  className="font-display text-4xl text-sfm-navy mb-2"
-                >
-                  The Sankofa Principle
-                </h2>
-                <p className="text-sfm-gold text-lg mb-6">Ancient wisdom, modern medicine</p>
-                <div className="divider-gold mb-8" aria-hidden="true" />
-
-                {/* AI-Optimized Educational Content */}
-                <div className="space-y-6 text-muted leading-relaxed">
-                  <p>
-                    <strong className="text-sfm-navy">Sankofa</strong> is an Akan principle
-                    from West Africa, represented by a bird looking back while moving
-                    forward. Its meaning is simple yet profound: go back, retrieve what
-                    matters, and carry it into your future.
-                  </p>
-                  <p>
-                    The Sankofa bird does not walk backward. It moves forward with
-                    intention, reaching back only for what will serve the journey ahead.
-                    This is not nostalgia. It is applied wisdom.
-                  </p>
-                  <p>
-                    Across cultures, Sankofa has become shorthand for something larger
-                    healthcare systems rarely do well:{' '}
-                    <em>retain what is essential while building what is new.</em>
-                  </p>
-                  <p className="text-sfm-navy font-medium text-lg">
-                    This principle sits at the center of our care model. We remember your 
-                    history, your context, and your goals — delivering virtual primary care 
-                    that honors your complete health story.
-                  </p>
-                </div>
-
-                <div className="mt-8">
-                  <Link 
-                    href="/founder" 
-                    className="btn-secondary"
-                    aria-label="Learn more about Dr. Yaw Nkrumah, founder of Sankofa Family Medicine"
-                  >
-                    Meet Dr. Nkrumah
-                    <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="relative max-w-md mx-auto">
-                <div className="relative rounded-3xl bg-sfm-cream/40 backdrop-blur-sm border border-sfm-gold/30 p-4 shadow-md">
-                  <Image
-                    src="/images/sankofa-bird.png"
-                    alt="Traditional Sankofa bird sculpture — an Akan symbol representing the principle of learning from the past to build a better future, central to Sankofa Family Medicine's care philosophy"
-                    width={600}
-                    height={500}
-                    className="w-full h-auto rounded-2xl object-contain"
-                    priority
-                  />
-                </div>
-                <div
-                  className="absolute -bottom-4 -right-4 w-full h-full border border-sfm-gold/30 rounded-3xl -z-10"
-                  aria-hidden="true"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why It Matters - Problem/Solution for AI Understanding */}
-        <section 
-          className="py-24 bg-sfm-cream"
-          aria-labelledby="why-it-matters-heading"
-        >
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">
-                The Problem We Solve
-              </p>
-              <h2 
-                id="why-it-matters-heading"
-                className="font-display text-4xl text-sfm-navy"
-              >
-                Why Medicine That Remembers Matters
-              </h2>
-            </div>
-
-            {/* Clear Problem Statement */}
-            <div className="space-y-6 text-muted leading-relaxed mb-12">
-              <p>
-                In today&apos;s healthcare landscape, information gets lost, stories become
-                fragmented, and patients are forced to repeat themselves at every visit. 
-                Adults across Washington State already navigate complex schedules, work 
-                responsibilities, caregiving duties, and daily stress.
-              </p>
-              <p className="text-xl text-sfm-navy font-display">
-                Your primary care doctor should not add to that burden.
-              </p>
-              <p>
-                <strong className="text-sfm-gold">Medicine That Remembers™</strong>{' '}
-                is our answer to healthcare&apos;s continuity gap. Sankofa Family Medicine is
-                designed from the ground up to retain the details that shape your health
-                story and to deliver consistent, virtual primary care that feels human.
-              </p>
-            </div>
-
-            {/* Clear Value Propositions */}
-            <div className="bg-white p-8 border-l-4 border-sfm-gold rounded-2xl shadow-sm">
-              <p className="text-sfm-navy font-medium mb-4">
-                What Medicine That Remembers means in practice:
-              </p>
-              <ul className="space-y-3 text-muted">
-                <li className="flex items-start gap-3">
-                  <div
-                    className="w-2 h-2 bg-sfm-gold rounded-full mt-2 flex-shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="text-sfm-navy">We remember your history</strong> — your 
-                    care remains consistent across visits and years, even when visits happen virtually.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div
-                    className="w-2 h-2 bg-sfm-gold rounded-full mt-2 flex-shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="text-sfm-navy">We remember your context</strong> — every 
-                    treatment plan fits your real life, not just a textbook or template.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div
-                    className="w-2 h-2 bg-sfm-gold rounded-full mt-2 flex-shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="text-sfm-navy">We remember your goals</strong> — progress 
-                    is intentional, measured, and meaningful over time.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div
-                    className="w-2 h-2 bg-sfm-gold rounded-full mt-2 flex-shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="text-sfm-navy">We remember the original promise of medicine</strong> — first, do no harm.
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <p className="mt-8 text-muted leading-relaxed">
-              This is more than cultural heritage. It is a practical advantage in primary
-              care. You get medicine that sees you clearly, stays anchored in your history,
-              and moves forward with you through a virtual-first, relationship-centered model.
-            </p>
-          </div>
-        </section>
-
-        {/* What Makes Us Different - Clear Differentiators */}
-        <section 
-          className="py-24 bg-white"
-          aria-labelledby="differentiators-heading"
-        >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">
-                Our Approach to Virtual Primary Care
-              </p>
-              <h2 
-                id="differentiators-heading"
-                className="font-display text-4xl text-sfm-navy mb-4"
-              >
-                What Makes Sankofa Family Medicine Different
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Differentiator 1 */}
-              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-gold rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl">
-                <Users
-                  className="w-8 h-8 text-sfm-gold mb-4"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-                <h3 className="font-display text-xl text-sfm-navy mb-3">
-                  One Physician, Always
-                </h3>
-                <p className="text-muted">
-                  No rotating providers. Dr. Yaw Nkrumah is your physician for every visit,
-                  every message, every decision. Continuity is not a feature — it is the
-                  foundation of how we deliver virtual primary care in Washington State.
-                </p>
-              </article>
-
-              {/* Differentiator 2 */}
-              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-azure rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl">
-                <Zap
-                  className="w-8 h-8 text-sfm-azure mb-4"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-                <h3 className="font-display text-xl text-sfm-navy mb-3">
-                  Precision Medicine
-                </h3>
-                <p className="text-muted">
-                  Genetic testing, metabolic optimization, and evidence-based protocols —
-                  all in service of personalized care that treats you as an individual, not
-                  a statistic or checkbox on a form.
-                </p>
-              </article>
-
-              {/* Differentiator 3 */}
-              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-navy rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl">
-                <Globe
-                  className="w-8 h-8 text-sfm-navy mb-4"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-                <h3 className="font-display text-xl text-sfm-navy mb-3">
-                  Virtual-First, Human-Centered
-                </h3>
-                <p className="text-muted">
-                  Technology that serves relationship, not replaces it. HIPAA-compliant
-                  telehealth that brings convenient access to primary care throughout
-                  Washington State without sacrificing human connection.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        {/* Sankofa OS Teaser */}
-        <section 
-          className="py-24 bg-sfm-navy"
-          aria-labelledby="sankofa-os-heading"
-        >
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="text-center mb-10">
-              <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">
-                The Infrastructure
-              </p>
-              <h2 
-                id="sankofa-os-heading"
-                className="font-display text-4xl text-white mb-4"
-              >
-                Sankofa OS
-              </h2>
-              <p className="text-white/70 max-w-2xl mx-auto">
-                We&apos;re building clinical memory infrastructure — what traditional EHRs 
-                were never designed to do.
-              </p>
-            </div>
-
-            <div className="bg-black/20 border border-white/10 rounded-2xl p-8 text-center">
-              <p className="text-white/60 mb-6 max-w-xl mx-auto">
-                Sankofa OS is currently in development. We&apos;re selectively building
-                our early access cohort of physicians and health systems who want to
-                shape what comes next in clinical memory technology.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  href="/sankofa-os"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-gold text-sfm-navy font-medium rounded-full hover:bg-amber-300 transition-all"
-                  aria-label="Learn more about Sankofa OS clinical memory infrastructure"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </Link>
-                <Link
-                  href="/contact?source=sankofa-os"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all"
-                  aria-label="Join the Sankofa OS early access waitlist"
-                >
-                  Join Waitlist
-                </Link>
-              </div>
-
-              <p className="text-white/30 text-xs mt-6">
-                Early access opening soon · Limited availability
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Standards - Trust Building */}
-        <section 
-          className="py-24 bg-white"
-          aria-labelledby="standards-heading"
-        >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">
-                Our Standards
-              </p>
-              <h2 
-                id="standards-heading"
-                className="font-display text-4xl text-sfm-navy mb-4"
-              >
-                Our Commitments to Patients
-              </h2>
-              <p className="text-muted max-w-xl mx-auto">
-                These are not marketing claims. They are commitments we measure ourselves
-                against as a virtual-first primary care practice.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {[
-                {
-                  icon: Heart,
-                  title: 'We listen first',
-                  description:
-                    'Your history and lived experience shape the diagnosis, not the other way around.',
-                },
-                {
-                  icon: FileText,
-                  title: 'We document with dignity',
-                  description:
-                    'Your medical records reflect who you are, not just what insurance codes might apply.',
-                },
-                {
-                  icon: Shield,
-                  title: 'Full transparency',
-                  description:
-                    'Clear explanations, access to your records, and no hidden billing surprises.',
-                },
-                {
-                  icon: Scale,
-                  title: 'Fair treatment',
-                  description:
-                    'Your background informs care — it never limits the quality of care you receive.',
-                },
-                {
-                  icon: UserCheck,
-                  title: 'Every question answered',
-                  description:
-                    'Secure messaging responses within 24 to 48 hours for established patients.',
-                },
-              ].map((item, index) => (
-                <article
-                  key={item.title}
-                  className={`bg-sfm-cream p-6 border-l-4 border-sfm-azure rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl ${
-                    index === 0 ? 'lg:col-span-2' : ''
-                  }`}
-                >
-                  <item.icon
-                    className="w-6 h-6 text-sfm-azure mb-3"
-                    strokeWidth={1.5}
-                    aria-hidden="true"
-                  />
-                  <h3 className="font-display text-lg text-sfm-navy mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted text-sm">{item.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Founder Teaser */}
-        <section 
-          className="py-24 bg-sfm-cream"
-          aria-labelledby="founder-heading"
-        >
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <div className="relative w-32 h-32 mx-auto mb-8">
+            {/* Atmospheric background */}
+            <div className="absolute inset-0" aria-hidden="true">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(199,160,53,0.08)_0%,_transparent_70%)]" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_at_top,_rgba(199,160,53,0.12)_0%,_transparent_70%)]" />
               <div
-                className="absolute inset-0 rounded-full bg-sfm-gold/15 blur-md"
-                aria-hidden="true"
-              />
-              <Image
-                src="/images/dr-nkrumah.png"
-                alt="Dr. Yaw Nkrumah, MD — Board-eligible family medicine physician and founder of Sankofa Family Medicine, providing virtual primary care across Washington State"
-                width={128}
-                height={128}
-                className="relative w-32 h-32 rounded-full object-cover object-top border-4 border-sfm-gold/30"
+                className="absolute inset-0 opacity-[0.03]"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                                   linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                  backgroundSize: '100px 100px',
+                }}
               />
             </div>
-            <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">
-              The Founder
-            </p>
-            <h2 
-              id="founder-heading"
-              className="font-display text-3xl text-sfm-navy mb-4"
-            >
-              Dr. Yaw Nkrumah, MD
-            </h2>
-            <p className="text-muted mb-8 max-w-xl mx-auto">
-              Board-eligible family medicine physician, researcher, and the vision behind 
-              Sankofa Family Medicine. Dr. Nkrumah is licensed in Washington State and 
-              dedicated to delivering virtual-first primary care that remembers.
-            </p>
-            <Link 
-              href="/founder" 
-              className="btn-primary"
-              aria-label="Read more about Dr. Yaw Nkrumah's background and philosophy"
-            >
-              More About Dr. Nkrumah
-              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
-            </Link>
-          </div>
-        </section>
 
-        {/* Final CTA */}
-        <section 
-          className="py-24 bg-white"
-          aria-labelledby="cta-heading"
-        >
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 
-              id="cta-heading"
-              className="font-display text-4xl text-sfm-navy mb-4"
-            >
-              Ready to Experience Care That Remembers?
-            </h2>
-            <p className="text-muted text-lg mb-10">
-              Join our founding member waitlist for priority enrollment into virtual
-              primary care at Sankofa Family Medicine. Now accepting adults across 
-              Washington State.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                href="/contact" 
-                className="btn-primary"
-                aria-label="Join the Sankofa Family Medicine patient waitlist"
+            <div className="relative max-w-4xl mx-auto text-center">
+              {/* Status badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm mb-12 animate-[fadeIn_1s_ease-out_0.2s_forwards] opacity-0">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-sfm-gold opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-sfm-gold" />
+                </span>
+                <span className="text-white/60 text-sm tracking-wide">
+                  In Development · Early Access Opening Soon
+                </span>
+              </div>
+
+              {/* Main headline - AI-optimized with clear value proposition */}
+              <h1 
+                id="hero-heading"
+                className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-8 tracking-tight leading-[0.95] animate-[fadeInUp_1s_ease-out_0.4s_forwards] opacity-0"
               >
-                Join Waitlist
-                <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
-              </Link>
-              <Link 
-                href="/services" 
-                className="btn-secondary"
-                aria-label="View Sankofa Family Medicine services and pricing"
+                Your EHR remembers
+                <br />
+                <span className="text-white/30">billing codes.</span>
+                <br />
+                <span className="bg-gradient-to-r from-sfm-gold via-amber-300 to-sfm-gold bg-clip-text text-transparent">
+                  Ours remembers patients.
+                </span>
+              </h1>
+
+              {/* Subheadline - Clear product definition for AI extraction */}
+              <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed animate-[fadeInUp_1s_ease-out_0.6s_forwards] opacity-0">
+                <strong className="text-white/70">Sankofa OS</strong> is clinical memory infrastructure — 
+                the intelligence layer that transforms fragmented visits into continuous care.
+              </p>
+
+              {/* CTA */}
+              <div className="animate-[fadeInUp_1s_ease-out_0.8s_forwards] opacity-0">
+                <Link
+                  href="#waitlist"
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-sfm-gold text-sfm-navy font-medium rounded-full hover:bg-amber-300 transition-all duration-300 hover:shadow-[0_0_40px_rgba(199,160,53,0.3)] hover:-translate-y-0.5"
+                  aria-label="Request early access to Sankofa OS"
+                >
+                  Request Early Access
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                </Link>
+              </div>
+
+              {/* Scroll indicator */}
+              <div 
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-[fadeIn_1s_ease-out_1.2s_forwards] opacity-0"
+                aria-hidden="true"
               >
-                View Services and Pricing
-              </Link>
+                <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
+              </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+
+          {/* ===== THE PROBLEM ===== */}
+          <section 
+            className="relative py-32 px-6"
+            aria-labelledby="problem-heading"
+          >
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                {/* Left column */}
+                <div className="lg:col-span-5">
+                  <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6">
+                    The Failure
+                  </p>
+                  <h2 
+                    id="problem-heading"
+                    className="font-display text-4xl sm:text-5xl text-white leading-tight mb-8"
+                  >
+                    Healthcare&apos;s most expensive problem isn&apos;t technology.
+                  </h2>
+                  <div className="w-16 h-px bg-gradient-to-r from-sfm-gold to-transparent" aria-hidden="true" />
+                </div>
+
+                {/* Right column - Clear problem statement for AI */}
+                <div className="lg:col-span-7 lg:pt-12">
+                  <div className="space-y-6 text-white/60 text-lg leading-relaxed">
+                    <p className="text-white/80 text-xl">It&apos;s forgetting.</p>
+                    <p>
+                      Context disappears between visits. Care plans drift without
+                      detection. Patients repeat themselves because no system was
+                      designed to remember.
+                    </p>
+                    <p>
+                      The cost is measured in hundreds of billions annually. The
+                      human cost is immeasurable.
+                    </p>
+                    <p className="text-white/40 text-base pt-4 border-t border-white/10">
+                      The infrastructure to solve this exists. It simply hasn&apos;t
+                      been built for the right purpose.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ===== THE SOLUTION ===== */}
+          <section 
+            className="relative py-32 px-6"
+            aria-labelledby="solution-heading"
+          >
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-transparent via-sfm-gold/[0.02] to-transparent"
+              aria-hidden="true"
+            />
+
+            <div className="relative max-w-4xl mx-auto text-center">
+              <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6">
+                The Solution
+              </p>
+              <h2 
+                id="solution-heading"
+                className="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-8 leading-tight"
+              >
+                We&apos;re building what EHRs
+                <br />
+                were never designed to do.
+              </h2>
+
+              {/* Feature hints - Abstract for mystery, but semantic for AI */}
+              <div 
+                className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 mb-16"
+                role="list"
+                aria-label="Core capabilities of Sankofa OS"
+              >
+                {[
+                  {
+                    icon: Fingerprint,
+                    label: 'Memory',
+                    hint: 'What matters, surfaced when it matters',
+                    description: 'Patient context preserved across visits',
+                  },
+                  {
+                    icon: Sparkles,
+                    label: 'Intelligence',
+                    hint: 'Context that compounds over time',
+                    description: 'Clinical insights that improve with history',
+                  },
+                  {
+                    icon: Lock,
+                    label: 'Control',
+                    hint: 'Patient agency by design',
+                    description: 'Patients own and control their health data',
+                  },
+                ].map((item) => (
+                  <article
+                    key={item.label}
+                    role="listitem"
+                    className="group relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm hover:border-sfm-gold/30 hover:bg-sfm-gold/[0.03] transition-all duration-500"
+                  >
+                    <item.icon
+                      className="w-6 h-6 text-sfm-gold/70 mb-4 group-hover:text-sfm-gold transition-colors"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                    <h3 className="text-white font-medium mb-2">{item.label}</h3>
+                    <p className="text-white/40 text-sm">{item.hint}</p>
+                    {/* Hidden but accessible description for AI/screen readers */}
+                    <span className="sr-only">{item.description}</span>
+                  </article>
+                ))}
+              </div>
+
+              <p className="text-white/30 text-sm tracking-wide">
+                Architecture proprietary · Details protected by design
+              </p>
+            </div>
+          </section>
+
+          {/* ===== CREDIBILITY ===== */}
+          <section 
+            className="relative py-32 px-6 border-t border-white/[0.06]"
+            aria-labelledby="credibility-heading"
+          >
+            <h2 id="credibility-heading" className="sr-only">About Sankofa OS Development</h2>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+                <div>
+                  <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4">
+                    Origin
+                  </p>
+                  <p className="text-white/60 leading-relaxed">
+                    Sankofa OS is being developed inside a practicing primary care
+                    clinic — not a lab. Every design decision is informed by real
+                    physician workflow and real patient relationships.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4">
+                    Philosophy
+                  </p>
+                  <p className="text-white/60 leading-relaxed">
+                    Named for the Akan principle of retrieving what matters from the
+                    past to move forward wisely. Not nostalgia. Applied wisdom
+                    encoded into clinical infrastructure.
+                  </p>
+                </div>
+              </div>
+
+              {/* Quote */}
+              <div className="mt-20 pt-12 border-t border-white/[0.06]">
+                <blockquote className="text-center">
+                  <p className="font-display text-2xl sm:text-3xl text-white/80 italic leading-relaxed max-w-3xl mx-auto">
+                    &ldquo;Continuity isn&apos;t a feature. It&apos;s the foundation.&rdquo;
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+
+          {/* ===== WAITLIST ===== */}
+          <section
+            id="waitlist"
+            className="relative py-32 px-6 border-t border-white/[0.06]"
+            aria-labelledby="waitlist-heading"
+          >
+            <div
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse_at_bottom,_rgba(199,160,53,0.1)_0%,_transparent_70%)]"
+              aria-hidden="true"
+            />
+
+            <div className="relative max-w-2xl mx-auto text-center">
+              <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6">
+                Early Access
+              </p>
+              <h2 
+                id="waitlist-heading"
+                className="font-display text-4xl sm:text-5xl text-white mb-6"
+              >
+                Shape what comes next.
+              </h2>
+              <p className="text-white/50 text-lg mb-12 leading-relaxed">
+                We&apos;re building our founding cohort of physicians who want
+                clinical infrastructure that actually remembers. Limited access.
+                Influence on roadmap.
+              </p>
+
+              <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-8 backdrop-blur-sm">
+                <div className="space-y-6">
+                  {/* Target audience */}
+                  <div 
+                    className="flex flex-wrap items-center justify-center gap-4 text-white/40 text-sm"
+                    role="list"
+                    aria-label="Who should join the waitlist"
+                  >
+                    <span className="flex items-center gap-2" role="listitem">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold/60" aria-hidden="true" />
+                      Independent physicians
+                    </span>
+                    <span className="flex items-center gap-2" role="listitem">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold/60" aria-hidden="true" />
+                      Medical directors
+                    </span>
+                    <span className="flex items-center gap-2" role="listitem">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold/60" aria-hidden="true" />
+                      Health systems
+                    </span>
+                  </div>
+
+                  <Link
+                    href="/contact?source=sankofa-os"
+                    className="group inline-flex items-center gap-3 px-10 py-4 bg-sfm-gold text-sfm-navy font-medium rounded-full hover:bg-amber-300 transition-all duration-300 hover:shadow-[0_0_50px_rgba(199,160,53,0.4)] hover:-translate-y-0.5"
+                    aria-label="Request access to Sankofa OS early access program"
+                  >
+                    Request Access
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                  </Link>
+
+                  <p className="text-white/30 text-xs">
+                    We review every request personally.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ===== FOOTER ===== */}
+          <footer className="relative py-12 px-6 border-t border-white/[0.06]">
+            <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-sfm-gold/10 border border-sfm-gold/20 flex items-center justify-center">
+                  <span className="text-sfm-gold font-display text-sm">S</span>
+                </div>
+                <span className="text-white/40 text-sm">
+                  Sankofa OS · A Sankofa Family Medicine Innovation
+                </span>
+              </div>
+
+              <nav className="flex items-center gap-6 text-white/30 text-sm" aria-label="Footer navigation">
+                <Link
+                  href="/about"
+                  className="hover:text-white/60 transition-colors"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  className="hover:text-white/60 transition-colors"
+                >
+                  Contact
+                </Link>
+                <span className="flex items-center gap-2">
+                  <Lock className="w-3 h-3" aria-hidden="true" />
+                  HIPAA Compliant
+                </span>
+              </nav>
+            </div>
+
+            <div className="max-w-4xl mx-auto mt-8 pt-8 border-t border-white/[0.04] text-center">
+              <p className="text-white/20 text-xs italic">
+                &ldquo;Go back, retrieve what matters, carry it forward.&rdquo;
+              </p>
+            </div>
+          </footer>
+        </main>
+      </div>
     </>
   )
 }
