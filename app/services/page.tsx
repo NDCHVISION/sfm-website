@@ -105,7 +105,7 @@ export default function ServicesPage() {
               <ul className="space-y-3 mb-8 flex-grow">
                 {[
                   'Everything in Continuity Care',
-                  'Nexus DNA Panel included',
+                  'DNA Panel included',
                   'Genetic interpretation',
                   'AI-generated health roadmap',
                   'Pharmacogenomic guidance',
