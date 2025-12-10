@@ -83,7 +83,7 @@ const faqJsonLd = {
       name: 'What problem does Sankofa OS solve?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa OS addresses healthcare\'s continuity crisis. Patients are forced to repeat their stories at every visit because systems don\'t remember context. Care plans drift without detection. Physicians spend more time on documentation than patient care. Clinical adherence and coordination failures cost the healthcare system hundreds of billions annually. Sankofa OS is designed to solve this by building memory into clinical infrastructure.',
+        text: 'Sankofa OS addresses healthcare's continuity crisis. Patients are forced to repeat their stories at every visit because systems don\'t remember context. Care plans drift without detection. Physicians spend more time on documentation than patient care. Clinical adherence and coordination failures cost the healthcare system hundreds of billions annually. Sankofa OS is designed to solve this by building memory into clinical infrastructure.',
       },
     },
     {
@@ -129,7 +129,7 @@ const webPageJsonLd = {
   url: 'https://sankofafamilymedicine.com/sankofa-os',
   name: 'Sankofa OS | Clinical Memory Infrastructure for Healthcare',
   description:
-    'Sankofa OS is clinical memory infrastructure — what EHRs were never designed to do. Built for physicians who refuse to forget their patients. Early access opening soon.',
+    'Sankofa OS is clinical memory infrastructure: What EHRs were never designed to do. Built for physicians who refuse to forget their patients. Early access opening soon.',
   isPartOf: {
     '@id': 'https://sankofafamilymedicine.com/#website',
   },
@@ -168,7 +168,7 @@ const breadcrumbJsonLd = {
 export const metadata: Metadata = {
   title: 'Sankofa OS | Clinical Memory Infrastructure for Healthcare',
   description:
-    'Sankofa OS is clinical memory infrastructure — what EHRs were never designed to do. Memory, intelligence, and patient control built into clinical workflows. Early access for physicians and health systems opening soon.',
+    'Sankofa OS is clinical memory infrastructure. What EHRs were never designed to do. Memory, intelligence, and patient control built into clinical workflows. Early access for physicians and health systems opening soon.',
   keywords: [
     'Sankofa OS',
     'clinical memory infrastructure',
@@ -319,7 +319,7 @@ export default function SankofaOSPage() {
 
               {/* Subheadline - Clear product definition for AI extraction */}
               <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed animate-[fadeInUp_1s_ease-out_0.6s_forwards] opacity-0">
-                <strong className="text-white/70">Sankofa OS</strong> is clinical memory infrastructure — 
+                <strong className="text-white/70">Sankofa OS</strong> is clinical memory infrastructure,
                 the intelligence layer that transforms fragmented visits into continuous care.
               </p>
 
@@ -477,7 +477,7 @@ export default function SankofaOSPage() {
                   </p>
                   <p className="text-white/60 leading-relaxed">
                     Sankofa OS is being developed inside a practicing primary care
-                    clinic — not a lab. Every design decision is informed by real
+                    clinic, not a lab. Every design decision is informed by real
                     physician workflow and real patient relationships.
                   </p>
                 </div>
