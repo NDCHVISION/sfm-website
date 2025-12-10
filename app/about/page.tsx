@@ -25,7 +25,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   alternateName: 'SFM',
   description:
-    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers™ — a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. The clinic offers telehealth visits, chronic disease management, precision medicine, and genetic testing.',
+    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers, a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. The clinic offers telehealth visits, chronic disease management, precision medicine, and genetic testing.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
@@ -119,7 +119,7 @@ const organizationJsonLd = {
     'Direct Primary Care',
     'Patient-Centered Care',
   ],
-  slogan: 'Medicine That Remembers™',
+  slogan: 'Medicine That Remembers',
   brand: {
     '@type': 'Brand',
     name: 'Medicine That Remembers',
@@ -137,7 +137,7 @@ const faqJsonLd = {
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers™ — a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. Unlike traditional practices with rotating providers, patients see the same physician (Dr. Nkrumah) for every visit.',
+        text: 'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers, a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. Unlike traditional practices with rotating providers, patients see the same physician (Dr. Nkrumah) for every visit.',
       },
     },
     {
@@ -145,7 +145,7 @@ const faqJsonLd = {
       name: 'What does Medicine That Remembers mean?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Medicine That Remembers™ is Sankofa Family Medicine\'s care philosophy. It means the clinic is designed to retain the details that shape your health: your history, your context, your goals, and your preferences. This approach addresses healthcare\'s continuity gap where patients are forced to repeat themselves because information gets lost between visits.',
+        text: 'Medicine That Remembers is Sankofa Family Medicine\'s care philosophy. It means the clinic is designed to retain the details that shape your health: your history, your context, your goals, and your preferences. This approach addresses healthcare\'s continuity gap where patients are forced to repeat themselves because information gets lost between visits.',
       },
     },
     {
@@ -219,7 +219,7 @@ const webPageJsonLd = {
   url: 'https://sankofafamilymedicine.com/about',
   name: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
   description:
-    'Learn about Sankofa Family Medicine, a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers™ — care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
+    'Learn about Sankofa Family Medicine, a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers: care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
   isPartOf: {
     '@id': 'https://sankofafamilymedicine.com/#website',
   },
@@ -242,7 +242,7 @@ const webPageJsonLd = {
 export const metadata: Metadata = {
   title: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
   description:
-    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers™ — care built on continuity, memory, dignity, and meaningful physician-patient relationships with Dr. Yaw Nkrumah.',
+    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers: care built on continuity, memory, dignity, and meaningful physician-patient relationships with Dr. Yaw Nkrumah.',
   keywords: [
     'Sankofa Family Medicine',
     'virtual primary care Washington State',
@@ -275,7 +275,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
     description:
-      'Medicine That Remembers™ for adults across Washington State. Virtual-first primary care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
+      'Medicine That Remembers for adults across Washington State. Virtual-first primary care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
     url: 'https://sankofafamilymedicine.com/about',
     siteName: 'Sankofa Family Medicine',
     type: 'website',
@@ -293,7 +293,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Sankofa Family Medicine | Virtual Primary Care',
     description:
-      'Medicine That Remembers™ — virtual-first primary care for adults across Washington State.',
+      'Medicine That Remembers: virtual-first primary care for adults across Washington State.',
     images: ['https://sankofafamilymedicine.com/images/sfm-og-about.png'],
   },
   robots: {
@@ -369,7 +369,7 @@ export default function AboutPage() {
             <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
               Sankofa Family Medicine is a virtual-first primary care clinic serving adults 
               across Washington State. Founded by Dr. Yaw Nkrumah, we deliver{' '}
-              <strong className="text-sfm-gold">Medicine That Remembers™</strong> — care built on 
+              <strong className="text-sfm-gold">Medicine That Remembersâ„¢</strong>: care built on 
               continuity, memory, dignity, and meaningful physician-patient relationships.
             </p>
 
@@ -377,7 +377,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
                 <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold" aria-hidden="true" />
-                Medicine That Remembers™
+                Medicine That Remembersâ„¢
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
                 HIPAA-Compliant Telehealth
@@ -402,7 +402,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <p className="text-3xl font-display text-white">0</p>
-                <p className="text-sm text-white/70">Insurance billing — transparent direct pay</p>
+                <p className="text-sm text-white/70">Insurance billing (transparent direct pay)</p>
               </div>
             </div>
           </div>
@@ -448,7 +448,7 @@ export default function AboutPage() {
                   </p>
                   <p className="text-sfm-navy font-medium text-lg">
                     This principle sits at the center of our care model. We remember your 
-                    history, your context, and your goals — delivering virtual primary care 
+                    history, your context, and your goals, delivering virtual primary care 
                     that honors your complete health story.
                   </p>
                 </div>
@@ -469,7 +469,7 @@ export default function AboutPage() {
                 <div className="relative rounded-3xl bg-sfm-cream/40 backdrop-blur-sm border border-sfm-gold/30 p-4 shadow-md">
                   <Image
                     src="/images/sankofa-bird.png"
-                    alt="Traditional Sankofa bird sculpture — an Akan symbol representing the principle of learning from the past to build a better future, central to Sankofa Family Medicine's care philosophy"
+                    alt="Traditional Sankofa bird sculpture, an Akan symbol representing the principle of learning from the past to build a better future, central to Sankofa Family Medicine's care philosophy"
                     width={600}
                     height={500}
                     className="w-full h-auto rounded-2xl object-contain"
@@ -515,7 +515,7 @@ export default function AboutPage() {
                 Your primary care doctor should not add to that burden.
               </p>
               <p>
-                <strong className="text-sfm-gold">Medicine That Remembers™</strong>{' '}
+                <strong className="text-sfm-gold">Medicine That Remembersâ„¢</strong>{' '}
                 is our answer to healthcare&apos;s continuity gap. Sankofa Family Medicine is
                 designed from the ground up to retain the details that shape your health
                 story and to deliver consistent, virtual primary care that feels human.
@@ -534,7 +534,7 @@ export default function AboutPage() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="text-sfm-navy">We remember your history</strong> — your 
+                    <strong className="text-sfm-navy">We remember your history.</strong> Your 
                     care remains consistent across visits and years, even when visits happen virtually.
                   </span>
                 </li>
@@ -544,7 +544,7 @@ export default function AboutPage() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="text-sfm-navy">We remember your context</strong> — every 
+                    <strong className="text-sfm-navy">We remember your context.</strong> Every 
                     treatment plan fits your real life, not just a textbook or template.
                   </span>
                 </li>
@@ -554,7 +554,7 @@ export default function AboutPage() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="text-sfm-navy">We remember your goals</strong> — progress 
+                    <strong className="text-sfm-navy">We remember your goals.</strong> Progress 
                     is intentional, measured, and meaningful over time.
                   </span>
                 </li>
@@ -564,7 +564,7 @@ export default function AboutPage() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="text-sfm-navy">We remember the original promise of medicine</strong> — first, do no harm.
+                    <strong className="text-sfm-navy">We remember the original promise of medicine:</strong> first, do no harm.
                   </span>
                 </li>
               </ul>
@@ -609,7 +609,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-muted">
                   No rotating providers. Dr. Yaw Nkrumah is your physician for every visit,
-                  every message, every decision. Continuity is not a feature — it is the
+                  every message, every decision. Continuity is not a feature. It is the
                   foundation of how we deliver virtual primary care in Washington State.
                 </p>
               </article>
@@ -625,7 +625,7 @@ export default function AboutPage() {
                   Precision Medicine
                 </h3>
                 <p className="text-muted">
-                  Genetic testing, metabolic optimization, and evidence-based protocols —
+                  Genetic testing, metabolic optimization, and evidence-based protocols,
                   all in service of personalized care that treats you as an individual, not
                   a statistic or checkbox on a form.
                 </p>
@@ -668,7 +668,7 @@ export default function AboutPage() {
                 Sankofa OS
               </h2>
               <p className="text-white/70 max-w-2xl mx-auto">
-                We&apos;re building clinical memory infrastructure — what traditional EHRs 
+                We&apos;re building clinical memory infrastructure: what traditional EHRs 
                 were never designed to do.
               </p>
             </div>
@@ -699,7 +699,7 @@ export default function AboutPage() {
               </div>
 
               <p className="text-white/30 text-xs mt-6">
-                Early access opening soon · Limited availability
+                Early access opening soon. Limited availability.
               </p>
             </div>
           </div>
@@ -751,7 +751,7 @@ export default function AboutPage() {
                   icon: Scale,
                   title: 'Fair treatment',
                   description:
-                    'Your background informs care — it never limits the quality of care you receive.',
+                    'Your background informs care. It never limits the quality of care you receive.',
                 },
                 {
                   icon: UserCheck,
@@ -794,7 +794,7 @@ export default function AboutPage() {
               />
               <Image
                 src="/images/dr-nkrumah.png"
-                alt="Dr. Yaw Nkrumah, MD — Board-eligible family medicine physician and founder of Sankofa Family Medicine, providing virtual primary care across Washington State"
+                alt="Dr. Yaw Nkrumah, MD, Board-eligible family medicine physician and founder of Sankofa Family Medicine, providing virtual primary care across Washington State"
                 width={128}
                 height={128}
                 className="relative w-32 h-32 rounded-full object-cover object-top border-4 border-sfm-gold/30"
@@ -865,3 +865,4 @@ export default function AboutPage() {
     </>
   )
 }
+
