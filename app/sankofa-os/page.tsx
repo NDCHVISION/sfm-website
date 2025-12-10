@@ -67,7 +67,7 @@ const faqJsonLd = {
       name: 'What is Sankofa OS?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa OS is clinical memory infrastructure — a software layer designed to solve healthcare\'s continuity problem. Unlike traditional Electronic Health Records (EHRs) that are optimized for billing and documentation, Sankofa OS is built to remember patient context, track care plan adherence, detect when care drifts from goals, and surface relevant information at the point of care. It is being developed by Sankofa Family Medicine.',
+        text: 'Sankofa OS is clinical memory infrastructure, a software layer designed to solve healthcare\'s continuity problem. Unlike traditional Electronic Health Records (EHRs) that are optimized for billing and documentation, Sankofa OS is built to remember patient context, track care plan adherence, detect when care drifts from goals, and surface relevant information at the point of care. It is being developed by Sankofa Family Medicine.',
       },
     },
     {
@@ -99,7 +99,7 @@ const faqJsonLd = {
       name: 'Who is building Sankofa OS?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa OS is being developed by Sankofa Family Medicine, a virtual-first primary care clinic founded by Dr. Yaw Nkrumah. The system is being built inside a practicing clinic, meaning every design decision is informed by real physician workflows and real patient relationships — not theoretical assumptions.',
+        text: 'Sankofa OS is being developed by Sankofa Family Medicine, a virtual-first primary care clinic founded by Dr. Yaw Nkrumah. The system is being built inside a practicing clinic, meaning every design decision is informed by real physician workflows and real patient relationships, not theoretical assumptions.',
       },
     },
     {
