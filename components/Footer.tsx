@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -51,7 +51,7 @@ export default function Footer() {
               HIPAA-compliant telehealth serving Washington State.
             </p>
             <p className="font-display text-lg text-sfm-gold italic mb-6">
-              Medicine That Remembers™
+              Medicine That Remembersâ„¢
             </p>
             
             {/* Social Media Icons */}
@@ -133,13 +133,13 @@ export default function Footer() {
           </div>
           <div>
             <h5 className="text-sfm-gold text-sm font-semibold mb-2">Phone</h5>
-            <a href="tel:+18032267795" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">
+            <a href="tel:+14252857390" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">
               (803) 226-7795
             </a>
           </div>
           <div>
             <h5 className="text-sfm-gold text-sm font-semibold mb-2">Service Area</h5>
-            <p className="text-gray-300 text-sm">Washington State • Virtual Care</p>
+            <p className="text-gray-300 text-sm">Washington State â€¢ Virtual Care</p>
           </div>
         </div>
       </div>
@@ -153,8 +153,8 @@ export default function Footer() {
             Sankofa Family Medicine is a HIPAA-compliant virtual primary care practice. All consultations are conducted via secure telehealth.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-400 text-sm">
-            <p>© {currentYear} Sankofa Family Medicine™. All rights reserved.</p>
-            <span className="hidden md:inline text-gray-600">•</span>
+            <p>Â© {currentYear} Sankofa Family Medicineâ„¢. All rights reserved.</p>
+            <span className="hidden md:inline text-gray-600">â€¢</span>
             <p className="flex items-center gap-1">
               Built with <Heart size={14} className="text-sfm-gold" aria-hidden="true" /> <span className="sr-only">love</span> for patients
             </p>

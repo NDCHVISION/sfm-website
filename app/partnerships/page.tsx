@@ -1,4 +1,4 @@
-import ComingSoon from '@/components/ComingSoon'
+﻿import ComingSoon from '@/components/ComingSoon'
 import { Users } from 'lucide-react'
 import { Metadata } from 'next'
 

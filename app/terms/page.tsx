@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -95,7 +95,7 @@ export default function TermsPage() {
             </p>
             <div className="mt-4 p-4 bg-white rounded-lg border border-sfm-gold/20">
               <p><strong>Email:</strong> <a href="mailto:sfm@ndchvision.com" className="text-sfm-azure hover:text-sfm-navy">sfm@ndchvision.com</a></p>
-              <p><strong>Phone:</strong> <a href="tel:+18032267795" className="text-sfm-azure hover:text-sfm-navy">(803) 226-7795</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+14252857390" className="text-sfm-azure hover:text-sfm-navy">(803) 226-7795</a></p>
             </div>
           </section>
         </div>

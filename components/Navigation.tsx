@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -65,7 +65,7 @@ export default function Navigation() {
                 className="h-10 w-auto"
               />
               <span className="font-display text-lg text-sfm-navy hidden sm:block">
-                Sankofa Family Medicine<span className="tm text-sfm-gold">™</span>
+                Sankofa Family Medicine<span className="tm text-sfm-gold">â„¢</span>
               </span>
             </Link>
 
@@ -211,7 +211,7 @@ export default function Navigation() {
             <div className="border-t border-gray-100 pt-6 text-sm text-gray-500">
               <p className="font-semibold text-sfm-navy mb-2">Contact</p>
               <p><a href="mailto:sfm@ndchvision.com" className="hover:text-sfm-azure focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded">sfm@ndchvision.com</a></p>
-              <p><a href="tel:+18032267795" className="hover:text-sfm-azure focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded">(803) 226-7795</a></p>
+              <p><a href="tel:+14252857390" className="hover:text-sfm-azure focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded">(803) 226-7795</a></p>
               <p className="mt-3 text-sfm-azure text-xs">Serving Washington State</p>
             </div>
           </nav>

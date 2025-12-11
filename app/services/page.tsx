@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 import { Check, ArrowRight, Heart, Dna, Star, Shield, Sparkles } from 'lucide-react'
 import { Metadata } from 'next'
