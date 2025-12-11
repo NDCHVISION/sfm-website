@@ -88,10 +88,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sfm-navy font-medium mb-1">Email</p>
                     <a 
-                      href="mailto:sfm@ndchvision.com" 
+                      href="mailto:appointments@sankofafamilymedicine.com" 
                       className="text-muted hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
                     >
-                      sfm@ndchvision.com
+                      appointments@sankofafamilymedicine.com
                     </a>
                   </div>
                 </div>
@@ -103,10 +103,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sfm-navy font-medium mb-1">Phone</p>
                     <a 
-                      href="tel:+18032267795" 
+                      href="tel:(425) 285-7390" 
                       className="text-muted hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
                     >
-                      (803) 226-7795
+                      (425) 285-7390
                     </a>
                   </div>
                 </div>
