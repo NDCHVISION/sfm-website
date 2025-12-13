@@ -10,11 +10,11 @@ interface ComingSoonProps {
 
 export default function ComingSoon({ title, description, icon, expectedDate }: ComingSoonProps) {
   return (
-    <div className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-sfm-cream via-white to-blue-50/30">
+    <div className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream/50">
       <div className="max-w-3xl mx-auto px-6 text-center">
         {/* Icon */}
-        <div className="flex justify-center mb-8">
-          <div className="p-6 bg-sfm-gold/10 rounded-full text-sfm-gold">
+        <div className="flex justify-center mb-10">
+          <div className="p-8 bg-gradient-to-br from-sfm-gold/20 to-sfm-gold/5 rounded-3xl text-sfm-gold shadow-lg shadow-sfm-gold/10">
             {icon}
           </div>
         </div>
@@ -25,13 +25,13 @@ export default function ComingSoon({ title, description, icon, expectedDate }: C
         </h1>
 
         {/* Description */}
-        <p className="text-xl text-muted mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl text-muted mb-10 max-w-2xl mx-auto leading-relaxed">
           {description}
         </p>
 
         {/* Coming Soon Badge */}
         <div className="inline-block mb-8">
-          <span className="inline-block px-4 py-2 bg-sfm-gold text-white font-semibold text-sm">
+          <span className="inline-block px-6 py-3 bg-gradient-to-r from-sfm-gold to-amber-500 text-sfm-navy font-semibold text-sm rounded-full shadow-lg shadow-sfm-gold/25">
             Coming Soon
           </span>
         </div>
@@ -60,23 +60,23 @@ export default function ComingSoon({ title, description, icon, expectedDate }: C
         </div>
 
         {/* Info Box */}
-        <div className="p-8 bg-sfm-navy/5 border border-sfm-navy/10">
-          <h2 className="font-semibold text-sfm-navy mb-3 text-lg">In the Meantime</h2>
-          <p className="text-muted mb-4">
+        <div className="p-10 bg-white border border-gray-100 rounded-3xl shadow-lg">
+          <h2 className="font-display text-2xl text-sfm-navy mb-4">In the Meantime</h2>
+          <p className="text-muted mb-6">
             Explore our current offerings or reach out to learn more about Sankofa Family Medicine.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link 
               href="/services" 
-              className="text-sfm-azure hover:text-sfm-navy transition-colors font-medium flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sfm-cream text-sfm-azure hover:bg-sfm-azure hover:text-white rounded-xl transition-all duration-300 font-medium"
             >
               View Services <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link 
               href="/about" 
-              className="text-sfm-azure hover:text-sfm-navy transition-colors font-medium flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sfm-cream text-sfm-azure hover:bg-sfm-azure hover:text-white rounded-xl transition-all duration-300 font-medium"
             >
-              Learn Our History <ArrowRight size={16} aria-hidden="true" />
+              Learn Our Story <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
         </div>

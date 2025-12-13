@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ChevronDown, Phone, Mail, ArrowRight } from 'lucide-react'
@@ -11,6 +11,22 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Dropdown handlers with delay to prevent flicker
+  const handleDropdownEnter = useCallback((dropdown: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+    setActiveDropdown(dropdown)
+  }, [])
+
+  const handleDropdownLeave = useCallback(() => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 150)
+  }, [])
 
   // Handle scroll for header style change
   useEffect(() => {
@@ -176,8 +192,8 @@ export default function Navigation() {
               {/* Services Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setActiveDropdown('services')}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseEnter={() => handleDropdownEnter('services')}
+                onMouseLeave={handleDropdownLeave}
               >
                 <button
                   onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
@@ -192,14 +208,18 @@ export default function Navigation() {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
                 </button>
 
+                {/* Bridge element to prevent gap */}
+                <div className="absolute left-0 right-0 h-4 top-full" />
+
                 {/* Mega Menu */}
                 <div
                   role="menu"
                   aria-label="Services menu"
-                  className={`absolute left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-white border border-gray-100 rounded-2xl shadow-2xl 
+                  className={`absolute left-1/2 -translate-x-1/2 pt-2 mt-2 w-[720px]
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'services' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
+                  <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl">
                   <div className="p-8">
                     <div className="grid grid-cols-3 gap-8">
                       {navGroups.services.columns.map((column) => (
@@ -241,14 +261,15 @@ export default function Navigation() {
                       </Link>
                     </div>
                   </div>
+                  </div>
                 </div>
               </div>
 
               {/* About Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setActiveDropdown('about')}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseEnter={() => handleDropdownEnter('about')}
+                onMouseLeave={handleDropdownLeave}
               >
                 <button
                   onClick={() => setActiveDropdown(activeDropdown === 'about' ? null : 'about')}
@@ -263,14 +284,17 @@ export default function Navigation() {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
                 </button>
 
+                {/* Bridge element to prevent gap */}
+                <div className="absolute left-0 right-0 h-4 top-full" />
+
                 <div
                   role="menu"
                   aria-label="About menu"
-                  className={`absolute left-1/2 -translate-x-1/2 mt-3 w-[500px] bg-white border border-gray-100 rounded-2xl shadow-2xl 
+                  className={`absolute left-1/2 -translate-x-1/2 pt-2 mt-2 w-[500px]
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'about' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
-                  <div className="p-8">
+                  <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl p-8">
                     <div className="grid grid-cols-2 gap-8">
                       {navGroups.about.columns.map((column) => (
                         <div key={column.title}>
