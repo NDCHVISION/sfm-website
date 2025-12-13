@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Check, ArrowRight, Heart, Dna, Star, Shield, Sparkles, Crown } from 'lucide-react'
+import { primaryServices, additionalServices, careCoordination, exclusions } from '@/lib/services'
 
 export default function ServicesPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
@@ -482,15 +483,25 @@ export default function ServicesPage() {
           <div 
             className={`transition-all duration-700 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            <Link 
-              href="/contact" 
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sfm-gold to-yellow-600 
-                text-sfm-navy font-semibold tracking-wide hover:from-yellow-500 hover:to-sfm-gold 
-                transition-all duration-300 shadow-lg shadow-sfm-gold/25 hover:shadow-xl hover:shadow-sfm-gold/40"
-            >
-              Claim Your Founding Spot
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </Link>
+            <div className="inline-flex items-center gap-3">
+              <Link 
+                href="/services/what-we-cover"
+                className="group inline-flex items-center gap-3 px-6 py-3 bg-white/10 text-white border border-white/10 rounded-xl hover:bg-white/5 transition-all"
+              >
+                What We Cover
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+
+              <Link 
+                href="/contact" 
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sfm-gold to-yellow-600 
+                  text-sfm-navy font-semibold tracking-wide hover:from-yellow-500 hover:to-sfm-gold 
+                  transition-all duration-300 shadow-lg shadow-sfm-gold/25 hover:shadow-xl hover:shadow-sfm-gold/40"
+              >
+                Claim Your Founding Spot
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
           
           {/* Founding spots indicator */}
