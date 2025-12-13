@@ -8,10 +8,10 @@
   --sfm-navy: #051c3b;
   --sfm-azure: #05436e;
   --sfm-gold: #bc9833;
-  --sfm-gold-dark: #9a7d2a; /* Darker gold for better contrast on white */
+  --sfm-gold-dark: #9a7d2a;
   --sfm-cream: #faf9f7;
   --sfm-text: #1a1a1a;
-  --sfm-text-muted: #4a5568; /* Better contrast than gray-500 */
+  --sfm-text-muted: #4a5568;
 }
 
 * { box-sizing: border-box; }
@@ -94,20 +94,23 @@ body {
 
 /* Buttons */
 .btn-primary {
-  @apply inline-flex items-center justify-center px-8 py-4 text-white text-sm tracking-wide font-medium;
-  @apply transition-all duration-300;
-  background-color: var(--sfm-gold);
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 text-white text-sm tracking-wide font-semibold;
+  @apply transition-all duration-300 shadow-lg hover:shadow-xl;
+  background: linear-gradient(to right, var(--sfm-gold), #d4a944);
+  box-shadow: 0 10px 25px -5px rgba(188, 152, 51, 0.25);
 }
 .btn-primary:hover {
-  background-color: var(--sfm-gold-dark);
+  background: linear-gradient(to right, #d4a944, var(--sfm-gold));
+  box-shadow: 0 20px 40px -10px rgba(188, 152, 51, 0.4);
 }
 .btn-primary:focus-visible {
   @apply outline-none ring-2 ring-sfm-gold ring-offset-2;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center px-8 py-4 border border-sfm-navy text-sfm-navy text-sm tracking-wide font-medium;
-  @apply transition-all duration-300 hover:bg-sfm-navy hover:text-white;
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4;
+  @apply bg-sfm-navy text-white font-semibold tracking-wide;
+  @apply transition-all duration-300 hover:bg-sfm-azure;
 }
 .btn-secondary:focus-visible {
   @apply outline-none ring-2 ring-sfm-navy ring-offset-2;
@@ -123,15 +126,15 @@ body {
 
 /* Cards */
 .card {
-  @apply bg-white border border-gray-100 p-8 transition-all duration-300;
-  @apply hover:border-sfm-azure/30 hover:shadow-lg;
+  @apply bg-white border border-gray-200 rounded-2xl p-8;
+  @apply transition-all duration-300 hover:border-sfm-azure/30 hover:shadow-lg;
 }
 .card:focus-within {
   @apply border-sfm-azure/50 shadow-lg;
 }
 
 .card-featured {
-  @apply bg-white border-2 border-sfm-gold p-8 relative;
+  @apply bg-white border-2 border-sfm-gold rounded-2xl p-8 relative;
 }
 .card-featured::before {
   content: '';
@@ -159,7 +162,7 @@ body {
   color: var(--sfm-text-muted);
 }
 
-/* Improved white text on dark backgrounds - ensure sufficient contrast */
+/* Improved white text on dark backgrounds */
 .text-white-accessible {
   color: rgba(255, 255, 255, 0.95);
 }
@@ -173,59 +176,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in { 
-  animation: fadeIn 0.6s ease-out forwards; 
-}
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-
-/* Reduced motion: disable animations */
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-in {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  :root {
-    --sfm-gold: #8b7020;
-    --sfm-azure: #033c5e;
-  }
-  
-  .btn-primary {
-    border: 2px solid currentColor;
-  }
-}
-
-/* Selection styling */
-::selection {
-  background-color: var(--sfm-gold);
-  color: white;
-}
-
-/* Link underlines for better accessibility in content areas */
-.prose a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.prose a:hover {
-  text-decoration-thickness: 2px;
-}
-/* Sankofa OS Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -236,105 +186,26 @@ body {
     transform: translateY(0);
   }
 }
-//* 
- * Additional styles for Sankofa Family Medicine Services Page
- * Add these to your global CSS file
- * Updated for your brand colors: navy #051c3b, azure #05436e, gold #bc9833, cream #faf9f7
- */
 
-/* Premium card styles */
-.card {
-  @apply bg-white border border-gray-200 rounded-2xl p-8;
-}
-
-.card-featured {
-  @apply bg-white rounded-2xl p-8;
-}
-
-/* Premium buttons */
-.btn-primary {
-  @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-    bg-gradient-to-r from-sfm-gold to-yellow-600 text-sfm-navy 
-    font-semibold tracking-wide hover:from-yellow-500 hover:to-sfm-gold 
-    transition-all duration-300 shadow-lg shadow-sfm-gold/25 
-    hover:shadow-xl hover:shadow-sfm-gold/40;
-}
-
-.btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-    bg-sfm-navy text-white font-semibold tracking-wide 
-    hover:bg-sfm-azure transition-all duration-300;
-}
-
-/* Custom scrollbar for premium feel */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #faf9f7; /* sfm-cream */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus states for accessibility */
-button:focus-visible,
-a:focus-visible {
-  @apply outline-none ring-2 ring-sfm-gold ring-offset-2;
-}
-
-/* Animation utilities */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes pulse-gold {
+@keyframes pulseGold {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(188, 152, 51, 0.4); /* sfm-gold */
+    box-shadow: 0 0 0 0 rgba(188, 152, 51, 0.4);
   }
   50% {
     box-shadow: 0 0 0 8px rgba(188, 152, 51, 0);
   }
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+.animate-fade-in { 
+  animation: fadeIn 0.6s ease-out forwards; 
 }
 
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out forwards;
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .animate-pulse-gold {
-  animation: pulse-gold 2s infinite;
+  animation: pulseGold 2s infinite;
 }
 
 /* Staggered animation delays */
@@ -344,8 +215,15 @@ a:focus-visible {
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
 
-/* Premium text selection using brand colors */
-::selection {
-  background: rgba(188, 152, 51, 0.2); /* sfm-gold */
-  color: #051c3b; /* sfm-navy */
+/* Reduced motion: disable animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
+
+/* High contrast mode support */
+@media (prefers-
