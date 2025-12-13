@@ -228,7 +228,7 @@ const webPageJsonLd = {
   },
   primaryImageOfPage: {
     '@type': 'ImageObject',
-    url: 'https://sankofafamilymedicine.com/images/sankofa-bird.png',
+    url: 'https://sankofafamilymedicine.com/images/sankofa-bird-new.png',
   },
   datePublished: '2025-12-11',
   dateModified: new Date().toISOString().split('T')[0],
@@ -343,7 +343,7 @@ export default function AboutPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section 
-          className="relative pt-32 pb-20 bg-sfm-navy overflow-hidden"
+          className="relative pt-40 pb-20 bg-sfm-navy overflow-hidden"
           aria-labelledby="hero-heading"
         >
           <div
@@ -466,20 +466,16 @@ export default function AboutPage() {
               </div>
 
               <div className="relative max-w-md mx-auto">
-                <div className="relative rounded-3xl bg-sfm-cream/40 backdrop-blur-sm border border-sfm-gold/30 p-4 shadow-md">
+                <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-sfm-cream to-white p-6 shadow-xl border border-sfm-gold/20">
                   <Image
-                    src="/images/sankofa-bird.png"
-                    alt="Traditional Sankofa bird sculpture, an Akan symbol representing the principle of learning from the past to build a better future, central to Sankofa Family Medicine's care philosophy"
+                    src="/images/sankofa-bird-new.png"
+                    alt="Traditional Sankofa bird sculpture carved from rich dark wood, an Akan symbol representing the principle of learning from the past to build a better future, central to Sankofa Family Medicine's care philosophy"
                     width={600}
                     height={500}
-                    className="w-full h-auto rounded-2xl object-contain"
+                    className="w-full h-auto rounded-2xl"
                     priority
                   />
                 </div>
-                <div
-                  className="absolute -bottom-4 -right-4 w-full h-full border border-sfm-gold/30 rounded-3xl -z-10"
-                  aria-hidden="true"
-                />
               </div>
             </div>
           </div>
@@ -598,7 +594,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Differentiator 1 */}
-              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-gold rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-gold rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
                 <Users
                   className="w-8 h-8 text-sfm-gold mb-4"
                   strokeWidth={1.5}
@@ -615,7 +611,7 @@ export default function AboutPage() {
               </article>
 
               {/* Differentiator 2 */}
-              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-azure rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-azure rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
                 <Zap
                   className="w-8 h-8 text-sfm-azure mb-4"
                   strokeWidth={1.5}
@@ -632,7 +628,7 @@ export default function AboutPage() {
               </article>
 
               {/* Differentiator 3 */}
-              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-navy rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <article className="bg-sfm-cream p-8 border-l-4 border-sfm-navy rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
                 <Globe
                   className="w-8 h-8 text-sfm-navy mb-4"
                   strokeWidth={1.5}
@@ -762,7 +758,7 @@ export default function AboutPage() {
               ].map((item, index) => (
                 <article
                   key={item.title}
-                  className={`bg-sfm-cream p-6 border-l-4 border-sfm-azure rounded-2xl shadow-sm transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-xl ${
+                  className={`bg-sfm-cream p-6 border-l-4 border-sfm-azure rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${
                     index === 0 ? 'lg:col-span-2' : ''
                   }`}
                 >

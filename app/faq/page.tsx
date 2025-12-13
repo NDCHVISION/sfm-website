@@ -154,7 +154,7 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-40 pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Support</p>
           <h1 className="font-display text-5xl text-sfm-navy mb-6">
@@ -183,7 +183,7 @@ export default function FAQPage() {
                   const isOpen = openItems[itemId]
 
                   return (
-                    <div key={itemId} className="bg-white border border-gray-100">
+                    <div key={itemId} className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">
                       <button
                         onClick={() => toggleItem(itemId)}
                         className="w-full flex items-center justify-between p-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-inset"

@@ -25,7 +25,7 @@ export default function Navigation() {
   const handleDropdownLeave = useCallback(() => {
     closeTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null)
-    }, 150)
+    }, 300)
   }, [])
 
   // Handle scroll for header style change
@@ -209,13 +209,15 @@ export default function Navigation() {
                 </button>
 
                 {/* Bridge element to prevent gap */}
-                <div className="absolute left-0 right-0 h-4 top-full" />
+                <div className="absolute -left-4 -right-4 h-8 top-full bg-transparent" />
 
                 {/* Mega Menu */}
                 <div
                   role="menu"
                   aria-label="Services menu"
-                  className={`absolute left-1/2 -translate-x-1/2 pt-2 mt-2 w-[720px]
+                  onMouseEnter={() => handleDropdownEnter('services')}
+                  onMouseLeave={handleDropdownLeave}
+                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[720px]
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'services' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
@@ -285,12 +287,14 @@ export default function Navigation() {
                 </button>
 
                 {/* Bridge element to prevent gap */}
-                <div className="absolute left-0 right-0 h-4 top-full" />
+                <div className="absolute -left-4 -right-4 h-8 top-full bg-transparent" />
 
                 <div
                   role="menu"
                   aria-label="About menu"
-                  className={`absolute left-1/2 -translate-x-1/2 pt-2 mt-2 w-[500px]
+                  onMouseEnter={() => handleDropdownEnter('about')}
+                  onMouseLeave={handleDropdownLeave}
+                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[500px]
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'about' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >

@@ -526,7 +526,7 @@ export default function ServicesPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section
-          className="relative pt-32 pb-20 bg-sfm-navy overflow-hidden"
+          className="relative pt-40 pb-20 bg-sfm-navy overflow-hidden"
           aria-labelledby="hero-heading"
         >
           <div

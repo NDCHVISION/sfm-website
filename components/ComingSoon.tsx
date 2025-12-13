@@ -10,7 +10,7 @@ interface ComingSoonProps {
 
 export default function ComingSoon({ title, description, icon, expectedDate }: ComingSoonProps) {
   return (
-    <div className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream/50">
+    <div className="min-h-screen pt-40 pb-16 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream/50">
       <div className="max-w-3xl mx-auto px-6 text-center">
         {/* Icon */}
         <div className="flex justify-center mb-10">

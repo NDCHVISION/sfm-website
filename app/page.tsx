@@ -152,17 +152,15 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <Image
-                src="/images/sankofa-bird.png"
-                alt="Wooden Sankofa bird sculpture symbolizing learning from the past"
-                width={600}
-                height={500}
-                className="w-full h-auto"
-              />
-              <div
-                className="absolute -bottom-4 -right-4 w-full h-full border border-sfm-gold/30 -z-10"
-                aria-hidden="true"
-              />
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-sfm-cream to-white p-6 shadow-xl border border-sfm-gold/20">
+                <Image
+                  src="/images/sankofa-bird-new.png"
+                  alt="Elegant wooden Sankofa bird sculpture on natural wood console, symbolizing the wisdom of learning from the past to build a better future"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto rounded-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -173,13 +171,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <Image
-                src="/images/sfm-about.png"
-                alt="Stethoscope and notebook on a wooden desk representing thoughtful care"
-                width={600}
-                height={500}
-                className="w-full h-auto"
-              />
+              <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                <Image
+                  src="/images/sfm-about.png"
+                  alt="Stethoscope and notebook on a wooden desk representing thoughtful care"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
 
             <div className="order-1 lg:order-2">

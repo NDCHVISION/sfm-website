@@ -12,16 +12,19 @@ export default function FounderPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-sfm-navy">
+      <section className="relative pt-40 pb-20 bg-sfm-navy">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <Image 
-            src="/images/dr-nkrumah.png" 
-            alt="Dr. Yaw Nkrumah, MD" 
-            width={192}
-            height={192}
-            className="w-48 h-48 rounded-full object-cover object-top mx-auto mb-8 border-4 border-sfm-gold/30"
-            priority
-          />
+          <div className="relative inline-block mb-8">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 blur-xl scale-110" />
+            <Image 
+              src="/images/dr-nkrumah.png" 
+              alt="Dr. Yaw Nkrumah, MD" 
+              width={192}
+              height={192}
+              className="relative w-48 h-48 rounded-full object-cover object-top border-4 border-sfm-gold/40 shadow-2xl"
+              priority
+            />
+          </div>
           <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">Founder & Medical Director</p>
           <h1 className="font-display text-5xl md:text-6xl text-white mb-4">Dr. Yaw Nkrumah, MD</h1>
           <p className="text-white/80 text-lg max-w-xl mx-auto mb-6">
@@ -99,20 +102,20 @@ export default function FounderPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur p-8 border border-white/20">
+            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl">
               <GraduationCap className="w-10 h-10 text-sfm-gold mb-4" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="font-display text-xl text-white mb-2">Medical School</h3>
               <p className="text-white/80">Medical University of South Carolina (MUSC)</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur p-8 border border-white/20">
+            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl">
               <Stethoscope className="w-10 h-10 text-sfm-gold mb-4" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="font-display text-xl text-white mb-2">Residency</h3>
               <p className="text-white/80">Kadlec Family Medicine Residency</p>
               <p className="text-white/60 text-sm mt-1">Washington State</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur p-8 border border-white/20">
+            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl">
               <FileText className="w-10 h-10 text-sfm-gold mb-4" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="font-display text-xl text-white mb-2">Licensure</h3>
               <p className="text-white/80">Licensed Physician</p>
@@ -133,7 +136,7 @@ export default function FounderPage() {
 
           <div className="space-y-8">
             {/* COVID-19 Publication */}
-            <div className="border border-gray-100 p-6 hover:border-sfm-azure/30 transition-colors">
+            <div className="border border-gray-100 p-6 rounded-xl hover:border-sfm-azure/30 transition-colors shadow-sm">
                 <p className="text-sfm-azure text-xs tracking-wide uppercase mb-2">COVID-19 Therapeutics First Author</p>
               <h3 className="font-display text-xl text-sfm-navy mb-2">
                 Treatment of COVID-19 Patients with Remdesivir: A Systematic Review and Meta-Analysis
@@ -151,7 +154,7 @@ export default function FounderPage() {
             </div>
 
             {/* Ménière Disease Publication */}
-            <div className="border border-gray-100 p-6 hover:border-sfm-azure/30 transition-colors">
+            <div className="border border-gray-100 p-6 rounded-xl hover:border-sfm-azure/30 transition-colors shadow-sm">
               <p className="text-sfm-azure text-xs tracking-wide uppercase mb-2">Ménière Disease Research</p>
               <h3 className="font-display text-xl text-sfm-navy mb-2">
                 Pathogenesis and Etiology of Ménière Disease: A Scoping Review
@@ -187,7 +190,7 @@ export default function FounderPage() {
               { icon: Wifi, title: 'Virtual Care Delivery', description: 'HIPAA-compliant telehealth that maintains human connection' },
               { icon: Globe, title: 'Culturally Grounded Medicine', description: 'Care that honors diverse backgrounds and health traditions' },
             ].map((interest) => (
-              <div key={interest.title} className="bg-white p-6 border-l-4 border-sfm-azure">
+              <div key={interest.title} className="bg-white p-6 border-l-4 border-sfm-azure rounded-xl shadow-sm">
                 <interest.icon className="w-6 h-6 text-sfm-azure mb-3" strokeWidth={1.5} aria-hidden="true" />
                 <h3 className="font-display text-lg text-sfm-navy mb-2">{interest.title}</h3>
                 <p className="text-muted text-sm">{interest.description}</p>

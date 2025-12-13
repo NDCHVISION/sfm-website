@@ -53,7 +53,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-40 pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Contact Us</p>
           <h1 className="font-display text-5xl text-sfm-navy mb-6">
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-white border border-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
                     <Mail className="w-5 h-5 text-sfm-azure" aria-hidden="true" />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-white border border-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
                     <Phone className="w-5 h-5 text-sfm-azure" aria-hidden="true" />
                   </div>
                   <div>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-white border border-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
                     <MapPin className="w-5 h-5 text-sfm-azure" aria-hidden="true" />
                   </div>
                   <div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
               </div>
 
               {/* Founding Member Reminder */}
-              <div className="mt-10 p-6 bg-sfm-navy text-white">
+              <div className="mt-10 p-6 bg-sfm-navy rounded-2xl text-white">
                 <p className="font-display text-lg mb-2">Founding Member Offer</p>
                 <p className="text-white/80 text-sm">
                   First 30 members receive Tier 3 benefits at Tier 2 pricing, locked for life.
@@ -133,10 +133,10 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white border border-gray-100 p-8 md:p-10">
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-lg">
               {isSubmitted ? (
                 <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                  <div className="w-16 h-16 border-2 border-sfm-gold flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 border-2 border-sfm-gold rounded-xl flex items-center justify-center mb-6">
                     <Send className="w-6 h-6 text-sfm-gold" aria-hidden="true" />
                   </div>
                   <h3 className="font-display text-2xl text-sfm-navy mb-4">You&apos;re On the List</h3>
