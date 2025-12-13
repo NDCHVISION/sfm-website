@@ -542,47 +542,44 @@ export default function ServicesPage() {
           {/* Billing Toggle */}
           <div className="flex flex-col items-center mb-20">
             <p className="text-sm text-gray-400 mb-5 tracking-wide font-body">Choose Your Commitment</p>
-            <div className="relative inline-flex items-center bg-gray-100 rounded-full p-1.5 shadow-inner">
-              {/* Sliding background */}
-              <div 
-                className={`absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-white rounded-full shadow-md 
-                  transition-transform duration-300 ease-out
-                  ${billingPeriod === 'annual' ? 'translate-x-[calc(100%+6px)]' : 'translate-x-0'}`}
-              />
-              
-              <button
-                onClick={() => setBillingPeriod('monthly')}
-                className={`relative z-10 px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300 font-body ${
-                  billingPeriod === 'monthly'
-                    ? 'text-sfm-navy'
-                    : 'text-gray-400 hover:text-gray-600'
-                }`}
-                aria-pressed={billingPeriod === 'monthly'}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setBillingPeriod('annual')}
-                className={`relative z-10 px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300 
-                  flex items-center gap-2 font-body ${
-                  billingPeriod === 'annual'
-                    ? 'text-sfm-navy'
-                    : 'text-gray-400 hover:text-gray-600'
-                }`}
-                aria-pressed={billingPeriod === 'annual'}
-              >
-                Annual
-                <span className="px-2.5 py-1 bg-gradient-to-r from-sfm-gold/20 to-yellow-400/20 
-                  text-sfm-gold text-xs font-semibold rounded-full tracking-wide">
-                  SAVE 10%
-                </span>
-              </button>
+
+            <div
+              className={`billing-toggle relative inline-flex items-center gap-6 bg-gray-100 rounded-full p-1.5 shadow-inner ${
+                billingPeriod === 'annual' ? 'annual-active' : ''
+              }`}
+              role="tablist"
+              aria-label="Billing period"
+            >
+              <div className="toggle-options relative z-10 inline-flex rounded-full">
+                <button
+                  onClick={() => setBillingPeriod('monthly')}
+                  className={`toggle-option px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 font-body ${
+                    billingPeriod === 'monthly' ? 'is-active text-sfm-navy' : 'text-gray-400 hover:text-gray-600'
+                  }`}
+                  aria-pressed={billingPeriod === 'monthly'}
+                >
+                  Monthly
+                </button>
+
+                <button
+                  onClick={() => setBillingPeriod('annual')}
+                  className={`toggle-option px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex items-center gap-2 font-body ${
+                    billingPeriod === 'annual' ? 'is-active text-sfm-navy' : 'text-gray-400 hover:text-gray-600'
+                  }`}
+                  aria-pressed={billingPeriod === 'annual'}
+                >
+                  Annual
+                  <span className="badge px-2.5 py-1 bg-gradient-to-r from-sfm-gold/20 to-yellow-400/20 text-sfm-gold text-xs font-semibold rounded-full tracking-wide">
+                    SAVE 10%
+                  </span>
+                </button>
+              </div>
             </div>
+
             <p className="text-xs text-gray-400 mt-4 max-w-sm text-center font-body">
-              {billingPeriod === 'monthly' 
+              {billingPeriod === 'monthly'
                 ? 'Month-to-month flexibility. Start, pause, or cancel anytime.'
-                : 'Commit to your health for the year and save 10%. Paid upfront.'
-              }
+                : 'Commit to your health for the year and save 10%. Paid upfront.'}
             </p>
           </div>
 

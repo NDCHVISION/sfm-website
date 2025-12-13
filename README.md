@@ -34,7 +34,7 @@ To get your GA4 Measurement ID:
 | `/public/images/og-image.png` | 1200x630 | Placeholder (using hero) |
 
 ### 3. Verify Contact Information
-- Email: sfm@ndchvision.com
+- Email: info@sankofafamilymedicine.com
 - Phone: (425) 285-7390
 - Formspree endpoint in `/app/contact/page.tsx`
 

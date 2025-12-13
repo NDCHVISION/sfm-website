@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FAQ | Sankofa Family Medicine„¢ | Virtual Primary Care Washington State',
+  title: 'FAQ | Sankofa Family Medicine | Virtual Primary Care Washington State',
   description:
-    'Frequently asked questions about Sankofa Family Medicine„¢, a virtual primary care practice serving patients across Washington State. Learn about membership, telehealth visits, insurance, privacy, and how to get started.',
+    'Frequently asked questions about Sankofa Family Medicine, a virtual primary care practice serving patients across Washington State. Learn about membership, telehealth visits, insurance, privacy, and how to get started.',
   keywords: [
     'virtual primary care FAQ',
     'telehealth questions',
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     'Bellevue telehealth',
   ],
   openGraph: {
-    title: 'FAQ | Sankofa Family Medicine„¢',
+    title: 'FAQ | Sankofa Family Medicine',
     description:
-      'Everything you need to know about Sankofa Family Medicine„¢, a virtual primary care clinic serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual primary care clinic serving patients across Washington State.',
     url: 'https://sankofafamilymedicine.com/faq',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ | Sankofa Family Medicine„¢',
+    title: 'FAQ | Sankofa Family Medicine',
     description:
-      'Everything you need to know about Sankofa Family Medicine„¢, a virtual primary care clinic serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual primary care clinic serving patients across Washington State.',
   },
   alternates: {
     canonical: 'https://sankofafamilymedicine.com/faq',

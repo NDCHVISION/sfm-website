@@ -227,3 +227,41 @@ body {
 
 /* High contrast mode support */
 @media (prefers-
+
+/* Billing toggle styles (pseudo-element thumb) */
+.billing-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 9999px;
+}
+.billing-toggle::before {
+  /* the sliding thumb */
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  width: calc(50% - 12px);
+  background: white;
+  border-radius: 9999px;
+  box-shadow: 0 6px 16px rgba(8, 15, 40, 0.08);
+  transition: transform 260ms cubic-bezier(.22,.9,.33,1), background-color 200ms;
+}
+.billing-toggle.annual-active::before {
+  transform: translateX(calc(100% + 12px));
+}
+
+.toggle-options { display: inline-flex; }
+.toggle-option { position: relative; z-index: 10; background: transparent; border: 0; cursor: pointer; }
+.toggle-option.is-active { color: var(--sfm-navy); }
+.toggle-option:focus-visible { outline: 2px solid rgba(5,67,110,0.12); outline-offset: 3px; border-radius: 9999px; }
+
+.badge { display: inline-block; z-index: 11; }
+
+@media (max-width: 640px) {
+  .billing-toggle { gap: 8px; padding: 6px; }
+  .billing-toggle::before { left: 6px; right: 6px; width: calc(50% - 12px); }
+}
+

@@ -94,8 +94,8 @@ export default function TermsPage() {
               If you have any questions about these Terms of Service, please contact us at:
             </p>
             <div className="mt-4 p-4 bg-white rounded-lg border border-sfm-gold/20">
-              <p><strong>Email:</strong> <a href="mailto:sfm@ndchvision.com" className="text-sfm-azure hover:text-sfm-navy">sfm@ndchvision.com</a></p>
-              <p><strong>Phone:</strong> <a href="tel:+14252857390" className="text-sfm-azure hover:text-sfm-navy">(803) 226-7795</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@sankofafamilymedicine.com" className="text-sfm-azure hover:text-sfm-navy">info@sankofafamilymedicine.com</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+14252857390" className="text-sfm-azure hover:text-sfm-navy">1 425 285-7390</a></p>
             </div>
           </section>
         </div>

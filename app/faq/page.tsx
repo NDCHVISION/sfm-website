@@ -228,8 +228,8 @@ export default function FAQPage() {
               Contact Us
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </Link>
-            <a href="mailto:sfm@ndchvision.com" className="btn-secondary">
-              Email: sfm@ndchvision.com
+            <a href="mailto:info@sankofafamilymedicine.com" className="btn-secondary">
+              Email: info@sankofamilymedicine.com
             </a>
           </div>
         </div>

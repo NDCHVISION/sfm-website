@@ -76,8 +76,8 @@ const structuredData = {
       url: 'https://sankofafamilymedicine.com',
       logo: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
       image: 'https://sankofafamilymedicine.com/images/og-image.png',
-      telephone: '+1-803-226-7795',
-      email: 'sfm@ndchvision.com',
+      telephone: '+1-425-285-7390',
+      email: 'info@sankofafamilymedicine.com',
       areaServed: {
         '@type': 'State',
         name: 'Washington',

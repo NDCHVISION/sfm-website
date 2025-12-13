@@ -25,7 +25,7 @@ export default function FounderPage() {
           <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">Founder & Medical Director</p>
           <h1 className="font-display text-5xl md:text-6xl text-white mb-4">Dr. Yaw Nkrumah, MD</h1>
           <p className="text-white/80 text-lg max-w-xl mx-auto mb-6">
-            Family Physician €¢ Washington State
+            Family Physician Washington State
           </p>
           <div className="flex items-center justify-center gap-4">
             <a 
@@ -62,8 +62,8 @@ export default function FounderPage() {
           
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              Dr. Yaw Nkrumah is a family physician, founder of Sankofa Family Medicine„¢, and Founder & CEO 
-              of The Nkrumah Doctrine Cultural Holdings (NDCH„¢), a cultural-systems and applied-AI studio.
+              Dr. Yaw Nkrumah is a family physician, founder of Sankofa Family Medicine, and Founder & CEO
+              of The Nkrumah Doctrine Cultural Holdings (NDCH), a cultural-systems and applied-AI studio.
             </p>
             <p>
               He believes great care begins with <strong className="text-sfm-navy">presence, clarity, and continuity</strong>. 
@@ -134,7 +134,7 @@ export default function FounderPage() {
           <div className="space-y-8">
             {/* COVID-19 Publication */}
             <div className="border border-gray-100 p-6 hover:border-sfm-azure/30 transition-colors">
-              <p className="text-sfm-azure text-xs tracking-wide uppercase mb-2">COVID-19 Therapeutics €¢ First Author</p>
+                <p className="text-sfm-azure text-xs tracking-wide uppercase mb-2">COVID-19 Therapeutics First Author</p>
               <h3 className="font-display text-xl text-sfm-navy mb-2">
                 Treatment of COVID-19 Patients with Remdesivir: A Systematic Review and Meta-Analysis
               </h3>

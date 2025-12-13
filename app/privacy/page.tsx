@@ -96,7 +96,7 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy or our privacy practices, please contact us at:
             </p>
             <div className="mt-4 p-4 bg-white rounded-lg border border-sfm-gold/20">
-              <p><strong>Email:</strong> <a href="mailto:appointments@sankofafamilymedicine.com" className="text-sfm-azure hover:text-sfm-navy">sfm@ndchvision.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:appointments@sankofafamilymedicine.com" className="text-sfm-azure hover:text-sfm-navy">appointments@sankofafamilymedicine.com</a></p>
               <p><strong>Phone:</strong> <a href="tel:(425) 285-7390" className="text-sfm-azure hover:text-sfm-navy">(425) 285-7390 </a></p>
             </div>
           </section>
