@@ -1,4 +1,4 @@
-﻿import ComingSoon from '@/components/ComingSoon'
+import ComingSoon from '@/components/ComingSoon'
 import { BookOpen } from 'lucide-react'
 import { Metadata } from 'next'
 

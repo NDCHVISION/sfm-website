@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/Navigation'
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Sankofa Family Medicine | Virtual Primary Care Washington',
     template: '%s | Sankofa Family Medicine'
   },
-  description: 'Premium virtual primary care in Washington State. Medicine That Remembersâ„¢: one physician who knows your history, every visit. Telehealth doctor, concierge medicine, and direct primary care.',
+  description: 'Premium virtual primary care in Washington State. Medicine That Remembers™: one physician who knows your history, every visit. Telehealth doctor, concierge medicine, and direct primary care.',
   keywords: [
     'virtual primary care Washington',
     'telehealth doctor WA',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: 'https://sankofafamilymedicine.com',
     siteName: 'Sankofa Family Medicine',
     title: 'Sankofa Family Medicine | Virtual Primary Care Washington',
-    description: 'Premium virtual primary care in Washington State. Medicine That Remembersâ„¢: one physician who knows your history, every visit.',
+    description: 'Premium virtual primary care in Washington State. Medicine That Remembers™: one physician who knows your history, every visit.',
     images: [
       {
         url: '/images/og-image.png',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sankofa Family Medicine | Virtual Primary Care Washington',
-    description: 'Premium virtual primary care in Washington State. Medicine That Remembersâ„¢',
+    description: 'Premium virtual primary care in Washington State. Medicine That Remembers™',
     images: ['/images/og-image.png'],
   },
   robots: {

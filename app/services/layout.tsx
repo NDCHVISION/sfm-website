@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Services & Pricing | Premium Virtual Primary Care',
-  description: 'Sankofa Family Medicine membership tiers and pricing. Premium virtual primary care starting at $149/month or $1,609/year. Founding members get Tier 3 (Legacy Health) benefits at Tier 2 (Precision Care) pricingâ€”locked for life. Direct primary care in Washington State.',
+  description: 'Sankofa Family Medicine membership tiers and pricing. Premium virtual primary care starting at $149/month or $1,609/year. Founding members get Tier 3 (Legacy Health) benefits at Tier 2 (Precision Care) pricing€”locked for life. Direct primary care in Washington State.',
   keywords: [
     'direct primary care Washington',
     'DPC membership pricing',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Services & Pricing | Sankofa Family Medicine',
-    description: 'Premium virtual primary care starting at $149/month. Founding members get Tier 3 benefits at Tier 2 pricingâ€”locked for life.',
+    description: 'Premium virtual primary care starting at $149/month. Founding members get Tier 3 benefits at Tier 2 pricing€”locked for life.',
     url: 'https://sankofafamilymedicine.com/services',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Services & Pricing | Sankofa Family Medicine',
-    description: 'Premium virtual primary care starting at $149/month. Founding members get Tier 3 benefits at Tier 2 pricingâ€”locked for life.',
+    description: 'Premium virtual primary care starting at $149/month. Founding members get Tier 3 benefits at Tier 2 pricing€”locked for life.',
     images: ['/images/og-services.jpg'],
   },
   alternates: {

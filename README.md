@@ -1,4 +1,4 @@
-﻿# Sankofa Family Medicine Website
+# Sankofa Family Medicine Website
 
 ## Quick Start
 

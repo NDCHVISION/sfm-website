@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -65,7 +65,7 @@ export default function Navigation() {
                 className="h-10 w-auto"
               />
               <span className="font-display text-lg text-sfm-navy hidden sm:block">
-                Sankofa Family Medicine<span className="tm text-sfm-gold">â„¢</span>
+                Sankofa Family Medicine<span className="tm text-sfm-gold">��</span>
               </span>
             </Link>
 

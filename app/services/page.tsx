@@ -1,4 +1,4 @@
-ï»¿'use client'
+'use client'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -295,7 +295,7 @@ export default function ServicesPage() {
             className={`text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body
               transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Lock in premium access, genetic testing, and direct physician cell accessâ€”all at our 
+            Lock in premium access, genetic testing, and direct physician cell access—all at our 
             mid-tier price. <span className="text-white/90 font-medium">Locked for life.</span>
           </p>
           
@@ -492,7 +492,7 @@ export default function ServicesPage() {
                         {billingPeriod === 'monthly' ? (
                           <>
                             or <span className="text-sfm-azure">${tier.annualPrice.toLocaleString()}/year</span>
-                            <span className="text-gray-300"> Â· </span>
+                            <span className="text-gray-300"> · </span>
                             save ${tier.annualSavings}
                           </>
                         ) : (
@@ -568,7 +568,7 @@ export default function ServicesPage() {
                 className="text-sfm-azure hover:text-sfm-navy text-sm underline underline-offset-4
                   decoration-sfm-azure/30 hover:decoration-sfm-navy/50 transition-colors font-body"
               >
-                View payment FAQ â†’
+                View payment FAQ ?
               </Link>
             </p>
           </footer>
@@ -780,7 +780,7 @@ export default function ServicesPage() {
             Ready to Transform<br />Your Healthcare?
           </h2>
           <p className="text-white/60 text-lg mb-12 max-w-xl mx-auto font-body">
-            Join the founding cohort and lock in Tier 3 benefits at Tier 2 pricingâ€”for life.
+            Join the founding cohort and lock in Tier 3 benefits at Tier 2 pricing—for life.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

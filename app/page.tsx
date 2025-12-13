@@ -1,11 +1,11 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Sankofa Family Medicine | Premium Virtual Primary Care in Washington State',
-  description: 'Medicine That Remembersâ„¢: Premium virtual primary care built on continuity and precision. One physician who knows your history. HIPAA-compliant telehealth for adults across Washington.',
+  description: 'Medicine That Remembers™: Premium virtual primary care built on continuity and precision. One physician who knows your history. HIPAA-compliant telehealth for adults across Washington.',
 }
 
 export default function HomePage() {
@@ -31,13 +31,13 @@ export default function HomePage() {
     {/* Text card for clarity on all screens */}
     <div className="max-w-xl bg-sfm-navy/90 border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm animate-fade-in">
       <p className="text-sfm-gold text-xs md:text-sm tracking-[0.3em] uppercase mb-4">
-        Virtual Primary Care â€¢ Washington State
+        Virtual Primary Care | Washington State
       </p>
 
       <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">
         Medicine That
         <br />
-        Remembers<span className="tm">â„¢</span>
+        Remembers<span className="tm">™</span>
       </h1>
 
       <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
