@@ -2,161 +2,206 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Heart } from 'lucide-react'
+import { Linkedin, Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
-  // Active social links
-  const activeSocialLinks = [
+  const footerLinks = {
+    services: [
+      { label: 'Membership Tiers', href: '/services' },
+      { label: 'What We Treat', href: '/services/what-we-cover' },
+      { label: 'Pricing', href: '/services#pricing' },
+    ],
+    practice: [
+      { label: 'Care Model', href: '/about' },
+      { label: 'Dr. Nkrumah', href: '/founder' },
+      { label: 'How It Works', href: '/faq' },
+      { label: 'Patient Resources', href: '/resources' },
+    ],
+    legal: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+    ],
+  }
+
+  const socialLinks = [
     {
       name: 'LinkedIn (Dr. Nkrumah)',
       href: 'https://www.linkedin.com/in/yawnkrumahmd/',
       icon: Linkedin,
-      label: 'Dr. Nkrumah on LinkedIn'
     },
     {
-      name: 'LinkedIn (SFM)',
+      name: 'LinkedIn (Practice)',
       href: 'https://www.linkedin.com/company/109183000/',
       icon: Linkedin,
-      label: 'Sankofa Family Medicine on LinkedIn'
     },
   ]
 
-  // Hidden/coming soon social links (kept in code for future use)
-  // const futureSocialLinks = [
-  //   { name: 'Facebook', href: '#', icon: Facebook },
-  //   { name: 'YouTube', href: '#', icon: Youtube },
-  //   { name: 'TikTok', href: '#', icon: null }, // Custom SVG needed
-  // ]
-
   return (
-    <footer className="bg-sfm-navy text-white" role="contentinfo">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
-          {/* Brand Section */}
-          <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">
-              <Image 
-                src="/images/sfm-logo.png" 
-                alt="Sankofa Family Medicine" 
-                width={48}
-                height={48}
-                className="h-12 w-auto brightness-0 invert"
-              />
-            </Link>
-            <p className="text-gray-300 mb-4 text-sm max-w-sm">
-              Premium virtual primary care built on memory, dignity, and relationship. 
-              HIPAA-compliant telehealth serving Washington State.
-            </p>
-            <p className="font-display text-lg text-sfm-gold italic mb-6">
-              Medicine That Remembers™
-            </p>
-            
-            {/* Social Media Icons */}
-            <div className="flex items-center gap-4">
-              <span className="text-gray-400 text-sm">Connect:</span>
-              <div className="flex gap-3">
-                {activeSocialLinks.map((social) => {
-                  const Icon = social.icon
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={social.label}
-                      className="p-2 rounded-lg bg-sfm-gold/10 text-sfm-gold hover:bg-sfm-gold hover:text-sfm-navy transition-all duration-300 transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold"
-                      aria-label={social.label}
-                    >
-                      <Icon size={20} strokeWidth={1.5} />
-                    </a>
-                  )
-                })}
+    <footer className="bg-sfm-navy" role="contentinfo">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-6 pt-20 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+          
+          {/* Brand Column */}
+          <div className="lg:col-span-5">
+            <Link href="/" className="inline-flex items-center gap-4 mb-6 group">
+              <div className="relative">
+                <Image 
+                  src="/images/sfm-logo.png" 
+                  alt="Sankofa Family Medicine" 
+                  width={64}
+                  height={64}
+                  className="h-16 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
+              <div>
+                <span className="font-display text-2xl text-white block leading-tight">
+                  Sankofa Family Medicine
+                </span>
+                <span className="text-sfm-gold text-sm font-medium tracking-wide">
+                  Medicine That Remembers™
+                </span>
+              </div>
+            </Link>
+            
+            <p className="text-gray-400 text-sm leading-relaxed max-w-md mb-8">
+              Premium virtual primary care built on memory, dignity, and the physician-patient relationship. 
+              HIPAA-compliant telehealth serving adults throughout Washington State.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-3 mb-8">
+              <a 
+                href="tel:+14252857390" 
+                className="flex items-center gap-3 text-gray-300 hover:text-sfm-gold transition-colors text-sm group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-sfm-gold/10 transition-colors">
+                  <Phone className="w-4 h-4 text-sfm-gold" />
+                </div>
+                (425) 285-7390
+              </a>
+              <a 
+                href="mailto:info@sankofafamilymedicine.com" 
+                className="flex items-center gap-3 text-gray-300 hover:text-sfm-gold transition-colors text-sm group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-sfm-gold/10 transition-colors">
+                  <Mail className="w-4 h-4 text-sfm-gold" />
+                </div>
+                info@sankofafamilymedicine.com
+              </a>
+              <div className="flex items-center gap-3 text-gray-400 text-sm">
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-sfm-gold/60" />
+                </div>
+                Serving Washington State (Virtual)
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={social.name}
+                  className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 
+                    hover:bg-sfm-gold hover:text-sfm-navy transition-all duration-300"
+                  aria-label={social.name}
+                >
+                  <social.icon size={18} strokeWidth={1.5} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Main Navigation */}
-          <div>
-            <h4 className="font-display text-lg text-sfm-gold mb-6">Main</h4>
-            <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Home</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">About SFM</Link></li>
-              <li><Link href="/founder" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Dr. Nkrumah</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Services & Pricing</Link></li>
-              <li><Link href="/faq" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">FAQ</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Contact</Link></li>
-            </ul>
-          </div>
+          {/* Links Columns */}
+          <div className="lg:col-span-7">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
+              {/* Services */}
+              <div>
+                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+                  Services
+                </h4>
+                <ul className="space-y-3">
+                  {footerLinks.services.map((link) => (
+                    <li key={link.href}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-sfm-gold transition-colors text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          {/* Coming Soon */}
-          <div>
-            <h4 className="font-display text-lg text-sfm-gold mb-6">Coming Soon</h4>
-            <ul className="space-y-3">
-              <li><Link href="/blog" className="text-gray-400 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Blog & Insights</Link></li>
-              <li><Link href="/resources" className="text-gray-400 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Patient Resources</Link></li>
-              <li><Link href="/testimonials" className="text-gray-400 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Patient Stories</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Careers</Link></li>
-              <li><Link href="/partnerships" className="text-gray-400 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Partnerships</Link></li>
-            </ul>
-          </div>
+              {/* Practice */}
+              <div>
+                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+                  Practice
+                </h4>
+                <ul className="space-y-3">
+                  {footerLinks.practice.map((link) => (
+                    <li key={link.href}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-sfm-gold transition-colors text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="font-display text-lg text-sfm-gold mb-6">Legal</h4>
-            <ul className="space-y-3">
-              <li><Link href="/privacy" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">Terms of Service</Link></li>
-              <li>
-                <a 
-                  href="https://www.linkedin.com/in/yawnkrumahmd/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-gray-300 hover:text-sfm-gold transition-colors text-sm flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded"
+              {/* Legal + CTA */}
+              <div>
+                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+                  Legal
+                </h4>
+                <ul className="space-y-3 mb-8">
+                  {footerLinks.legal.map((link) => (
+                    <li key={link.href}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-sfm-gold transition-colors text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Mini CTA */}
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-sfm-gold text-sfm-navy text-sm font-semibold rounded-lg
+                    hover:bg-sfm-gold/90 transition-all duration-300 group"
                 >
-                  Dr. Nkrumah <Linkedin size={14} />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact Info Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-t border-gray-700">
-          <div>
-            <h5 className="text-sfm-gold text-sm font-semibold mb-2">Email</h5>
-            <a href="mailto:info@sankofafamilymedicine.com" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">
-              info@sankofafamilymedicine.com
-            </a>
-          </div>
-          <div>
-            <h5 className="text-sfm-gold text-sm font-semibold mb-2">Phone</h5>
-            <a href="tel:+14252857390" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">
-              (425) 285-7390
-            </a>
-          </div>
-          <div>
-            <h5 className="text-sfm-gold text-sm font-semibold mb-2">Service Area</h5>
-            <p className="text-gray-300 text-sm">Washington State Virtual Care</p>
+                  Join Waitlist
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Legal & Copyright */}
-      <div className="border-t border-gray-700 bg-sfm-navy/50">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <p className="text-center text-gray-400 text-xs mb-4 max-w-3xl mx-auto leading-relaxed">
-            This website is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. 
-            Always seek the advice of your physician or other qualified health provider with any questions regarding a medical condition. 
-            Sankofa Family Medicine is a HIPAA-compliant virtual primary care practice. All consultations are conducted via secure telehealth.
-          </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-400 text-sm">
-            <p>© {currentYear} Sankofa Family Medicine™. All rights reserved.</p>
-            <span className="hidden md:inline text-gray-600">™</span>
-            <p className="flex items-center gap-1">
-              Built with <Heart size={14} className="text-sfm-gold" aria-hidden="true" /> <span className="sr-only">love</span> for patients
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-gray-500 text-xs">
+              © {currentYear} Sankofa Family Medicine™. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-xs text-center md:text-right max-w-xl">
+              This website is for informational purposes only and does not constitute medical advice. 
+              Always consult a qualified healthcare provider.
             </p>
           </div>
         </div>
