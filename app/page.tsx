@@ -154,8 +154,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-sfm-cream to-white p-6 shadow-xl border border-sfm-gold/20">
                 <Image
-                  src="/images/sankofa-bird-new.png"
-                  alt="Elegant wooden Sankofa bird sculpture on natural wood console, symbolizing the wisdom of learning from the past to build a better future"
+                  src="/images/sankofa-bird.png"
+                  alt="Wooden Sankofa bird sculpture symbolizing learning from the past"
                   width={600}
                   height={500}
                   className="w-full h-auto rounded-2xl"
