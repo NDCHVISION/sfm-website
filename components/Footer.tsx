@@ -134,7 +134,7 @@ export default function Footer() {
           <div>
             <h5 className="text-sfm-gold text-sm font-semibold mb-2">Phone</h5>
             <a href="tel:+14252857390" className="text-gray-300 hover:text-sfm-gold transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold rounded">
-              (803) 226-7795
+              (425) 285-7390
             </a>
           </div>
           <div>
@@ -164,3 +164,4 @@ export default function Footer() {
     </footer>
   )
 }
+

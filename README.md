@@ -1,4 +1,4 @@
-# Sankofa Family Medicine Website
+﻿# Sankofa Family Medicine Website
 
 ## Quick Start
 
@@ -35,7 +35,7 @@ To get your GA4 Measurement ID:
 
 ### 3. Verify Contact Information
 - Email: sfm@ndchvision.com
-- Phone: (803) 226-7795
+- Phone: (425) 285-7390
 - Formspree endpoint in `/app/contact/page.tsx`
 
 ---

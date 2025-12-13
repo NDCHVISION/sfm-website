@@ -84,3 +84,4 @@ export default function ComingSoon({ title, description, icon, expectedDate }: C
     </div>
   )
 }
+
