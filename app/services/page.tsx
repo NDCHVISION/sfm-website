@@ -581,7 +581,6 @@ export default function ServicesPage() {
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { value: '15+', label: 'Years of clinical excellence', sublabel: 'Family medicine expertise' },
               { value: '24hr', label: 'Maximum response time', sublabel: 'Usually much faster' },
               { value: '100%', label: 'Virtual convenience', sublabel: 'Washington State' },
             ].map((stat, index) => (
