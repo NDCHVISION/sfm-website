@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -32,13 +33,22 @@ export default function Navigation() {
     return () => document.removeEventListener('keydown', handleEscape)
   }, [isOpen])
 
-  // Main navigation items
-  const mainNavLinks = [
-    { href: '/about', label: 'About' },
-    { href: '/founder', label: 'Dr. Nkrumah' },
-    { href: '/services', label: 'Services' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/contact', label: 'Contact' },
+  // Top-level navigation tuned for clinical conversions
+  const topNav = [
+    { href: '/about', label: 'Care Model' },
+    // Services will be a controlled dropdown
+    { href: '/faq', label: 'How It Works' },
+    { href: '/founder', label: 'About' },
+    { href: '/resources', label: 'Resources' },
+  ]
+
+  const servicesMenu = [
+    { href: '/services#primary-care', label: 'Primary Care' },
+    { href: '/services#chronic-conditions', label: 'Chronic Conditions' },
+    { href: '/services#preventive-care', label: 'Preventive Care' },
+    { href: '/services#mens-health', label: "Men’s Health" },
+    { href: '/services#metabolic-health', label: 'Metabolic Health' },
+    { href: '/services#virtual-visits', label: 'Virtual Visits' },
   ]
 
   // Coming soon items (consolidated)
@@ -71,20 +81,73 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-              {mainNavLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sfm-navy hover:text-sfm-azure transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
+              <Link
+                href="/about"
+                className="text-sfm-navy hover:text-sfm-azure transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
+              >
+                Care Model
+              </Link>
+
+              {/* Services dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <button
+                  onClick={() => setServicesOpen((s) => !s)}
+                  aria-haspopup="menu"
+                  aria-expanded={servicesOpen}
+                  className="flex items-center gap-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
                 >
-                  {link.label}
-                </Link>
-              ))}
-              <Link 
-                href="/contact" 
+                  Services
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                <div
+                  role="menu"
+                  className={`absolute left-0 mt-3 w-56 bg-white border border-gray-100 rounded-lg shadow-lg py-2 transition-opacity duration-200 ${servicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                >
+                  {servicesMenu.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      role="menuitem"
+                      onClick={() => setServicesOpen(false)}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                href="/faq"
+                className="text-sfm-navy hover:text-sfm-azure transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
+              >
+                How It Works
+              </Link>
+
+              <Link
+                href="/founder"
+                className="text-sfm-navy hover:text-sfm-azure transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
+              >
+                About
+              </Link>
+
+              <Link
+                href="/resources"
+                className="text-sfm-navy hover:text-sfm-azure transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
+              >
+                Resources
+              </Link>
+
+              <Link
+                href="/contact"
                 className="btn-primary text-sm py-2 px-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-gold focus-visible:ring-offset-2"
               >
-                Join Waitlist
+                Get Started
               </Link>
             </nav>
 
@@ -132,7 +195,7 @@ export default function Navigation() {
             </button>
           </div>
           
-          <nav className="px-12 py-2" aria-label="Mobile navigation">
+            <nav className="px-12 py-2" aria-label="Mobile navigation">
             {/* Primary CTA */}
             <div className="mb-8 pb-8 border-b border-gray-100">
               <Link
@@ -156,17 +219,75 @@ export default function Navigation() {
                     Home
                   </Link>
                 </li>
-                {mainNavLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block font-display text-3xl text-sfm-navy hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+
+                <li>
+                  <Link
+                    href="/about"
+                    onClick={() => setIsOpen(false)}
+                    className="block font-display text-3xl text-sfm-navy hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+                  >
+                    Care Model
+                  </Link>
+                </li>
+
+                {/* Services expand inline on mobile */}
+                <li>
+                  <button
+                    onClick={() => setServicesOpen((s) => !s)}
+                    className="w-full flex items-center justify-between font-display text-3xl text-sfm-navy hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+                    aria-expanded={servicesOpen}
+                    aria-controls="mobile-services"
+                  >
+                    Services
+                    <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <div id="mobile-services" className={`${servicesOpen ? 'mt-6 max-h-96' : 'max-h-0'} overflow-hidden transition-all duration-300`}> 
+                    <ul className="space-y-4 pl-2">
+                      {servicesMenu.map((item) => (
+                        <li key={item.href}>
+                          <Link
+                            href={item.href}
+                            onClick={() => { setIsOpen(false); setServicesOpen(false) }}
+                            className="text-gray-500 hover:text-sfm-azure transition-colors text-sm font-medium flex items-center gap-2"
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <Link
+                    href="/faq"
+                    onClick={() => setIsOpen(false)}
+                    className="block font-display text-3xl text-sfm-navy hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+                  >
+                    How It Works
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/founder"
+                    onClick={() => setIsOpen(false)}
+                    className="block font-display text-3xl text-sfm-navy hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+                  >
+                    About
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/resources"
+                    onClick={() => setIsOpen(false)}
+                    className="block font-display text-3xl text-sfm-navy hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
+                  >
+                    Resources
+                  </Link>
+                </li>
               </ul>
             </div>
 
