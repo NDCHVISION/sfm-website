@@ -10,6 +10,15 @@ export default function Navigation() {
   const [moreOpen, setMoreOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
 
+  // Close services dropdown on Escape for keyboard users
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && servicesOpen) setServicesOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [servicesOpen])
+
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
@@ -106,7 +115,8 @@ export default function Navigation() {
 
                 <div
                   role="menu"
-                  className={`absolute left-0 mt-3 w-56 bg-white border border-gray-100 rounded-lg shadow-lg py-2 transition-opacity duration-200 ${servicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                  aria-label="Services menu"
+                  className={`nav-dropdown absolute left-0 mt-3 w-60 bg-white border border-gray-100 rounded-lg shadow-lg py-2 transition-opacity duration-200 ${servicesOpen ? 'open' : ''}`}
                 >
                   {servicesMenu.map((item) => (
                     <Link

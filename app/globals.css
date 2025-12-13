@@ -265,3 +265,26 @@ body {
   .billing-toggle::before { left: 6px; right: 6px; width: calc(50% - 12px); }
 }
 
+/* Navigation dropdown styling for an elite clinical header */
+.nav-dropdown {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 220ms cubic-bezier(.2,.9,.28,1);
+  min-width: 18rem; /* comfortable reading width */
+  z-index: 60;
+}
+.nav-dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav-dropdown a:hover { background-color: #f8fafc; }
+.nav-dropdown a:focus { outline: 2px solid rgba(5,67,110,0.12); outline-offset: 2px; }
+
+/* Slightly larger touch targets for dropdown on small screens */
+@media (max-width: 1024px) {
+  .nav-dropdown { min-width: 14rem; }
+}
+
+
