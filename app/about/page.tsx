@@ -368,7 +368,7 @@ export default function AboutPage() {
             {/* AI-Optimized Lead Paragraph - Clear, factual, extractable */}
             <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
               Sankofa Family Medicine is a virtual-first primary care clinic serving adults 
-              across Washington State. Founded by Dr. Yaw Nkrumah, we deliver{' '}
+              across Washington State. Founded by Dr. Yaw A. Nkrumah, we deliver{' '}
               <strong className="text-sfm-gold">Medicine That Remembers</strong>: care built on 
               continuity, memory, dignity, and meaningful physician-patient relationships.
             </p>
