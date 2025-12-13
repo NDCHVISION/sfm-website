@@ -97,7 +97,7 @@ export default function ServicesPage() {
     {
       name: 'Genomic Insight',
       duration: 'ONE-TIME',
-      description: "Have 23andMe or Ancestry? We'll unlock what they didn't tell you.",
+      description: "Have 23andMe or Ancestry? We will unlock what they did not tell you.",
       outcomes: ['Clinical interpretation', 'Actionable insights'],
       price: 295,
       icon: Dna,
@@ -105,115 +105,169 @@ export default function ServicesPage() {
     },
   ]
 
-  return (
-    <>
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'MedicalBusiness',
-            name: 'Sankofa Family Medicine',
-            description: 'Premium virtual direct primary care practice in Washington State offering personalized, genetics-informed healthcare.',
-            url: 'https://sankofafamilymedicine.com',
-            areaServed: {
-              '@type': 'State',
-              name: 'Washington',
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalBusiness',
+        '@id': 'https://sankofafamilymedicine.com/#organization',
+        name: 'Sankofa Family Medicine',
+        alternateName: 'Sankofa Family Medicine PLLC',
+        description: 'Premium virtual direct primary care practice serving Washington State. Offering genetics-informed, AI-powered personalized healthcare with unlimited physician access and same-day appointments.',
+        url: 'https://sankofafamilymedicine.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://sankofafamilymedicine.com/images/logo.png',
+        },
+        image: 'https://sankofafamilymedicine.com/images/og-image.jpg',
+        telephone: '+1-XXX-XXX-XXXX',
+        email: 'info@sankofafamilymedicine.com',
+        address: {
+          '@type': 'PostalAddress',
+          addressRegion: 'WA',
+          addressCountry: 'US',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 47.6062,
+          longitude: -122.3321,
+        },
+        areaServed: {
+          '@type': 'State',
+          name: 'Washington',
+          sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
+        },
+        serviceArea: {
+          '@type': 'GeoShape',
+          name: 'Washington State',
+          description: 'Virtual healthcare services available to all Washington State residents',
+        },
+        priceRange: '$149-$449/month',
+        currenciesAccepted: 'USD',
+        paymentAccepted: 'Cash, Credit Card, HSA, FSA',
+        medicalSpecialty: [
+          'Family Medicine',
+          'Primary Care',
+          'Preventive Medicine',
+          'Genetics',
+        ],
+        availableService: [
+          {
+            '@type': 'MedicalProcedure',
+            '@id': 'https://sankofafamilymedicine.com/#continuity-care',
+            name: 'Continuity Care Membership',
+            description: 'Premium virtual primary care membership with unlimited visits, 24-48 hour secure messaging, wellness visits, care coordination, and prescription management for Washington State residents.',
+            procedureType: 'https://schema.org/NoninvasiveProcedure',
+            howPerformed: 'Telemedicine video consultation',
+            preparation: 'No preparation required',
+            followup: 'Ongoing care coordination included',
+            offers: {
+              '@type': 'Offer',
+              price: '149',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: '149',
+                priceCurrency: 'USD',
+                unitText: 'month',
+                billingDuration: 'P1M',
+              },
+              availability: 'https://schema.org/InStock',
+              validFrom: '2025-01-01',
             },
-            medicalSpecialty: 'Family Medicine',
-            availableService: [
-              {
-                '@type': 'MedicalProcedure',
-                name: 'Continuity Care Membership',
-                description: 'Premium virtual primary care with unlimited visits, secure messaging, and care coordination',
-                offers: [
-                  {
-                    '@type': 'Offer',
-                    price: '149',
-                    priceCurrency: 'USD',
-                    priceSpecification: {
-                      '@type': 'UnitPriceSpecification',
-                      price: '149',
-                      priceCurrency: 'USD',
-                      billingDuration: 'P1M',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    price: '1609',
-                    priceCurrency: 'USD',
-                    priceSpecification: {
-                      '@type': 'UnitPriceSpecification',
-                      price: '1609',
-                      priceCurrency: 'USD',
-                      billingDuration: 'P1Y',
-                    },
-                  },
-                ],
+          },
+          {
+            '@type': 'MedicalProcedure',
+            '@id': 'https://sankofafamilymedicine.com/#precision-care',
+            name: 'Precision Care Membership',
+            description: 'Advanced virtual primary care with DNA panel, genetic interpretation, AI-generated health roadmap, pharmacogenomic guidance, and priority scheduling for Washington State residents.',
+            procedureType: 'https://schema.org/NoninvasiveProcedure',
+            howPerformed: 'Telemedicine video consultation with genetic testing',
+            preparation: 'DNA sample collection kit provided',
+            followup: 'Ongoing genetic counseling and AI-powered health optimization',
+            offers: {
+              '@type': 'Offer',
+              price: '249',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: '249',
+                priceCurrency: 'USD',
+                unitText: 'month',
+                billingDuration: 'P1M',
               },
-              {
-                '@type': 'MedicalProcedure',
-                name: 'Precision Care Membership',
-                description: 'Genetic insights and AI-powered care including DNA panel, genetic interpretation, and pharmacogenomic guidance',
-                offers: [
-                  {
-                    '@type': 'Offer',
-                    price: '249',
-                    priceCurrency: 'USD',
-                    priceSpecification: {
-                      '@type': 'UnitPriceSpecification',
-                      price: '249',
-                      priceCurrency: 'USD',
-                      billingDuration: 'P1M',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    price: '2689',
-                    priceCurrency: 'USD',
-                    priceSpecification: {
-                      '@type': 'UnitPriceSpecification',
-                      price: '2689',
-                      priceCurrency: 'USD',
-                      billingDuration: 'P1Y',
-                    },
-                  },
-                ],
+              availability: 'https://schema.org/LimitedAvailability',
+              validFrom: '2025-01-01',
+            },
+          },
+          {
+            '@type': 'MedicalProcedure',
+            '@id': 'https://sankofafamilymedicine.com/#legacy-health',
+            name: 'Legacy Health Membership',
+            description: 'White-glove concierge virtual care with direct physician cell access, same-day appointments, extended visit times, annual labs included, and family health planning for Washington State residents.',
+            procedureType: 'https://schema.org/NoninvasiveProcedure',
+            howPerformed: 'Telemedicine with direct physician access',
+            preparation: 'No preparation required',
+            followup: 'Unlimited direct physician communication',
+            offers: {
+              '@type': 'Offer',
+              price: '449',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: '449',
+                priceCurrency: 'USD',
+                unitText: 'month',
+                billingDuration: 'P1M',
               },
-              {
-                '@type': 'MedicalProcedure',
-                name: 'Legacy Health Membership',
-                description: 'White-glove concierge care with direct physician cell access, same-day appointments, and annual labs included',
-                offers: [
-                  {
-                    '@type': 'Offer',
-                    price: '449',
-                    priceCurrency: 'USD',
-                    priceSpecification: {
-                      '@type': 'UnitPriceSpecification',
-                      price: '449',
-                      priceCurrency: 'USD',
-                      billingDuration: 'P1M',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    price: '4849',
-                    priceCurrency: 'USD',
-                    priceSpecification: {
-                      '@type': 'UnitPriceSpecification',
-                      price: '4849',
-                      priceCurrency: 'USD',
-                      billingDuration: 'P1Y',
-                    },
-                  },
-                ],
-              },
-            ],
-            hasOfferCatalog: {
+              availability: 'https://schema.org/InStock',
+              validFrom: '2025-01-01',
+            },
+          },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Sankofa Family Medicine Healthcare Services',
+          itemListElement: [
+            {
               '@type': 'OfferCatalog',
-              name: 'Healthcare Services',
+              name: 'Membership Plans',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Continuity Care Membership',
+                    description: 'Premium virtual primary care with unlimited visits',
+                  },
+                  price: '149',
+                  priceCurrency: 'USD',
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Precision Care Membership',
+                    description: 'Genetic insights and AI-powered personalized care',
+                  },
+                  price: '249',
+                  priceCurrency: 'USD',
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Legacy Health Membership',
+                    description: 'White-glove concierge care with direct physician access',
+                  },
+                  price: '449',
+                  priceCurrency: 'USD',
+                },
+              ],
+            },
+            {
+              '@type': 'OfferCatalog',
+              name: 'Transformation Programs',
               itemListElement: [
                 {
                   '@type': 'Offer',
@@ -229,7 +283,7 @@ export default function ServicesPage() {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Weight & Metabolic Program',
+                    name: 'Weight and Metabolic Program',
                     description: '12-16 week evidence-based weight management program',
                   },
                   price: '1895',
@@ -240,20 +294,146 @@ export default function ServicesPage() {
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Genomic Insight Session',
-                    description: 'Clinical interpretation of existing genetic test results',
+                    description: 'Clinical interpretation of existing genetic test results from 23andMe or Ancestry',
                   },
                   price: '295',
                   priceCurrency: 'USD',
                 },
               ],
             },
-          }),
+          ],
+        },
+        isAcceptingNewPatients: true,
+        virtualLocation: {
+          '@type': 'VirtualLocation',
+          name: 'Sankofa Family Medicine Telehealth Platform',
+          description: 'HIPAA-compliant virtual care platform for Washington State residents',
+        },
+        knowsAbout: [
+          'Telemedicine',
+          'Virtual Primary Care',
+          'Direct Primary Care',
+          'Genetic Testing',
+          'Pharmacogenomics',
+          'Preventive Medicine',
+          'Cardiometabolic Health',
+          'Weight Management',
+          'AI-Powered Healthcare',
+        ],
+        sameAs: [
+          'https://www.linkedin.com/company/sankofa-family-medicine',
+        ],
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://sankofafamilymedicine.com/#physician',
+        name: 'Dr. Nkrumah',
+        description: 'Board-eligible family medicine physician specializing in genetics-informed virtual primary care',
+        medicalSpecialty: 'Family Medicine',
+        worksFor: {
+          '@id': 'https://sankofafamilymedicine.com/#organization',
+        },
+        availableService: [
+          'Virtual Primary Care',
+          'Genetic Consultation',
+          'Preventive Medicine',
+          'Chronic Disease Management',
+        ],
+      },
+      {
+        '@type': 'WebPage',
+        '@id': 'https://sankofafamilymedicine.com/services/#webpage',
+        url: 'https://sankofafamilymedicine.com/services',
+        name: 'Services and Pricing | Sankofa Family Medicine | Virtual Primary Care Washington State',
+        description: 'Explore membership tiers and pricing for premium virtual direct primary care in Washington State. Genetics-informed healthcare with unlimited physician access starting at $149/month.',
+        isPartOf: {
+          '@id': 'https://sankofafamilymedicine.com/#website',
+        },
+        about: {
+          '@id': 'https://sankofafamilymedicine.com/#organization',
+        },
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://sankofafamilymedicine.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Services',
+              item: 'https://sankofafamilymedicine.com/services',
+            },
+          ],
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://sankofafamilymedicine.com/#website',
+        url: 'https://sankofafamilymedicine.com',
+        name: 'Sankofa Family Medicine',
+        description: 'Premium virtual direct primary care practice in Washington State',
+        publisher: {
+          '@id': 'https://sankofafamilymedicine.com/#organization',
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://sankofafamilymedicine.com/services/#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Direct Primary Care (DPC)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Direct Primary Care is a membership-based healthcare model where patients pay a monthly fee directly to their physician for comprehensive primary care services. This eliminates insurance billing complexity and allows for longer visits, same-day access, and a stronger patient-physician relationship.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is Sankofa Family Medicine available throughout Washington State?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, Sankofa Family Medicine provides virtual primary care services to patients located anywhere in Washington State through our HIPAA-compliant telemedicine platform.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What payment methods are accepted?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'We accept credit cards, debit cards, HSA (Health Savings Account), and FSA (Flexible Spending Account) payments. We are a cash-pay practice and do not bill insurance directly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is included in the genetic testing?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Our Precision Care and Legacy Health memberships include comprehensive DNA panel testing with clinical interpretation, pharmacogenomic guidance for medication optimization, and an AI-generated personalized health roadmap.',
+            },
+          },
+        ],
+      },
+    ],
+  }
+
+  return (
+    <>
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
         }}
       />
 
       {/* Founding Member Hero */}
       <section className="relative pt-36 pb-28 bg-sfm-navy overflow-hidden">
-        {/* Ambient Background Effects - Updated with your brand colors */}
+        {/* Ambient Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(188,152,51,0.15),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(5,67,110,0.2),transparent_50%)]" />
@@ -295,7 +475,7 @@ export default function ServicesPage() {
             className={`text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body
               transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Lock in premium access, genetic testing, and direct physician cell access—all at our 
+            Lock in premium access, genetic testing, and direct physician cell access at our 
             mid-tier price. <span className="text-white/90 font-medium">Locked for life.</span>
           </p>
           
@@ -492,7 +672,7 @@ export default function ServicesPage() {
                         {billingPeriod === 'monthly' ? (
                           <>
                             or <span className="text-sfm-azure">${tier.annualPrice.toLocaleString()}/year</span>
-                            <span className="text-gray-300"> · </span>
+                            <span className="text-gray-300 mx-1">|</span>
                             save ${tier.annualSavings}
                           </>
                         ) : (
@@ -568,7 +748,7 @@ export default function ServicesPage() {
                 className="text-sfm-azure hover:text-sfm-navy text-sm underline underline-offset-4
                   decoration-sfm-azure/30 hover:decoration-sfm-navy/50 transition-colors font-body"
               >
-                View payment FAQ ?
+                View payment FAQ
               </Link>
             </p>
           </footer>
@@ -583,6 +763,7 @@ export default function ServicesPage() {
             {[
               { value: '24hr', label: 'Maximum response time', sublabel: 'Usually much faster' },
               { value: '100%', label: 'Virtual convenience', sublabel: 'Washington State' },
+              { value: '0', label: 'Insurance hassles', sublabel: 'Direct care model' },
             ].map((stat, index) => (
               <div 
                 key={stat.label}
@@ -780,7 +961,7 @@ export default function ServicesPage() {
             Ready to Transform<br />Your Healthcare?
           </h2>
           <p className="text-white/60 text-lg mb-12 max-w-xl mx-auto font-body">
-            Join the founding cohort and lock in Tier 3 benefits at Tier 2 pricing—for life.
+            Join the founding cohort and lock in Tier 3 benefits at Tier 2 pricing for life.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
