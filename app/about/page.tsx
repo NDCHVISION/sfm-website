@@ -230,7 +230,7 @@ const webPageJsonLd = {
     '@type': 'ImageObject',
     url: 'https://sankofafamilymedicine.com/images/sankofa-bird.png',
   },
-  datePublished: '2024-01-01',
+  datePublished: '2025-12-11',
   dateModified: new Date().toISOString().split('T')[0],
   inLanguage: 'en-US',
 }

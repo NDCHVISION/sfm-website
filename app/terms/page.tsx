@@ -12,7 +12,7 @@ export default function TermsPage() {
         {/* Header */}
         <div className="mb-12">
           <h1 className="font-display text-5xl text-sfm-navy mb-4">Terms of Service</h1>
-          <p className="text-muted text-lg">Last updated: December 2024</p>
+          <p className="text-muted text-lg">Last updated: December 2025</p>
         </div>
 
         {/* Content */}
