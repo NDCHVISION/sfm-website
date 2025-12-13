@@ -52,12 +52,12 @@ export default function Navigation() {
   ]
 
   const servicesMenu = [
-    { href: '/services#primary-care', label: 'Primary Care' },
-    { href: '/services#chronic-conditions', label: 'Chronic Conditions' },
-    { href: '/services#preventive-care', label: 'Preventive Care' },
-    { href: '/services#mens-health', label: "Men’s Health" },
-    { href: '/services#metabolic-health', label: 'Metabolic Health' },
-    { href: '/services#virtual-visits', label: 'Virtual Visits' },
+    { href: '/services#primary-care', label: 'Primary Care', desc: 'Continuity-first primary care with unlimited virtual access' },
+    { href: '/services#chronic-conditions', label: 'Chronic Conditions', desc: 'Evidence-based management for diabetes, hypertension, and lipids' },
+    { href: '/services#preventive-care', label: 'Preventive Care', desc: 'Annual screenings, vaccines, and personalized prevention plans' },
+    { href: '/services#mens-health', label: "Men’s Health", desc: 'Hormonal optimization, sexual health, and performance care' },
+    { href: '/services#metabolic-health', label: 'Metabolic Health', desc: 'Weight, metabolic optimization, and insulin resistance care' },
+    { href: '/services#virtual-visits', label: 'Virtual Visits', desc: 'HIPAA-compliant video visits and secure messaging' },
   ]
 
   // Coming soon items (consolidated)
@@ -116,19 +116,22 @@ export default function Navigation() {
                 <div
                   role="menu"
                   aria-label="Services menu"
-                  className={`nav-dropdown absolute left-0 mt-3 w-60 bg-white border border-gray-100 rounded-lg shadow-lg py-2 transition-opacity duration-200 ${servicesOpen ? 'open' : ''}`}
+                  className={`nav-dropdown absolute left-0 mt-3 w-72 bg-white border border-gray-100 rounded-lg shadow-lg py-3 px-2 transition-opacity duration-200 ${servicesOpen ? 'open' : ''}`}
                 >
-                  {servicesMenu.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      role="menuitem"
-                      onClick={() => setServicesOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                  <div className="services-grid">
+                    {servicesMenu.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        role="menuitem"
+                        onClick={() => setServicesOpen(false)}
+                        className="service-item block px-4 py-3 rounded hover:bg-gray-50 focus-visible:outline-none"
+                      >
+                        <div className="label text-sm font-medium text-sfm-navy">{item.label}</div>
+                        <div className="desc text-xs text-gray-500 mt-1">{item.desc}</div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
 

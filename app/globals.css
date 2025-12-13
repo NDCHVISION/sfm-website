@@ -287,4 +287,14 @@ body {
   .nav-dropdown { min-width: 14rem; }
 }
 
+.nav-dropdown .services-grid { display: grid; grid-template-columns: 1fr; gap: 4px; }
+.nav-dropdown .service-item .label { color: var(--sfm-navy); }
+.nav-dropdown .service-item .desc { color: #6b7280; }
+
+@media (min-width: 768px) {
+  .nav-dropdown { min-width: 18rem; }
+  .nav-dropdown .services-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 6px; }
+}
+
+
 
