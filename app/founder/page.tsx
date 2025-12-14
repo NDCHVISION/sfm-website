@@ -59,7 +59,7 @@ export default function FounderPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-12">
             <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Biography</p>
-            <h2 className="font-display text-4xl text-sfm-navy mb-6">About Dr. Nkrumah</h2>
+            <h2 className="font-display text-4xl text-sfm-navy mb-6">About Our Founder</h2>
             <div className="divider-gold mb-8" />
           </div>
           

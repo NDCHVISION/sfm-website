@@ -15,7 +15,7 @@ export default function Footer() {
     ],
     practice: [
       { label: 'Care Model', href: '/about' },
-      { label: 'Dr. Nkrumah', href: '/founder' },
+      { label: 'Our Founder', href: '/founder' },
       { label: 'How It Works', href: '/faq' },
       { label: 'Patient Resources', href: '/resources' },
     ],

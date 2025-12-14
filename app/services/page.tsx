@@ -1002,7 +1002,7 @@ export default function ServicesPage() {
               className="inline-flex items-center gap-2 px-8 py-5 text-white/70 hover:text-white 
                 font-medium transition-colors duration-300 font-body"
             >
-              Meet Dr. Nkrumah
+              Meet Our Founder
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
           </div>

@@ -243,7 +243,7 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/founder" className="btn-secondary-white">
-              More About Dr. Nkrumah
+              Meet Our Founder
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </Link>
             <Link href="/about" className="btn-secondary-white">

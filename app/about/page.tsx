@@ -459,7 +459,7 @@ export default function AboutPage() {
                     className="btn-secondary"
                     aria-label="Learn more about Dr. Yaw Nkrumah, founder of Sankofa Family Medicine"
                   >
-                    Meet Dr. Nkrumah
+                    Meet Our Founder
                     <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                   </Link>
                 </div>
@@ -815,7 +815,7 @@ export default function AboutPage() {
               className="btn-primary"
               aria-label="Read more about Dr. Yaw Nkrumah's background and philosophy"
             >
-              More About Dr. Nkrumah
+              Meet Our Founder
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </Link>
           </div>

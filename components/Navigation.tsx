@@ -123,7 +123,7 @@ export default function Navigation() {
     { href: '/services', label: 'Membership & Pricing' },
     { href: '/services/what-we-cover', label: 'What We Treat' },
     { href: '/about', label: 'Care Model' },
-    { href: '/founder', label: 'Meet Dr. Nkrumah' },
+    { href: '/founder', label: 'Our Founder' },
     { href: '/faq', label: 'How It Works' },
     { href: '/resources', label: 'Resources' },
   ]

@@ -582,8 +582,8 @@ export default function ServicesPage() {
                 <p className="text-sm text-white/70">Virtual via HIPAA-compliant telehealth</p>
               </div>
               <div>
-                <p className="text-3xl font-display text-white">Dr. Nkrumah</p>
-                <p className="text-sm text-white/70">Your physician for every visit</p>
+                <p className="text-3xl font-display text-white">Your Physician</p>
+                <p className="text-sm text-white/70">Dr. Nkrumah for every visit</p>
               </div>
             </div>
           </div>
