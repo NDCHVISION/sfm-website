@@ -109,8 +109,6 @@ export default function Navigation() {
           title: 'Learn More',
           items: [
             { href: '/resources', label: 'Patient Resources', desc: 'Guides & health information' },
-            { href: '/testimonials', label: 'Patient Stories', desc: 'Hear from our members' },
-            { href: '/blog', label: 'Health Insights', desc: 'Articles & updates' },
           ],
         },
       ],
@@ -129,8 +127,6 @@ export default function Navigation() {
   ]
 
   const mobileSecondary = [
-    { href: '/testimonials', label: 'Patient Stories' },
-    { href: '/blog', label: 'Blog' },
     { href: '/careers', label: 'Careers' },
     { href: '/partnerships', label: 'Partnerships' },
   ]
