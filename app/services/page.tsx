@@ -17,7 +17,7 @@ export default function ServicesPage() {
   const tiers = [
     {
       name: 'Continuity Care',
-      tagline: 'Premium virtual primary care',
+      tagline: 'Your foundation for connected care',
       monthlyPrice: 149,
       annualPrice: 1609,
       annualSavings: 179,
@@ -25,18 +25,23 @@ export default function ServicesPage() {
       gradient: 'from-sfm-azure/10 to-transparent',
       accentColor: 'sfm-azure',
       featured: false,
+      highlights: ['Next-day appointments', '48-hour messaging', '30-min visits'],
       features: [
-        'Unlimited virtual visits',
-        '24-48 hour secure messaging',
-        '2 wellness visits/year',
-        'Care coordination',
+        'Unlimited scheduled virtual visits',
+        '60-minute new patient intake',
+        '30-minute follow-up visits',
+        'Secure messaging with 48-hour response',
+        '2 comprehensive wellness visits per year',
+        'Care coordination and referrals',
         'Prescription management',
+        'Wholesale lab pricing (70-90% savings)',
       ],
-      cta: 'Join Waitlist',
+      notIncluded: ['Genetic testing', 'Direct cell access', 'Same-day appointments'],
+      cta: 'Begin Your Journey',
     },
     {
       name: 'Precision Care',
-      tagline: 'Genetic insights + AI-powered care',
+      tagline: 'Genomic insights meet personalized medicine',
       monthlyPrice: 249,
       annualPrice: 2689,
       annualSavings: 299,
@@ -44,19 +49,23 @@ export default function ServicesPage() {
       gradient: 'from-sfm-gold/10 via-sfm-gold/5 to-transparent',
       accentColor: 'sfm-gold',
       featured: true,
+      highlights: ['Priority scheduling', '24-hour messaging', 'DNA panel included'],
       features: [
         'Everything in Continuity Care',
-        'DNA Panel included',
-        'Genetic interpretation',
-        'AI-generated health roadmap',
-        'Pharmacogenomic guidance',
-        'Priority scheduling',
+        'Comprehensive DNA panel included ($400 value)',
+        'Physician-led genetic interpretation session',
+        'Pharmacogenomic medication guidance',
+        'AI-generated personalized health roadmap',
+        '24-hour secure message response',
+        'Priority scheduling for all appointments',
+        'Follow-up visits up to 45 minutes',
       ],
-      cta: 'Claim Founding Spot',
+      notIncluded: ['Direct cell access', 'Same-day guaranteed'],
+      cta: 'Unlock Precision Care',
     },
     {
-      name: 'Legacy Health',
-      tagline: 'White-glove concierge care',
+      name: 'Concierge Care',
+      tagline: 'The pinnacle of personalized medicine',
       monthlyPrice: 449,
       annualPrice: 4849,
       annualSavings: 539,
@@ -64,15 +73,19 @@ export default function ServicesPage() {
       gradient: 'from-sfm-navy/10 to-transparent',
       accentColor: 'sfm-navy',
       featured: false,
+      highlights: ['Direct physician cell', 'Same-day appointments', '60-min visits'],
       features: [
         'Everything in Precision Care',
-        'Direct physician cell access',
-        'Same-day appointments',
-        'Extended visit times',
-        'Annual labs included',
-        'Family health planning',
+        'Direct physician cell phone access',
+        'Same-day appointment guarantee',
+        'Same-day message response',
+        'Extended visits up to 60 minutes',
+        '4 comprehensive wellness visits per year',
+        'Family health planning consultations',
+        'After-hours availability for urgent concerns',
       ],
-      cta: 'Join Waitlist',
+      notIncluded: [],
+      cta: 'Experience Concierge',
     },
   ]
 
@@ -203,9 +216,9 @@ export default function ServicesPage() {
           },
           {
             '@type': 'MedicalProcedure',
-            '@id': 'https://sankofafamilymedicine.com/#legacy-health',
-            name: 'Legacy Health Membership',
-            description: 'White-glove concierge virtual care with direct physician cell access, same-day appointments, extended visit times, annual labs included, and family health planning for Washington State residents.',
+            '@id': 'https://sankofafamilymedicine.com/#concierge-care',
+            name: 'Concierge Care Membership',
+            description: 'The pinnacle of personalized medicine with direct physician cell access, same-day appointments, extended 60-minute visits, 4 wellness visits per year, and family health planning for Washington State residents.',
             procedureType: 'https://schema.org/NoninvasiveProcedure',
             howPerformed: 'Telemedicine with direct physician access',
             preparation: 'No preparation required',
@@ -258,8 +271,8 @@ export default function ServicesPage() {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Legacy Health Membership',
-                    description: 'White-glove concierge care with direct physician access',
+                    name: 'Concierge Care Membership',
+                    description: 'The pinnacle of personalized medicine with direct physician access',
                   },
                   price: '449',
                   priceCurrency: 'USD',
@@ -414,7 +427,7 @@ export default function ServicesPage() {
             name: 'What is included in the genetic testing?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Our Precision Care and Legacy Health memberships include comprehensive DNA panel testing with clinical interpretation, pharmacogenomic guidance for medication optimization, and an AI-generated personalized health roadmap.',
+              text: 'Our Precision Care and Concierge Care memberships include comprehensive DNA panel testing with clinical interpretation, pharmacogenomic guidance for medication optimization, and an AI-generated personalized health roadmap.',
             },
           },
         ],
@@ -468,7 +481,7 @@ export default function ServicesPage() {
           >
             First 30 Members Get<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sfm-gold via-yellow-500 to-sfm-gold">
-              Tier 3 Benefits at Tier 2 Pricing
+              Concierge Benefits at Precision Pricing
             </span>
           </h1>
           
@@ -476,8 +489,8 @@ export default function ServicesPage() {
             className={`text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body
               transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Lock in premium access, genetic testing, and direct physician cell access at our 
-            mid-tier price. <span className="text-white/90 font-medium">Locked for life.</span>
+            Direct cell access, same-day appointments, and 4 wellness visits per year at $249/month.
+            <span className="text-white/90 font-medium"> Protected for as long as you remain a member.</span>
           </p>
           
           <div 
@@ -545,8 +558,8 @@ export default function ServicesPage() {
               Choose Your Level of Care
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed font-body">
-              Every tier includes unlimited virtual access to Dr. Nkrumah. 
-              Choose the depth of precision medicine that fits your health journey.
+              Every tier includes unlimited scheduled visits with Dr. Nkrumah. 
+              The difference is how fast you can be seen and what is included.
             </p>
           </header>
 
