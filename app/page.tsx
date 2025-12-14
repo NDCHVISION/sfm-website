@@ -236,7 +236,7 @@ export default function HomePage() {
           <blockquote className="font-display text-2xl md:text-3xl text-white italic leading-relaxed mb-6">
             &quot;I built Sankofa Family Medicine to provide the kind of care I would want for my own family:
             care that remembers your history, respects your time, and stays with you across the years. Many
-            clinicians share these values; this practice gives us the structure and time to honor them.&quot;
+            physicians share these values; this practice gives us the structure and time to honor them.&quot;
           </blockquote>
           <p className="text-sfm-gold font-medium">Dr. Yaw Nkrumah, MD</p>
           <p className="text-white/70 text-sm mt-1">Founder &amp; Medical Director</p>
