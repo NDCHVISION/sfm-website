@@ -162,18 +162,8 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo - Enlarged */}
-            <Link href="/" className="flex items-center gap-4 group">
-              <div className="relative">
-                <Image 
-                  src="/images/sfm-logo.png" 
-                  alt="Sankofa Family Medicine" 
-                  width={56}
-                  height={56}
-                  className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
-                  priority
-                />
-              </div>
-              <div className="hidden sm:block">
+            <Link href="/" className="flex items-center group">
+              <div>
                 <span className="font-display text-xl lg:text-2xl text-sfm-navy block leading-tight">
                   Sankofa Family Medicine
                 </span>

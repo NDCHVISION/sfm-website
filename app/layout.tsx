@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     description: 'Premium virtual primary care in Washington State. Medicine That Remembers™: one physician who knows your history, every visit.',
     images: [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/images/sfm-logo.png',
+        width: 800,
+        height: 800,
         alt: 'Sankofa Family Medicine - Medicine That Remembers',
       },
     ],
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sankofa Family Medicine | Virtual Primary Care Washington',
     description: 'Premium virtual primary care in Washington State. Medicine That Remembers™',
-    images: ['/images/og-image.png'],
+    images: ['/images/sfm-logo.png'],
   },
   robots: {
     index: true,
