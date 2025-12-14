@@ -754,7 +754,7 @@ export default function ServicesPage() {
                   across all touchpoints.
                 </p>
                 <Link
-                  href="/membership"
+                  href="/services"
                   className="inline-flex items-center gap-2 text-sfm-gold hover:text-white transition-colors group"
                 >
                   <span>Learn about membership benefits</span>
@@ -933,7 +933,7 @@ export default function ServicesPage() {
                 Request Early Access
                 <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
               </Link>
-              <Link href="/membership" className="btn-secondary">
+              <Link href="/services" className="btn-secondary">
                 View Membership Options
               </Link>
             </div>
