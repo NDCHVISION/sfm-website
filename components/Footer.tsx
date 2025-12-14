@@ -46,23 +46,25 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="lg:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-4 mb-6 group">
-              <div className="relative">
-                <Image 
-                  src="/images/sfm-logo.png" 
-                  alt="Sankofa Family Medicine" 
-                  width={64}
-                  height={64}
-                  className="h-16 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div>
-                <span className="font-display text-2xl text-white block leading-tight">
-                  Sankofa Family Medicine
-                </span>
-                <span className="text-sfm-gold text-sm font-medium tracking-wide">
-                  Medicine That Remembers™
-                </span>
+            <Link href="/" className="inline-block mb-6 group">
+              <div className="flex items-center gap-4">
+                <div className="relative">
+                  <Image 
+                    src="/images/sfm-logo.png" 
+                    alt="Sankofa Family Medicine" 
+                    width={64}
+                    height={64}
+                    className="h-16 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-display text-3xl lg:text-4xl text-white leading-none tracking-tight">
+                    Sankofa Family Medicine
+                  </span>
+                  <span className="text-sfm-gold text-sm font-medium tracking-widest uppercase mt-1">
+                    Medicine That Remembers™
+                  </span>
+                </div>
               </div>
             </Link>
             

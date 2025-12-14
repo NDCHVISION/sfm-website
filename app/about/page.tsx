@@ -404,8 +404,8 @@ export default function AboutPage() {
                 <p className="text-4xl font-display text-sfm-gold mb-2">100%</p>
                 <p className="text-sm text-white/70">Virtual primary care via telehealth</p>
               </div>
-              <div>
-                <p className="text-3xl font-display text-white">0</p>
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <p className="text-4xl font-display text-sfm-gold mb-2">0</p>
                 <p className="text-sm text-white/70">Insurance billing (transparent direct pay)</p>
               </div>
             </div>
