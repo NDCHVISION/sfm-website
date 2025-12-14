@@ -5,8 +5,8 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import MobileCTA from '@/components/MobileCTA'
 
-// Replace with your actual Google Analytics Measurement ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'
+// Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = 'G-V9M27XXYYB'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sankofafamilymedicine.com'),
