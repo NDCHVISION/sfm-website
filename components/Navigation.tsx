@@ -160,16 +160,18 @@ export default function Navigation() {
 
         {/* Main navigation */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Logo - Enlarged */}
-            <Link href="/" className="flex items-center group">
-              <div>
-                <span className="font-display text-xl lg:text-2xl text-sfm-navy block leading-tight">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Brand */}
+            <Link href="/" className="flex items-center group relative">
+              <div className="relative py-2">
+                <span className="font-display text-lg sm:text-xl lg:text-2xl text-sfm-navy block leading-tight group-hover:text-sfm-azure transition-colors duration-200">
                   Sankofa Family Medicine
                 </span>
-                <span className="text-xs lg:text-sm text-sfm-gold font-medium tracking-wide">
+                <span className="text-[10px] sm:text-xs lg:text-sm text-sfm-gold font-medium tracking-wider uppercase">
                   Medicine That Remembers™
                 </span>
+                {/* Subtle underline on hover */}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-sfm-gold to-sfm-azure group-hover:w-full transition-all duration-300" />
               </div>
             </Link>
 
@@ -185,13 +187,14 @@ export default function Navigation() {
                   onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
                   aria-haspopup="menu"
                   aria-expanded={activeDropdown === 'services'}
-                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200
+                  className={`relative flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
                     ${activeDropdown === 'services' 
-                      ? 'bg-sfm-cream text-sfm-azure' 
-                      : 'text-sfm-navy hover:bg-sfm-cream/50'}`}
+                      ? 'text-sfm-azure' 
+                      : 'text-sfm-navy hover:text-sfm-azure'}`}
                 >
                   Services
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-sfm-azure transition-all duration-200 ${activeDropdown === 'services' ? 'w-3/4' : 'w-0'}`} />
                 </button>
 
                 {/* Bridge element to prevent gap */}
@@ -263,13 +266,14 @@ export default function Navigation() {
                   onClick={() => setActiveDropdown(activeDropdown === 'about' ? null : 'about')}
                   aria-haspopup="menu"
                   aria-expanded={activeDropdown === 'about'}
-                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200
+                  className={`relative flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
                     ${activeDropdown === 'about' 
-                      ? 'bg-sfm-cream text-sfm-azure' 
-                      : 'text-sfm-navy hover:bg-sfm-cream/50'}`}
+                      ? 'text-sfm-azure' 
+                      : 'text-sfm-navy hover:text-sfm-azure'}`}
                 >
                   About
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-sfm-azure transition-all duration-200 ${activeDropdown === 'about' ? 'w-3/4' : 'w-0'}`} />
                 </button>
 
                 {/* Bridge element to prevent gap */}
@@ -318,24 +322,26 @@ export default function Navigation() {
               {/* Direct Links */}
               <Link
                 href="/faq"
-                className="px-4 py-2.5 text-sm font-medium text-sfm-navy hover:bg-sfm-cream/50 rounded-lg transition-all duration-200"
+                className="relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200 group"
               >
                 How It Works
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-sfm-azure group-hover:w-3/4 transition-all duration-200" />
               </Link>
 
               <Link
                 href="/contact"
-                className="px-4 py-2.5 text-sm font-medium text-sfm-navy hover:bg-sfm-cream/50 rounded-lg transition-all duration-200"
+                className="relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200 group"
               >
                 Contact
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-sfm-azure group-hover:w-3/4 transition-all duration-200" />
               </Link>
 
               {/* Primary CTA */}
               <Link
                 href="/contact"
-                className="ml-4 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sfm-gold to-amber-500 
-                  text-sfm-navy text-sm font-semibold rounded-xl shadow-lg shadow-sfm-gold/25
-                  hover:shadow-xl hover:shadow-sfm-gold/30 hover:scale-[1.02] transition-all duration-300"
+                className="ml-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sfm-gold via-amber-400 to-sfm-gold bg-[length:200%_100%] 
+                  text-sfm-navy text-sm font-bold rounded-full shadow-md shadow-sfm-gold/20
+                  hover:bg-[position:100%_0] hover:shadow-lg hover:shadow-sfm-gold/30 transition-all duration-500"
               >
                 Join Waitlist
                 <ArrowRight className="w-4 h-4" />
