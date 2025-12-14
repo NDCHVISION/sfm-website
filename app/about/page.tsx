@@ -343,9 +343,13 @@ export default function AboutPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section 
-          className="relative pt-40 pb-20 bg-sfm-navy overflow-hidden"
+          className="relative pt-40 pb-24 bg-sfm-navy overflow-hidden"
           aria-labelledby="hero-heading"
         >
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-sfm-azure/20 rounded-full blur-3xl" />
+          
           <div
             className="pointer-events-none absolute inset-0 opacity-60"
             aria-hidden="true"
@@ -354,16 +358,16 @@ export default function AboutPage() {
           </div>
 
           <div className="max-w-5xl mx-auto px-6 text-center relative">
-            <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">
+            <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6 font-medium">
               About Sankofa Family Medicine
             </p>
             <h1 
               id="hero-heading"
-              className="font-display text-5xl md:text-6xl text-white mb-6"
+              className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-8 leading-[1.1]"
             >
               Virtual Primary Care in Washington State
             </h1>
-            <div className="divider-gold mx-auto mb-8" aria-hidden="true" />
+            <div className="divider-gold mx-auto mb-10" aria-hidden="true" />
             
             {/* AI-Optimized Lead Paragraph - Clear, factual, extractable */}
             <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
@@ -374,30 +378,30 @@ export default function AboutPage() {
             </p>
 
             {/* Trust Signals */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold" aria-hidden="true" />
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
+                <span className="w-2 h-2 rounded-full bg-sfm-gold" aria-hidden="true" />
                 Medicine That Remembers
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
                 HIPAA-Compliant Telehealth
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
                 Adults 18+ in Washington State
               </span>
             </div>
 
             {/* Key Stats - Clear data points for AI extraction */}
             <div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left sm:text-center"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center"
               aria-label="Key statistics"
             >
-              <div>
-                <p className="text-3xl font-display text-white">1</p>
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <p className="text-4xl font-display text-sfm-gold mb-2">1</p>
                 <p className="text-sm text-white/70">Physician for your entire care journey</p>
               </div>
-              <div>
-                <p className="text-3xl font-display text-white">100%</p>
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <p className="text-4xl font-display text-sfm-gold mb-2">100%</p>
                 <p className="text-sm text-white/70">Virtual primary care via telehealth</p>
               </div>
               <div>
@@ -410,11 +414,14 @@ export default function AboutPage() {
 
         {/* The Sankofa Principle - Educational Content for AI */}
         <section 
-          className="py-24 bg-white"
+          className="py-28 bg-white relative overflow-hidden"
           aria-labelledby="sankofa-principle-heading"
         >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Decorative element */}
+          <div className="absolute top-1/2 right-0 w-96 h-96 bg-sfm-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          
+          <div className="max-w-6xl mx-auto px-6 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
                 <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">
                   The Foundation
@@ -823,17 +830,17 @@ export default function AboutPage() {
 
         {/* Final CTA */}
         <section 
-          className="py-24 bg-white"
+          className="py-28 bg-gradient-to-b from-white to-sfm-cream/50"
           aria-labelledby="cta-heading"
         >
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 
               id="cta-heading"
-              className="font-display text-4xl text-sfm-navy mb-4"
+              className="font-display text-4xl md:text-5xl text-sfm-navy mb-6 leading-tight"
             >
               Ready to Experience Care That Remembers?
             </h2>
-            <p className="text-muted text-lg mb-10">
+            <p className="text-muted text-lg md:text-xl mb-12">
               Join our founding member waitlist for priority enrollment into virtual
               primary care at Sankofa Family Medicine. Now accepting adults across 
               Washington State.

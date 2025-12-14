@@ -154,14 +154,14 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-16 bg-white">
+      <section className="pt-40 pb-20 bg-gradient-to-b from-white to-sfm-cream/30">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Support</p>
-          <h1 className="font-display text-5xl text-sfm-navy mb-6">
+          <p className="text-sfm-azure text-sm tracking-[0.25em] uppercase mb-4 font-medium">Support</p>
+          <h1 className="font-display text-5xl md:text-6xl text-sfm-navy mb-8 leading-[1.1]">
             Frequently Asked Questions
           </h1>
-          <div className="divider-gold mx-auto mb-8" />
-          <p className="text-muted text-lg max-w-2xl mx-auto">
+          <div className="divider-gold mx-auto mb-10" />
+          <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto">
             Everything you need to know about Sankofa Family Medicine, from payment to virtual care to getting started.
           </p>
         </div>
@@ -177,20 +177,20 @@ export default function FAQPage() {
                 <h2 className="font-display text-2xl text-sfm-navy">{section.title}</h2>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {section.items.map((item, itemIndex) => {
                   const itemId = `${sectionIndex}-${itemIndex}`
                   const isOpen = openItems[itemId]
 
                   return (
-                    <div key={itemId} className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">
+                    <div key={itemId} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                       <button
                         onClick={() => toggleItem(itemId)}
-                        className="w-full flex items-center justify-between p-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-inset"
+                        className="w-full flex items-center justify-between p-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-inset"
                         aria-expanded={isOpen}
                         aria-controls={`faq-answer-${itemId}`}
                       >
-                        <span className="font-medium text-sfm-navy pr-4">{item.question}</span>
+                        <span className="font-medium text-sfm-navy pr-4 text-lg">{item.question}</span>
                         <ChevronDown 
                           className={`w-5 h-5 text-sfm-azure flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                           aria-hidden="true"
@@ -202,7 +202,7 @@ export default function FAQPage() {
                         role="region"
                         aria-labelledby={`faq-question-${itemId}`}
                       >
-                        <div className="px-5 pb-5 text-muted leading-relaxed">
+                        <div className="px-6 pb-6 text-muted leading-relaxed">
                           {item.answer}
                         </div>
                       </div>
@@ -216,12 +216,14 @@ export default function FAQPage() {
       </section>
 
       {/* Still Have Questions */}
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <HelpCircle className="w-12 h-12 text-sfm-azure mx-auto mb-6" strokeWidth={1.5} aria-hidden="true" />
-          <h2 className="font-display text-3xl text-sfm-navy mb-4">Still Have Questions?</h2>
-          <p className="text-muted mb-8 max-w-xl mx-auto">
-            We&apos;re happy to answer any questions not covered here. Reach out and we&apos;ll respond within one business day.
+          <div className="w-20 h-20 rounded-2xl bg-sfm-azure/10 flex items-center justify-center mx-auto mb-8">
+            <HelpCircle className="w-10 h-10 text-sfm-azure" strokeWidth={1.5} aria-hidden="true" />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">Still Have Questions?</h2>
+          <p className="text-muted text-lg mb-10 max-w-xl mx-auto">
+            We're happy to answer any questions not covered here. Reach out and we'll respond within one business day.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="btn-primary">
@@ -236,12 +238,16 @@ export default function FAQPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-sfm-navy">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-display text-4xl text-white mb-6">
+      <section className="py-28 bg-sfm-navy relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative">
+          <h2 className="font-display text-4xl md:text-5xl text-white mb-8 leading-tight">
             Ready to Get Started?
           </h2>
-          <p className="text-white/70 text-lg mb-10">
+          <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
             Join the founding member waitlist and experience care that remembers.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

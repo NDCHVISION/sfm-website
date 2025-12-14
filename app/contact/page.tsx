@@ -53,14 +53,14 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-16 bg-white">
+      <section className="pt-40 pb-20 bg-gradient-to-b from-white to-sfm-cream/30">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Contact Us</p>
-          <h1 className="font-display text-5xl text-sfm-navy mb-6">
+          <p className="text-sfm-azure text-sm tracking-[0.25em] uppercase mb-4 font-medium">Contact Us</p>
+          <h1 className="font-display text-5xl md:text-6xl text-sfm-navy mb-8 leading-[1.1]">
             Join the Waitlist
           </h1>
-          <div className="divider-gold mx-auto mb-8" />
-          <p className="text-muted text-lg max-w-2xl mx-auto">
+          <div className="divider-gold mx-auto mb-10" />
+          <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto">
             Interested in becoming a founding member? Have questions about our services? 
             We respond within one business day.
           </p>
@@ -74,13 +74,13 @@ export default function ContactPage() {
             
             {/* Contact Info */}
             <div>
-              <h2 className="font-display text-2xl text-sfm-navy mb-6">Get In Touch</h2>
-              <p className="text-muted leading-relaxed mb-10">
+              <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mb-6">Get In Touch</h2>
+              <p className="text-muted leading-relaxed mb-12 text-lg">
                 Ready to experience primary care that remembers? Reach out to learn more 
                 about membership, programs, or partnership opportunities.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-white border border-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
                     <Mail className="w-5 h-5 text-sfm-azure" aria-hidden="true" />

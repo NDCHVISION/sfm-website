@@ -526,9 +526,13 @@ export default function ServicesPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section
-          className="relative pt-40 pb-20 bg-sfm-navy overflow-hidden"
+          className="relative pt-40 pb-24 bg-sfm-navy overflow-hidden"
           aria-labelledby="hero-heading"
         >
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-sfm-azure/20 rounded-full blur-3xl" />
+          
           <div
             className="pointer-events-none absolute inset-0 opacity-60"
             aria-hidden="true"
@@ -537,16 +541,16 @@ export default function ServicesPage() {
           </div>
 
           <div className="max-w-5xl mx-auto px-6 text-center relative">
-            <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">
+            <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6 font-medium">
               Scope of Care
             </p>
             <h1
               id="hero-heading"
-              className="font-display text-5xl md:text-6xl text-white mb-6"
+              className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-8 leading-[1.1]"
             >
               Comprehensive Virtual Primary Care
             </h1>
-            <div className="divider-gold mx-auto mb-8" aria-hidden="true" />
+            <div className="divider-gold mx-auto mb-10" aria-hidden="true" />
 
             <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
               Physician-led family medicine delivered through secure telemedicine.
@@ -555,34 +559,34 @@ export default function ServicesPage() {
             </p>
 
             {/* Trust Signals */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold" aria-hidden="true" />
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
+                <span className="w-2 h-2 rounded-full bg-sfm-gold" aria-hidden="true" />
                 18+ Clinical Categories
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
                 100+ Conditions Treated
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
                 1 Physician Relationship
               </span>
             </div>
 
             {/* Key Stats */}
             <div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left sm:text-center"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center"
               aria-label="Key statistics"
             >
-              <div>
-                <p className="text-3xl font-display text-white">Same Day</p>
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <p className="text-4xl font-display text-sfm-gold mb-2">Same Day</p>
                 <p className="text-sm text-white/70">Acute care appointments available</p>
               </div>
-              <div>
-                <p className="text-3xl font-display text-white">100%</p>
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <p className="text-4xl font-display text-sfm-gold mb-2">100%</p>
                 <p className="text-sm text-white/70">Virtual via HIPAA-compliant telehealth</p>
               </div>
-              <div>
-                <p className="text-3xl font-display text-white">Your Physician</p>
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <p className="text-4xl font-display text-sfm-gold mb-2">Your Physician</p>
                 <p className="text-sm text-white/70">Dr. Nkrumah for every visit</p>
               </div>
             </div>
@@ -590,9 +594,9 @@ export default function ServicesPage() {
         </section>
 
         {/* Introduction */}
-        <section className="py-16 bg-white" aria-labelledby="intro-heading">
+        <section className="py-20 bg-white" aria-labelledby="intro-heading">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <p className="text-muted text-lg leading-relaxed">
+            <p className="text-muted text-lg md:text-xl leading-relaxed">
               Sankofa Family Medicine provides comprehensive, virtual-first primary care
               across the majority of conditions traditionally managed in family medicine.
               Our approach combines clinical excellence with the convenience of telemedicine,

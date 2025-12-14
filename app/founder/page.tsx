@@ -12,23 +12,27 @@ export default function FounderPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-20 bg-sfm-navy">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 blur-xl scale-110" />
+      <section className="relative pt-40 pb-24 bg-sfm-navy overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-3xl" />
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative">
+          <div className="relative inline-block mb-10">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/40 to-sfm-gold/10 blur-2xl scale-125" />
             <Image 
               src="/images/dr-nkrumah.png" 
               alt="Dr. Yaw Nkrumah, MD" 
-              width={192}
-              height={192}
-              className="relative w-48 h-48 rounded-full object-cover object-top border-4 border-sfm-gold/40 shadow-2xl"
+              width={208}
+              height={208}
+              className="relative w-52 h-52 rounded-full object-cover object-top border-4 border-sfm-gold/40 shadow-2xl"
               priority
             />
           </div>
-          <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">Founder & Medical Director</p>
-          <h1 className="font-display text-5xl md:text-6xl text-white mb-4">Dr. Yaw Nkrumah, MD</h1>
-          <p className="text-white/80 text-lg max-w-xl mx-auto mb-6">
-            Family Physician Washington State
+          <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Founder & Medical Director</p>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Dr. Yaw Nkrumah, MD</h1>
+          <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-8">
+            Family Physician | Washington State
           </p>
           <div className="flex items-center justify-center gap-4">
             <a 
@@ -45,9 +49,12 @@ export default function FounderPage() {
       </section>
 
       {/* Philosophy Quote */}
-      <section className="py-16 bg-sfm-cream">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <blockquote className="font-display text-2xl md:text-3xl text-sfm-navy italic leading-relaxed">
+      <section className="py-20 bg-sfm-cream relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-sfm-gold/20" />
+        <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-sfm-gold/20" />
+        
+        <div className="max-w-3xl mx-auto px-6 text-center relative">
+          <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-sfm-navy italic leading-relaxed">
             &quot;Care improves when we take the time to listen, document with intention, and follow through 
             with consistency. Memory is the foundation of trust.&quot;
           </blockquote>
@@ -55,12 +62,12 @@ export default function FounderPage() {
       </section>
 
       {/* Biography */}
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Biography</p>
-            <h2 className="font-display text-4xl text-sfm-navy mb-6">About Our Founder</h2>
-            <div className="divider-gold mb-8" />
+            <p className="text-sfm-azure text-sm tracking-[0.25em] uppercase mb-4 font-medium">Biography</p>
+            <h2 className="font-display text-4xl md:text-5xl text-sfm-navy mb-6">About Our Founder</h2>
+            <div className="divider-gold mb-10" />
           </div>
           
           <div className="space-y-6 text-muted leading-relaxed">
@@ -94,32 +101,36 @@ export default function FounderPage() {
       </section>
 
       {/* Training & Credentials */}
-      <section className="py-24 bg-sfm-navy">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-28 bg-sfm-navy relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
+        
+        <div className="max-w-6xl mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase mb-4">Training & Credentials</p>
-            <h2 className="font-display text-4xl text-white mb-4">Education & Licensure</h2>
+            <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Training & Credentials</p>
+            <h2 className="font-display text-4xl md:text-5xl text-white mb-6">Education & Licensure</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl">
-              <GraduationCap className="w-10 h-10 text-sfm-gold mb-4" strokeWidth={1.5} aria-hidden="true" />
-              <h3 className="font-display text-xl text-white mb-2">Medical School</h3>
+            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <GraduationCap className="w-10 h-10 text-sfm-gold mb-6" strokeWidth={1.5} aria-hidden="true" />
+              <h3 className="font-display text-xl text-white mb-3">Medical School</h3>
               <p className="text-white/80">Medical University of South Carolina (MUSC)</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl">
-              <Stethoscope className="w-10 h-10 text-sfm-gold mb-4" strokeWidth={1.5} aria-hidden="true" />
-              <h3 className="font-display text-xl text-white mb-2">Residency</h3>
+            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <Stethoscope className="w-10 h-10 text-sfm-gold mb-6" strokeWidth={1.5} aria-hidden="true" />
+              <h3 className="font-display text-xl text-white mb-3">Residency</h3>
               <p className="text-white/80">Kadlec Family Medicine Residency</p>
-              <p className="text-white/60 text-sm mt-1">Washington State</p>
+              <p className="text-white/50 text-sm mt-2">Washington State</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl">
-              <FileText className="w-10 h-10 text-sfm-gold mb-4" strokeWidth={1.5} aria-hidden="true" />
-              <h3 className="font-display text-xl text-white mb-2">Licensure</h3>
+            <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <FileText className="w-10 h-10 text-sfm-gold mb-6" strokeWidth={1.5} aria-hidden="true" />
+              <h3 className="font-display text-xl text-white mb-3">Licensure</h3>
               <p className="text-white/80">Licensed Physician</p>
-              <p className="text-white/60 text-sm mt-1">Washington State</p>
+              <p className="text-white/50 text-sm mt-2">Washington State</p>
             </div>
           </div>
         </div>
@@ -234,12 +245,16 @@ export default function FounderPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-sfm-navy">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-display text-4xl text-white mb-6">
+      <section className="py-28 bg-sfm-navy relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative">
+          <h2 className="font-display text-4xl md:text-5xl text-white mb-8 leading-tight">
             Ready to Experience Care That Remembers?
           </h2>
-          <p className="text-white/70 text-lg mb-10">
+          <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
             Join the founding member waitlist and become one of the first patients of Sankofa Family Medicine.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
