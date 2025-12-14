@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Dr. Yaw Nkrumah, MD' }],
   creator: 'Sankofa Family Medicine',
   publisher: 'Sankofa Family Medicine',
+  verification: {
+    google: 'U2dIh49_8poa8rcQgoKH6Gr2RZBr-6q_XFLCFelN8XY',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
