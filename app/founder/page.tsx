@@ -1,16 +1,87 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import { ArrowRight, GraduationCap, FileText, Heart, Stethoscope, Brain, Wifi, Globe, ExternalLink } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Dr. Yaw Nkrumah, MD - Founder',
-  description: 'Meet Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine. Family physician trained at MUSC and Kadlec Family Medicine Residency, licensed in Washington State. Specializing in cardiometabolic health, preventive care, and AI-supported clinical workflows.',
+  title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. Board-certified family physician specializing in genetic testing, precision medicine, cardiometabolic health, and Medicine That Remembers.',
+  keywords: ['Dr. Yaw Nkrumah', 'family physician Washington', 'DPC founder', 'Sankofa Family Medicine', 'genetic testing', 'precision medicine', 'cardiometabolic health'],
+  openGraph: {
+    title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
+    description: 'Founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State.',
+    url: 'https://sankofafamilymedicine.com/founder',
+    images: [{ url: '/images/dr-nkrumah.png', width: 400, height: 400, alt: 'Dr. Yaw Nkrumah, MD' }],
+  },
+  alternates: {
+    canonical: 'https://sankofafamilymedicine.com/founder',
+  },
+}
+
+// Person schema for Dr. Yaw Nkrumah - locked-in entity story
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Physician',
+  '@id': 'https://sankofafamilymedicine.com/#founder',
+  name: 'Dr. Yaw Nkrumah',
+  givenName: 'Yaw',
+  familyName: 'Nkrumah',
+  honorificPrefix: 'Dr.',
+  honorificSuffix: 'MD',
+  jobTitle: 'Founder & Medical Director',
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. He created Medicine That Remembers to solve healthcare fragmentation through continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
+  image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
+  url: 'https://sankofafamilymedicine.com/founder',
+  sameAs: [
+    'https://www.linkedin.com/in/yawnkrumahmd/',
+  ],
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Medical University of South Carolina',
+      alternateName: 'MUSC',
+    },
+    {
+      '@type': 'MedicalOrganization',
+      name: 'Kadlec Family Medicine Residency',
+      address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
+    },
+  ],
+  hasCredential: [
+    {
+      '@type': 'MedicalLicense',
+      name: 'Medical License - Washington State',
+      credentialCategory: 'Physician License',
+      recognizedBy: { '@type': 'GovernmentOrganization', name: 'Washington State Department of Health' },
+    },
+  ],
+  medicalSpecialty: ['PrimaryCare', 'FamilyMedicine', 'PreventiveMedicine'],
+  knowsAbout: [
+    'Direct Primary Care (DPC)',
+    'Virtual/Telehealth Medicine',
+    'Genetic Testing & Precision Medicine',
+    'Cardiometabolic Health',
+    'Medicine That Remembers',
+  ],
+  worksFor: {
+    '@type': 'MedicalOrganization',
+    '@id': 'https://sankofafamilymedicine.com/#organization',
+    name: 'Sankofa Family Medicine',
+    description: 'Virtual-first direct primary care (DPC) practice serving patients across Washington State.',
+  },
 }
 
 export default function FounderPage() {
   return (
     <>
+      {/* Person Schema for Dr. Nkrumah */}
+      <Script
+        id="founder-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      
       {/* Hero */}
       <section className="relative pt-40 pb-24 bg-sfm-navy overflow-hidden">
         {/* Decorative elements */}

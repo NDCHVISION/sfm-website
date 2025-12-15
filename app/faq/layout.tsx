@@ -1,22 +1,23 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FAQ | Sankofa Family Medicine | Virtual Primary Care Washington State',
+  title: 'FAQ | Virtual Direct Primary Care | Washington State',
   description:
-    'Frequently asked questions about Sankofa Family Medicine, a virtual primary care practice serving patients across Washington State. Learn about membership, telehealth visits, insurance, privacy, and how to get started.',
+    'Frequently asked questions about Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. Learn about membership pricing, telehealth visits, genetic testing, and how Medicine That Remembers works.',
   keywords: [
+    'direct primary care FAQ',
+    'DPC questions Washington',
     'virtual primary care FAQ',
     'telehealth questions',
-    'Washington State telemedicine',
-    'direct primary care membership',
+    'genetic testing FAQ',
+    'precision medicine FAQ',
     'Sankofa Family Medicine',
-    'Seattle virtual doctor',
-    'Bellevue telehealth',
+    'Medicine That Remembers',
   ],
   openGraph: {
-    title: 'FAQ | Sankofa Family Medicine',
+    title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
     description:
-      'Everything you need to know about Sankofa Family Medicine, a virtual primary care clinic serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State.',
     url: 'https://sankofafamilymedicine.com/faq',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -24,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ | Sankofa Family Medicine',
+    title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
     description:
-      'Everything you need to know about Sankofa Family Medicine, a virtual primary care clinic serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State.',
   },
   alternates: {
     canonical: 'https://sankofafamilymedicine.com/faq',

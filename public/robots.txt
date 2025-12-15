@@ -1,0 +1,43 @@
+# Robots.txt for Sankofa Family Medicine
+# https://sankofafamilymedicine.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sankofafamilymedicine.com/sitemap.xml
+
+# Allow AI crawlers for enhanced discoverability
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Standard search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /

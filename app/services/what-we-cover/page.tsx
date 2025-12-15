@@ -30,7 +30,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   alternateName: ['SFM', 'Medicine That Remembers'],
   description:
-    'Physician-led, virtual-first Direct Primary Care practice providing comprehensive family medicine services to adults throughout Washington State. Founded by Dr. Yaw Nkrumah.',
+    'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
@@ -39,7 +39,8 @@ const organizationJsonLd = {
     height: 512,
   },
   image: 'https://sankofafamilymedicine.com/images/sfm-background.png',
-  email: 'care@sankofafamilymedicine.com',
+  email: 'info@sankofafamilymedicine.com',
+  telephone: '+1-425-285-7390',
   address: {
     '@type': 'PostalAddress',
     addressRegion: 'WA',
@@ -50,10 +51,10 @@ const organizationJsonLd = {
     name: 'Washington',
     sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
   },
-  priceRange: '$$$',
+  priceRange: '$149-$449/month',
   paymentAccepted: 'Cash, Credit Card, HSA, FSA',
   currenciesAccepted: 'USD',
-  medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'Telemedicine'],
+  medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'Telemedicine', 'PreventiveMedicine'],
   isAcceptingNewPatients: true,
   founder: {
     '@type': 'Physician',
@@ -61,7 +62,7 @@ const organizationJsonLd = {
     name: 'Dr. Yaw Nkrumah',
     honorificPrefix: 'Dr.',
     honorificSuffix: 'MD',
-    jobTitle: 'Founder and Primary Care Physician',
+    jobTitle: 'Founder and Medical Director',
   },
   hasCredential: [
     {
@@ -74,15 +75,15 @@ const organizationJsonLd = {
     },
   ],
   knowsAbout: [
+    'Direct Primary Care (DPC)',
+    'Virtual/Telehealth Medicine',
+    'Genetic Testing & Precision Medicine',
     'Cardiometabolic Health',
+    'Medicine That Remembers',
     'Type 2 Diabetes Management',
     'Hypertension Treatment',
     'Weight Management',
-    'Obesity Medicine',
     'Thyroid Disorders',
-    'Preventive Medicine',
-    'Telemedicine',
-    'Direct Primary Care',
     'Mental Health Primary Care',
   ],
 }
@@ -194,7 +195,7 @@ const faqJsonLd = {
       name: 'What services are outside the scope of virtual primary care?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Services requiring physical examination, in-person procedures, or urgent intervention are referred to appropriate in-person care. This includes emergencies, surgical procedures, sports physicals (WIAA requires in-person examination), obstetric care, pediatric care for children under 12, complex psychiatric conditions, and chronic opioid pain management.',
+        text: 'Services requiring physical examination, in-person procedures, or urgent intervention are referred to appropriate in-person care. This includes emergencies, surgical procedures, sports physicals (WIAA requires in-person examination), obstetric care, complex psychiatric conditions, and chronic opioid pain management. Pediatric patients under 12 are accepted on a case-by-case basis.',
       },
     },
     {
@@ -240,26 +241,21 @@ const breadcrumbJsonLd = {
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'Clinical Services | Virtual Primary Care in Washington State',
+  title: 'What We Treat | Virtual Direct Primary Care Services | Washington State',
   description:
-    'Comprehensive virtual primary care at Sankofa Family Medicine. From cardiometabolic health and diabetes management to mental wellness and acute care, Dr. Yaw Nkrumah provides physician-led telemedicine throughout Washington State.',
+    'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. We treat cardiometabolic conditions, diabetes, hypertension, mental health, weight management, and acute illness through Medicine That Remembers.',
   keywords: [
+    'direct primary care services',
+    'DPC conditions treated',
     'virtual primary care Washington',
-    'telemedicine family medicine',
-    'cardiometabolic health Seattle',
+    'genetic testing primary care',
+    'precision medicine',
+    'cardiometabolic health',
     'diabetes management telehealth',
-    'hypertension treatment online',
-    'weight management medications Washington',
-    'medical weight loss telehealth',
-    'thyroid care virtual doctor',
-    'mental health primary care telehealth',
-    'Direct Primary Care services WA',
-    'DPC Washington State',
-    'online doctor Washington State',
-    'virtual physician Seattle',
-    'chronic disease management telehealth',
-    'HIPAA compliant telehealth',
-    'Dr. Yaw Nkrumah services',
+    'weight management DPC',
+    'mental health primary care',
+    'Medicine That Remembers',
+    'Dr. Yaw Nkrumah',
   ],
   authors: [{ name: 'Dr. Yaw Nkrumah', url: 'https://sankofafamilymedicine.com/founder' }],
   creator: 'Sankofa Family Medicine',
@@ -491,7 +487,7 @@ const exclusions = [
   { item: 'Surgical and invasive procedures', note: null },
   { item: 'Pre-participation sports physicals', note: 'WIAA requires in-person examination' },
   { item: 'Obstetric care and delivery', note: null },
-  { item: 'Pediatric care under age 12', note: null },
+  { item: 'Pediatric care under age 12', note: 'case-by-case approval' },
   { item: 'Complex psychiatric conditions requiring stabilization', note: null },
   { item: 'Chronic opioid pain management', note: null },
   { item: 'Workers compensation evaluations', note: null },

@@ -126,8 +126,8 @@ export default function ServicesPage() {
         '@type': 'MedicalBusiness',
         '@id': 'https://sankofafamilymedicine.com/#organization',
         name: 'Sankofa Family Medicine',
-        alternateName: 'Sankofa Family Medicine PLLC',
-        description: 'Premium virtual direct primary care practice serving Washington State. Offering genetics-informed, AI-powered personalized healthcare with unlimited physician access and same-day appointments.',
+        alternateName: ['SFM', 'Medicine That Remembers'],
+        description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
         url: 'https://sankofafamilymedicine.com',
         logo: {
           '@type': 'ImageObject',
@@ -154,7 +154,7 @@ export default function ServicesPage() {
         serviceArea: {
           '@type': 'GeoShape',
           name: 'Washington State',
-          description: 'Virtual healthcare services available to all Washington State residents',
+          description: 'Virtual-first direct primary care (DPC) for patients across Washington State',
         },
         priceRange: '$149-$449/month',
         currenciesAccepted: 'USD',
@@ -165,12 +165,19 @@ export default function ServicesPage() {
           'Preventive Medicine',
           'Genetics',
         ],
+        knowsAbout: [
+          'Direct Primary Care (DPC)',
+          'Virtual/Telehealth Medicine',
+          'Genetic Testing & Precision Medicine',
+          'Cardiometabolic Health',
+          'Medicine That Remembers',
+        ],
         availableService: [
           {
             '@type': 'MedicalProcedure',
             '@id': 'https://sankofafamilymedicine.com/#continuity-care',
             name: 'Continuity Care Membership',
-            description: 'Premium virtual primary care membership with unlimited visits, 24-48 hour secure messaging, wellness visits, care coordination, and prescription management for Washington State residents.',
+            description: 'Virtual direct primary care membership with unlimited visits, 24-48 hour secure messaging, wellness visits, care coordination, and prescription management for patients in Washington State.',
             procedureType: 'https://schema.org/NoninvasiveProcedure',
             howPerformed: 'Telemedicine video consultation',
             preparation: 'No preparation required',
@@ -323,17 +330,6 @@ export default function ServicesPage() {
           name: 'Sankofa Family Medicine Telehealth Platform',
           description: 'HIPAA-compliant virtual care platform for Washington State residents',
         },
-        knowsAbout: [
-          'Telemedicine',
-          'Virtual Primary Care',
-          'Direct Primary Care',
-          'Genetic Testing',
-          'Pharmacogenomics',
-          'Preventive Medicine',
-          'Cardiometabolic Health',
-          'Weight Management',
-          'AI-Powered Healthcare',
-        ],
         sameAs: [
           'https://www.linkedin.com/company/sankofa-family-medicine',
         ],

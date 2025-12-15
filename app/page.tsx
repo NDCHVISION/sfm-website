@@ -4,8 +4,9 @@ import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope } from 'lu
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sankofa Family Medicine | Premium Virtual Primary Care in Washington State',
-  description: 'Medicine That Remembers™: Premium virtual primary care built on continuity and precision. One physician who knows your history. HIPAA-compliant telehealth for adults across Washington.',
+  title: 'Sankofa Family Medicine | Virtual Direct Primary Care | Washington State',
+  description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers solves healthcare fragmentation - one physician who knows your history, offering genetic testing, precision medicine, and cardiometabolic health optimization.',
+  keywords: ['direct primary care Washington', 'virtual DPC', 'Medicine That Remembers', 'genetic testing', 'precision medicine', 'cardiometabolic health', 'Dr. Yaw Nkrumah'],
 }
 
 export default function HomePage() {
@@ -41,8 +42,9 @@ export default function HomePage() {
       </h1>
 
       <p className="text-base md:text-lg text-white/85 mb-10 leading-relaxed">
-        Premium virtual primary care built on continuity, precision, and legacy. One physician who
-        knows your history. Every visit. HIPAA-compliant telehealth for adults across Washington State.
+        Virtual-first direct primary care (DPC) for patients across Washington State. We solve healthcare
+        fragmentation - one physician who knows your history, every visit. Genetic testing, precision
+        medicine, and cardiometabolic health optimization included.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4">
@@ -64,7 +66,7 @@ export default function HomePage() {
             </div>
           </div>
           <p className="text-white/60 text-sm">
-            <span className="text-sfm-gold font-medium">Limited founding spots</span> — Lock in Tier 3 benefits at Tier 2 pricing
+            <span className="text-sfm-gold font-medium">Limited founding spots</span> - Lock in Tier 3 benefits at Tier 2 pricing
           </p>
         </div>
       </div>

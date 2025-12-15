@@ -3,12 +3,12 @@ import { ArrowRight, ArrowLeft, Check, X } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Traditional vs. Sankofa Care Comparison',
-  description: 'Side-by-side comparison of traditional primary care vs Sankofa Family Medicine\'s Direct Primary Care. Evidence-based healthcare differences: 15 min vs 45 min visits, 26-day waits vs same-day access.',
-  keywords: ['direct primary care', 'DPC comparison', 'Washington State', 'virtual primary care', 'same-day appointments', 'concierge medicine'],
+  title: 'Why Direct Primary Care? | Traditional vs. Sankofa DPC Comparison',
+  description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice. Compare: 15 min vs 45 min visits, 26-day waits vs same-day access, 2,300 patients vs 450. See why DPC solves healthcare fragmentation.',
+  keywords: ['direct primary care comparison', 'DPC vs traditional', 'Washington State DPC', 'Medicine That Remembers', 'healthcare fragmentation', 'virtual primary care'],
   openGraph: {
-    title: 'Traditional vs. Sankofa Care | Side-by-Side Comparison',
-    description: 'See the evidence-based differences: 15 min vs 45 min visits, 26-day waits vs same-day access, 2,300 patients vs 450.',
+    title: 'Why Direct Primary Care? | Traditional vs. Sankofa DPC Comparison',
+    description: 'See the evidence-based differences: 15 min vs 45 min visits, 26-day waits vs same-day access. Direct primary care solves healthcare fragmentation.',
     url: 'https://sankofafamilymedicine.com/compare',
   },
   alternates: {

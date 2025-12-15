@@ -77,7 +77,7 @@ export default function Footer() {
             
             <p className="text-gray-400 text-sm leading-relaxed max-w-md mb-8">
               Premium virtual primary care built on memory, dignity, and the physician-patient relationship. 
-              HIPAA-compliant telehealth serving adults throughout Washington State.
+              HIPAA-compliant telehealth serving patients throughout Washington State.
             </p>
 
             {/* Contact Info */}

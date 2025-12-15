@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Privacy policy and HIPAA compliance information for Sankofa Family Medicine. We protect your health information.',
+  title: 'Privacy Policy | Sankofa Family Medicine',
+  description: 'Privacy policy and HIPAA compliance information for Sankofa Family Medicine. We protect your health information and follow strict medical privacy standards.',
 }
 
 export default function PrivacyPage() {

@@ -25,7 +25,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   alternateName: 'SFM',
   description:
-    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers, a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. The clinic offers telehealth visits, chronic disease management, precision medicine, and genetic testing.',
+    'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
@@ -137,7 +137,7 @@ const faqJsonLd = {
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Founded by Dr. Yaw Nkrumah, the practice delivers Medicine That Remembers, a care model built on continuity, memory, dignity, and meaningful physician-patient relationships. Unlike traditional practices with rotating providers, patients see the same physician (Dr. Nkrumah) for every visit.',
+        text: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization. Unlike traditional practices with rotating providers, patients see the same physician for every visit.',
       },
     },
     {
@@ -161,7 +161,7 @@ const faqJsonLd = {
       name: 'Who can receive care at Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine serves adults (18 and older) who reside in Washington State. The practice is 100% virtual, delivering care through HIPAA-compliant telehealth visits. Patients do not need to live near a physical office location.',
+        text: 'Sankofa Family Medicine serves patients of all ages residing in Washington State. Dr. Nkrumah is trained in family medicine for all ages; pediatric patients under 12 are accepted on a case-by-case basis with parental consultation. The practice is 100% virtual, delivering care through HIPAA-compliant telehealth visits.',
       },
     },
     {
@@ -219,7 +219,7 @@ const webPageJsonLd = {
   url: 'https://sankofafamilymedicine.com/about',
   name: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
   description:
-    'Learn about Sankofa Family Medicine, a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers: care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
+    'Learn about Sankofa Family Medicine, a virtual-first primary care clinic serving patients across Washington State. Medicine That Remembers: care built on continuity, memory, dignity, and meaningful physician-patient relationships.',
   isPartOf: {
     '@id': 'https://sankofafamilymedicine.com/#website',
   },
@@ -240,26 +240,20 @@ const webPageJsonLd = {
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'About Sankofa Family Medicine | Virtual Primary Care in Washington State',
+  title: 'About | Virtual Direct Primary Care | Washington State',
   description:
-    'Sankofa Family Medicine is a virtual-first primary care clinic serving adults across Washington State. Medicine That Remembers: care built on continuity, memory, dignity, and meaningful physician-patient relationships with Dr. Yaw Nkrumah.',
+    'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, precision medicine, and cardiometabolic health. Founded by Dr. Yaw Nkrumah, MD.',
   keywords: [
     'Sankofa Family Medicine',
-    'virtual primary care Washington State',
-    'telehealth doctor Washington',
-    'online primary care WA',
-    'virtual family medicine clinic',
-    'direct primary care telehealth',
+    'direct primary care Washington',
+    'virtual DPC',
+    'telehealth doctor Washington State',
     'Dr. Yaw Nkrumah',
     'Medicine That Remembers',
-    'virtual doctor Washington State',
-    'telehealth primary care',
-    'online doctor visit Washington',
-    'chronic disease management telehealth',
-    'precision medicine Washington',
     'genetic testing primary care',
-    'HIPAA compliant telehealth',
-    'adult primary care Washington',
+    'precision medicine',
+    'cardiometabolic health',
+    'healthcare fragmentation',
   ],
   authors: [{ name: 'Dr. Yaw Nkrumah', url: 'https://sankofafamilymedicine.com/founder' }],
   creator: 'Sankofa Family Medicine',

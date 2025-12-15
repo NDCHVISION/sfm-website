@@ -170,7 +170,7 @@ export const exclusions = [
   { item: 'Surgical and invasive procedures', note: null },
   { item: 'Pre-participation sports physicals', note: 'WIAA requires in-person examination' },
   { item: 'Obstetric care and delivery', note: null },
-  { item: 'Pediatric care under age 12', note: null },
+  { item: 'Pediatric care under age 12 (case-by-case approval)', note: null },
   { item: 'Complex psychiatric conditions requiring stabilization', note: null },
   { item: 'Chronic opioid pain management', note: null },
   { item: 'Workers compensation evaluations', note: null },

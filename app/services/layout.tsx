@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Services & Pricing | Premium Virtual Primary Care',
-  description: 'Sankofa Family Medicine membership tiers and pricing. Premium virtual primary care starting at $149/month or $1,609/year. Founding members get Tier 3 (Legacy Health) benefits at Tier 2 (Precision Care) pricing - locked for life. Direct primary care in Washington State.',
+  title: 'Services & Pricing | Virtual Direct Primary Care | Washington State',
+  description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice. Membership from $149/month includes genetic testing, precision medicine, and cardiometabolic health optimization. Founding members get Tier 3 benefits at Tier 2 pricing - locked for life.',
   keywords: [
     'direct primary care Washington',
     'DPC membership pricing',

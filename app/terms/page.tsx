@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'Terms of service and user agreement for Sankofa Family Medicine virtual primary care services.',
+  title: 'Terms of Service | Sankofa Family Medicine',
+  description: 'Terms of service and user agreement for Sankofa Family Medicine virtual direct primary care services in Washington State.',
 }
 
 export default function TermsPage() {
