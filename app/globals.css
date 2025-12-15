@@ -172,11 +172,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--sfm-gold-light) 0%, var(--sfm-gold) 100%);
-  box-shadow: 0 20px 50px rgba(188, 152, 51, 0.35);
-  transform: translateY(-2px);
+  box-shadow: 0 25px 60px rgba(188, 152, 51, 0.4);
+  transform: translateY(-3px);
+  letter-spacing: 0.5px;
 }
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(188, 152, 51, 0.25);
 }
 .btn-primary:focus-visible {
   @apply outline-none ring-2 ring-sfm-gold ring-offset-2;
@@ -243,13 +245,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
   @apply bg-white border border-gray-100 rounded-2xl p-8;
-  @apply transition-all duration-300;
-  box-shadow: var(--shadow-sm);
+  @apply transition-all duration-300 ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.02);
 }
 .card:hover {
-  @apply border-sfm-azure/20;
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+  @apply border-sfm-azure/30;
+  box-shadow: 0 20px 40px rgba(5, 67, 110, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
+  transform: translateY(-6px);
 }
 
 .card-featured {
@@ -266,13 +268,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Promise cards */
 .promise-card {
   @apply p-8 bg-white rounded-2xl border-l-4 border-sfm-azure;
-  @apply transition-all duration-300;
-  box-shadow: var(--shadow-sm);
+  @apply transition-all duration-300 ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(5, 67, 110, 0.06);
 }
 .promise-card:hover {
-  @apply border-sfm-gold;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  @apply border-l-sfm-gold;
+  box-shadow: 0 16px 35px rgba(5, 67, 110, 0.1);
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(250, 249, 247, 0.5) 100%);
 }
 
 /* ============================================
@@ -282,11 +285,12 @@ h1, h2, h3, h4, h5, h6 {
 .input {
   @apply w-full px-5 py-4 bg-sfm-cream border border-gray-200 rounded-xl;
   @apply text-sfm-navy placeholder:text-gray-400;
-  @apply transition-all duration-300;
+  @apply transition-all duration-300 ease-out;
 }
 .input:focus {
   @apply outline-none border-sfm-azure bg-white;
-  box-shadow: 0 0 0 4px rgba(5, 67, 110, 0.1);
+  box-shadow: 0 0 0 5px rgba(5, 67, 110, 0.12), 0 0 0 1px rgba(5, 67, 110, 0.3);
+  transform: scale(1.01);
 }
 
 /* ============================================
