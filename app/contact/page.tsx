@@ -118,7 +118,7 @@ export default function ContactPage() {
                       href="tel:+14252857390" 
                       className="text-muted hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
                     >
-                      (425) 285-7390
+                      +1 (425) 285-7390
                     </a>
                   </div>
                 </div>

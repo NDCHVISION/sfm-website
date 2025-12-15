@@ -35,7 +35,7 @@ To get your GA4 Measurement ID:
 
 ### 3. Verify Contact Information
 - Email: info@sankofafamilymedicine.com
-- Phone: (425) 285-7390
+- Phone: +1 (425) 285-7390
 - Formspree endpoint in `/app/contact/page.tsx`
 
 ---

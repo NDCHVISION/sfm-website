@@ -131,7 +131,7 @@ export default function Navigation() {
             <div className="flex items-center gap-8">
               <a href="tel:+14252857390" className="flex items-center gap-2 text-sm hover:text-sfm-gold transition-colors group">
                 <Phone className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
-                (425) 285-7390
+                +1 (425) 285-7390
               </a>
               <a href="mailto:info@sankofafamilymedicine.com" className="flex items-center gap-2 text-sm hover:text-sfm-gold transition-colors group">
                 <Mail className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
@@ -443,7 +443,7 @@ export default function Navigation() {
             <div className="border-t border-gray-100 pt-6 space-y-3">
               <a href="tel:+14252857390" className="flex items-center gap-3 px-4 py-2 text-sm text-sfm-navy hover:text-sfm-azure">
                 <Phone className="w-4 h-4 text-sfm-gold" />
-                (425) 285-7390
+                +1 (425) 285-7390
               </a>
               <a href="mailto:info@sankofafamilymedicine.com" className="flex items-center gap-3 px-4 py-2 text-sm text-sfm-navy hover:text-sfm-azure">
                 <Mail className="w-4 h-4 text-sfm-gold" />

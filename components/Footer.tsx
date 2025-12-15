@@ -89,7 +89,7 @@ export default function Footer() {
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-sfm-gold/10 transition-colors">
                   <Phone className="w-4 h-4 text-sfm-gold" />
                 </div>
-                (425) 285-7390
+                +1 (425) 285-7390
               </a>
               <a 
                 href="mailto:info@sankofafamilymedicine.com" 
