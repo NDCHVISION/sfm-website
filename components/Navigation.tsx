@@ -92,6 +92,19 @@ export default function Navigation() {
         },
       ],
     },
+    resources: {
+      label: 'Resources',
+      columns: [
+        {
+          title: 'Learn & Explore',
+          items: [
+            { href: '/blog', label: 'Blog', desc: 'Health insights & updates' },
+            { href: '/faq', label: 'FAQs', desc: 'Answers to common questions' },
+            { href: '/services/what-we-cover', label: 'Conditions Treated', desc: 'Scope of care' },
+          ],
+        },
+      ],
+    },
   }
 
   // Mobile navigation - FINAL LOCKED VERSION
@@ -103,6 +116,7 @@ export default function Navigation() {
     { href: '/compare', label: 'Our Standard' },
     { href: '/services/what-we-cover', label: 'Conditions We Treat' },
     { href: '/services', label: 'Membership' },
+    { href: '/blog', label: 'Blog' },
   ]
 
   const mobileSecondary = [
@@ -296,6 +310,69 @@ export default function Navigation() {
                       </Link>
                     </div>
                   </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resources Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleDropdownEnter('resources')}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'resources' ? null : 'resources')}
+                  aria-haspopup="menu"
+                  aria-expanded={activeDropdown === 'resources'}
+                  className={`relative flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
+                    ${activeDropdown === 'resources' 
+                      ? 'text-sfm-azure' 
+                      : 'text-sfm-navy hover:text-sfm-azure'}`}
+                >
+                  Resources
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-sfm-azure transition-all duration-200 ${activeDropdown === 'resources' ? 'w-3/4' : 'w-0'}`} />
+                </button>
+
+                {/* Bridge element to prevent gap */}
+                <div className="absolute -left-4 -right-4 h-8 top-full bg-transparent" />
+
+                <div
+                  role="menu"
+                  aria-label="Resources menu"
+                  onMouseEnter={() => handleDropdownEnter('resources')}
+                  onMouseLeave={handleDropdownLeave}
+                  className={`absolute left-0 pt-4 w-[320px]
+                    transition-all duration-200 origin-top
+                    ${activeDropdown === 'resources' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
+                >
+                  <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl p-8">
+                    <div className="grid grid-cols-1 gap-6">
+                      {navGroups.resources.columns.map((column) => (
+                        <div key={column.title}>
+                          <h3 className="text-xs font-bold text-sfm-azure uppercase tracking-wider mb-4">
+                            {column.title}
+                          </h3>
+                          <ul className="space-y-1">
+                            {column.items.map((item) => (
+                              <li key={item.href}>
+                                <Link
+                                  href={item.href}
+                                  role="menuitem"
+                                  onClick={() => setActiveDropdown(null)}
+                                  className="block px-3 py-3 rounded-xl hover:bg-sfm-cream transition-all duration-200 group"
+                                >
+                                  <span className="text-sm font-semibold text-sfm-navy group-hover:text-sfm-azure transition-colors">
+                                    {item.label}
+                                  </span>
+                                  <span className="text-xs text-gray-500 block mt-0.5">{item.desc}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

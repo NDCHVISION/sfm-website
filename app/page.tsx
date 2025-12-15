@@ -2,6 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope } from 'lucide-react'
 import { Metadata } from 'next'
+import CareJourney from '@/components/CareJourney'
+import MemberStories from '@/components/MemberStories'
+import TrustStrip from '@/components/TrustStrip'
+import SpotsCounter from '@/components/SpotsCounter'
 
 export const metadata: Metadata = {
   title: 'Sankofa Family Medicine | Virtual Direct Primary Care | Washington State',
@@ -59,12 +63,8 @@ export default function HomePage() {
 
       {/* Founding Member Badge */}
       <div className="mt-8 pt-8 border-t border-white/10">
-        <div className="flex items-center gap-3">
-          <div className="flex -space-x-2">
-            <div className="w-8 h-8 rounded-full bg-sfm-gold/20 border-2 border-sfm-gold/40 flex items-center justify-center">
-              <span className="text-xs text-sfm-gold font-bold">30</span>
-            </div>
-          </div>
+        <div className="flex items-start gap-4 flex-col sm:flex-row sm:items-center">
+          <SpotsCounter />
           <p className="text-white/60 text-sm">
             <span className="text-sfm-gold font-medium">Limited founding spots</span> - Lock in Tier 3 benefits at Tier 2 pricing
           </p>
@@ -80,6 +80,9 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
+      {/* Trust Strip - Global Trust Signals */}
+      <TrustStrip />
 
       {/* Patient Promises - Ethics as benefits */}
       <section className="py-32 bg-gradient-to-b from-white via-sfm-cream/30 to-white relative overflow-hidden">
@@ -200,6 +203,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Care Journey - Interactive Process Timeline */}
+      <CareJourney />
+
       {/* What Remembers Means - Brief intro */}
       <section className="py-28 bg-sfm-cream relative overflow-hidden">
         {/* Subtle decorative element */}
@@ -243,6 +249,7 @@ export default function HomePage() {
                   alt="Wooden Sankofa bird sculpture symbolizing learning from the past"
                   width={600}
                   height={500}
+                  loading="lazy"
                   className="w-full h-auto rounded-2xl transition-transform duration-700 group-hover:scale-[1.02]"
                 />
               </div>
@@ -265,6 +272,7 @@ export default function HomePage() {
                   alt="Stethoscope and notebook on a wooden desk representing thoughtful care"
                   width={600}
                   height={500}
+                  loading="lazy"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
                 />
               </div>
@@ -307,6 +315,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Member Stories - Social Proof & Testimonials */}
+      <MemberStories />
 
       {/* DPC Comparison - Why Choose Direct Primary Care */}
       <section className="py-28 bg-sfm-navy relative overflow-hidden">
@@ -422,6 +433,7 @@ export default function HomePage() {
                 alt="Dr. Yaw Nkrumah, Founder of Sankofa Family Medicine"
                 width={192}
                 height={192}
+                loading="lazy"
                 className="relative w-48 h-48 rounded-full object-cover object-top border-4 border-sfm-gold/40 shadow-2xl"
               />
               {/* Online indicator */}

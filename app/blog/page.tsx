@@ -1,25 +1,238 @@
-import ComingSoon from '@/components/ComingSoon'
-import { FileText } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, Calendar, User, Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Health Blog & Medical Insights | Sankofa Family Medicine',
-  description: 'Expert health insights, precision medicine updates, and wellness guidance from Dr. Yaw Nkrumah. Evidence-based articles on cardiometabolic health, preventive care, and virtual primary care in Washington State.',
-  keywords: ['health blog', 'medical insights', 'wellness tips', 'Dr. Nkrumah', 'Washington healthcare blog', 'primary care articles'],
-  openGraph: {
-    title: 'Health Blog & Medical Insights | Sankofa Family Medicine',
-    description: 'Expert health insights and wellness guidance from Dr. Yaw Nkrumah.',
-  },
+  title: 'Blog | Sankofa Family Medicine',
+  description: 'Health insights, precision medicine articles, and updates from Sankofa Family Medicine.',
+  keywords: ['health blog', 'precision medicine', 'direct primary care', 'wellness'],
 }
 
+interface BlogPost {
+  id: number
+  title: string
+  excerpt: string
+  category: string
+  readTime: number
+  author: string
+  date: string
+  slug: string
+}
+
+const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    title: 'Understanding Your Genetic Testing Results',
+    excerpt:
+      'Genetic testing can reveal valuable insights about your health predispositions. Learn how to interpret your results and work with your physician to create a personalized prevention plan.',
+    category: 'Genetics',
+    readTime: 8,
+    author: 'Dr. Yaw Nkrumah',
+    date: '2025-12-10',
+    slug: 'genetic-testing-guide',
+  },
+  {
+    id: 2,
+    title: 'Cardiometabolic Health: The Foundation of Wellness',
+    excerpt:
+      'Your cardiometabolic health is central to long-term wellness. Discover what metabolic markers matter, why they matter, and how precision medicine optimizes them for your unique biology.',
+    category: 'Cardiometabolic Health',
+    readTime: 10,
+    author: 'Dr. Yaw Nkrumah',
+    date: '2025-12-05',
+    slug: 'cardiometabolic-health',
+  },
+  {
+    id: 3,
+    title: 'Direct Primary Care vs. Traditional Healthcare: What\'s the Difference?',
+    excerpt:
+      'Confused about DPC? Learn how direct primary care differs from insurance-based medicine, what you can expect, and why many patients report better health outcomes with this model.',
+    category: 'Direct Care',
+    readTime: 7,
+    author: 'Dr. Yaw Nkrumah',
+    date: '2025-11-28',
+    slug: 'dpc-explained',
+  },
+  {
+    id: 4,
+    title: 'Chronic Fatigue Decoded: A Systems-Based Approach',
+    excerpt:
+      'Chronic fatigue is often a symptom of deeper imbalances. Explore how comprehensive testing and personalized protocols address the root causes rather than just the fatigue itself.',
+    category: 'Conditions',
+    readTime: 12,
+    author: 'Dr. Yaw Nkrumah',
+    date: '2025-11-20',
+    slug: 'chronic-fatigue',
+  },
+]
+
 export default function BlogPage() {
+  const categoryColor = (category: string): string => {
+    const colors: { [key: string]: string } = {
+      'Genetics': 'bg-blue-100 text-blue-700 border-blue-200',
+      'Cardiometabolic Health': 'bg-red-100 text-red-700 border-red-200',
+      'Direct Care': 'bg-emerald-100 text-emerald-700 border-emerald-200',
+      'Conditions': 'bg-amber-100 text-amber-700 border-amber-200',
+    }
+    return colors[category] || 'bg-gray-100 text-gray-700 border-gray-200'
+  }
+
   return (
-    <ComingSoon
-      title="Health Blog & Insights"
-      description="Expert health insights, precision medicine updates, and wellness guidance from Dr. Nkrumah. We're preparing thoughtful, evidence-based content to support your health journey."
-      icon={<FileText size={48} strokeWidth={1.5} />}
-      expectedDate="Early 2026"
-    />
+    <>
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 bg-gradient-to-b from-sfm-navy via-sfm-navy to-sfm-azure/20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">
+              Knowledge Center
+            </p>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              Health Insights & Updates
+            </h1>
+            <div className="divider-gold mx-auto mb-6" />
+            <p className="text-white/70 max-w-2xl mx-auto text-lg">
+              Precision medicine articles, wellness strategies, and direct primary care insights from Dr. Yaw Nkrumah and the SFM team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Grid */}
+      <section className="py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Featured Post */}
+          {blogPosts.length > 0 && (
+            <div className="mb-16">
+              <h2 className="font-display text-2xl text-sfm-navy mb-8">Latest Article</h2>
+              <div className="grid lg:grid-cols-2 gap-10 items-center bg-sfm-cream rounded-3xl p-8 border border-gray-100">
+                <div>
+                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-6 ${categoryColor(blogPosts[0].category)}`}>
+                    {blogPosts[0].category}
+                  </div>
+                  <h3 className="font-display text-3xl text-sfm-navy mb-4 leading-tight">
+                    {blogPosts[0].title}
+                  </h3>
+                  <p className="text-muted text-lg mb-6 leading-relaxed">
+                    {blogPosts[0].excerpt}
+                  </p>
+                  <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8">
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      <span>{blogPosts[0].author}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(blogPosts[0].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{blogPosts[0].readTime} min read</span>
+                    </div>
+                  </div>
+                  <Link href={`/blog/${blogPosts[0].slug}`} className="btn-primary">
+                    Read Article
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+                <div className="hidden lg:flex items-center justify-center">
+                  <div className="w-64 h-64 rounded-2xl bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 flex items-center justify-center text-4xl text-sfm-gold/30">
+                    📖
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Other Posts Grid */}
+          <div>
+            <h2 className="font-display text-2xl text-sfm-navy mb-8">More Articles</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.slice(1).map((post) => (
+                <article key={post.id} className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-sfm-gold/30 transition-all duration-300 group flex flex-col h-full">
+                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-4 w-fit ${categoryColor(post.category)}`}>
+                    {post.category}
+                  </div>
+
+                  <h3 className="font-display text-xl text-sfm-navy mb-3 leading-tight group-hover:text-sfm-azure transition-colors">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-muted text-sm mb-6 flex-grow leading-relaxed">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="border-t border-gray-100 pt-4 flex flex-wrap items-center gap-4 text-xs text-gray-500">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{post.readTime} min</span>
+                    </div>
+                  </div>
+
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="mt-4 inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium text-sm"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="py-28 bg-gradient-to-r from-sfm-navy to-sfm-azure relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
+            Get Health Insights Delivered
+          </h2>
+          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+            Subscribe to our newsletter for precision medicine articles, wellness updates, and exclusive insights from Dr. Nkrumah.
+          </p>
+          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Your email address"
+              className="flex-1 px-6 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-sfm-gold transition-colors"
+              required
+            />
+            <button
+              type="submit"
+              className="px-8 py-3 bg-sfm-gold text-sfm-navy font-semibold rounded-lg hover:bg-sfm-gold-light transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p className="text-white/50 text-xs mt-4">No spam, just quality health content.</p>
+        </div>
+      </section>
+
+      {/* Related CTA */}
+      <section className="py-16 bg-sfm-cream">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-muted mb-4">Ready to take charge of your health?</p>
+          <Link href="/contact" className="btn-primary">
+            Schedule Your Initial Consultation
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+    </>
   )
 }
 

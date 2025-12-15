@@ -673,3 +673,86 @@ blockquote::before {
   width: 80%;
 }
 
+/* ============================================
+   CARE JOURNEY COMPONENT
+   ============================================ */
+
+.timeline-step {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#care-journey {
+  scroll-margin-top: 120px;
+}
+
+/* ============================================
+   MEMBER STORIES CAROUSEL
+   ============================================ */
+
+.stories-wrapper {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.stories-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.stories-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.stories-wrapper::-webkit-scrollbar-thumb {
+  background: var(--sfm-gold);
+  border-radius: 4px;
+}
+
+.stories-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--sfm-gold-dark);
+}
+
+/* ============================================
+   TRUST STRIP ENHANCEMENTS
+   ============================================ */
+
+.trust-strip {
+  scroll-margin-top: 120px;
+}
+
+/* Improved scrolling on smaller screens */
+@media (max-width: 640px) {
+  .trust-strip {
+    padding: 1rem 0;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+
+/* Ensure images have proper aspect ratio */
+img[loading="lazy"] {
+  background: linear-gradient(to bottom, var(--sfm-cream), var(--sfm-cream-dark));
+}
+
+/* Improve text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, [role="button"] {
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Enhanced focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[role="menuitem"]:focus-visible {
+  outline: 2px solid var(--sfm-azure);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
