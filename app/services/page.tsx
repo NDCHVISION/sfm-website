@@ -539,7 +539,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Membership Tiers */}
-      <section className="py-28 bg-gradient-to-b from-white via-white to-sfm-cream/50 relative overflow-hidden">
+      <section id="pricing" className="py-28 bg-gradient-to-b from-white via-white to-sfm-cream/50 relative overflow-hidden scroll-mt-32">
         {/* Subtle grid pattern */}
         <div 
           className="absolute inset-0 opacity-[0.02]"
@@ -800,8 +800,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Transformation Programs */}
-      <section className="py-28 bg-gradient-to-b from-sfm-cream to-white relative">
+      {/* Transformation Programs - includes weight management, mental health, preventive anchors */}
+      <section 
+        id="programs" 
+        className="py-28 bg-gradient-to-b from-sfm-cream to-white relative scroll-mt-32"
+      >
+        {/* Anchor points for nav links */}
+        <div id="weight-management" className="absolute -top-32" aria-hidden="true" />
+        <div id="mental-health" className="absolute -top-32" aria-hidden="true" />
+        <div id="preventive" className="absolute -top-32" aria-hidden="true" />
+        
         <div className="max-w-6xl mx-auto px-6">
           <header className="text-center mb-16">
             <p className="text-sfm-azure text-sm tracking-[0.25em] uppercase mb-4 font-medium font-body">
