@@ -102,6 +102,7 @@ export default function Navigation() {
           items: [
             { href: '/about', label: 'Care Model', desc: 'How our DPC model works' },
             { href: '/founder', label: 'Dr. Yaw Nkrumah', desc: 'Meet your physician' },
+            { href: '/compare', label: 'Why DPC?', desc: 'Evidence-based comparison' },
             { href: '/faq', label: 'FAQs', desc: 'Common questions answered' },
           ],
         },
@@ -120,6 +121,7 @@ export default function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Membership & Pricing' },
     { href: '/services/what-we-cover', label: 'What We Treat' },
+    { href: '/compare', label: 'Why DPC?' },
     { href: '/about', label: 'Care Model' },
     { href: '/founder', label: 'Our Founder' },
     { href: '/faq', label: 'How It Works' },

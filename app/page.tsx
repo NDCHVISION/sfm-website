@@ -54,6 +54,20 @@ export default function HomePage() {
           View Services &amp; Pricing
         </Link>
       </div>
+
+      {/* Founding Member Badge */}
+      <div className="mt-8 pt-8 border-t border-white/10">
+        <div className="flex items-center gap-3">
+          <div className="flex -space-x-2">
+            <div className="w-8 h-8 rounded-full bg-sfm-gold/20 border-2 border-sfm-gold/40 flex items-center justify-center">
+              <span className="text-xs text-sfm-gold font-bold">30</span>
+            </div>
+          </div>
+          <p className="text-white/60 text-sm">
+            <span className="text-sfm-gold font-medium">Limited founding spots</span> — Lock in Tier 3 benefits at Tier 2 pricing
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   
@@ -112,9 +126,9 @@ export default function HomePage() {
                   'No rotating providers. Dr. Nkrumah knows your history, your goals, your family.',
               },
             ].map((promise) => (
-              <div key={promise.title} className="promise-card">
+              <div key={promise.title} className="promise-card group">
                 <promise.icon
-                  className="w-8 h-8 text-sfm-azure mb-4"
+                  className="w-8 h-8 text-sfm-azure mb-4 transition-transform duration-300 group-hover:scale-110"
                   strokeWidth={1.5}
                   aria-hidden="true"
                 />
@@ -122,6 +136,36 @@ export default function HomePage() {
                 <p className="text-muted text-sm leading-relaxed">{promise.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals - Credentials Bar */}
+      <section className="py-12 bg-white border-y border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            <div className="flex items-center gap-3 text-gray-500">
+              <Shield className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
+              <span className="text-sm font-medium">HIPAA Compliant</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-500">
+              <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <span className="text-sm font-medium">Board Certified</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-500">
+              <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span className="text-sm font-medium">Washington Licensed</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-500">
+              <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-sm font-medium">Same-Day Appointments</span>
+            </div>
           </div>
         </div>
       </section>
@@ -234,8 +278,101 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Founder Message */}
+      {/* DPC Comparison - Why Choose Direct Primary Care */}
       <section className="py-28 bg-sfm-navy relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(5,67,110,0.3),transparent_60%)]" />
+        
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="text-center mb-16">
+            <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">
+              The Evidence Speaks
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl text-white mb-6">
+              Why Direct Primary Care?
+            </h2>
+            <div className="divider-gold mx-auto mb-6" />
+            <p className="text-white/60 max-w-xl mx-auto">
+              Every metric below is drawn from peer-reviewed research.
+            </p>
+          </div>
+
+          {/* Key Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {[
+              { trad: '15 min', sfm: '45 min', label: 'Visit Duration' },
+              { trad: '26 days', sfm: 'Same day', label: 'Wait Time' },
+              { trad: '2,300+', sfm: '<500', label: 'Patients/Doctor' },
+              { trad: '$100+', sfm: '$5-20', label: 'Lab Costs' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-3">
+                  <div className="text-white/40 text-lg line-through mb-2">{stat.trad}</div>
+                  <div className="text-sfm-gold text-2xl md:text-3xl font-display font-medium">{stat.sfm}</div>
+                </div>
+                <p className="text-white/60 text-sm">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            {/* Traditional Care */}
+            <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
+              <p className="text-white/40 text-sm uppercase tracking-wider mb-6 font-medium">Traditional Care</p>
+              <ul className="space-y-4">
+                {[
+                  'Different doctor each visit',
+                  'Phone trees and callbacks',
+                  'Repeat your story every time',
+                  'Unpredictable copays',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white/50">
+                    <svg className="w-5 h-5 text-white/20 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* SFM Care */}
+            <div className="bg-sfm-gold/10 rounded-2xl p-8 border border-sfm-gold/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-sfm-gold/10 rounded-full blur-2xl" />
+              <p className="text-sfm-gold text-sm uppercase tracking-wider mb-6 font-medium relative">Sankofa Care</p>
+              <ul className="space-y-4 relative">
+                {[
+                  'Same physician, always',
+                  'Direct messaging with Dr. Nkrumah',
+                  'Your history, remembered',
+                  'One transparent monthly fee',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white">
+                    <svg className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Link to full comparison */}
+          <div className="text-center">
+            <Link 
+              href="/compare" 
+              className="inline-flex items-center gap-2 text-sfm-gold hover:text-white transition-colors group"
+            >
+              <span>See the full evidence-based comparison</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Message */}
+      <section className="py-28 bg-gradient-to-b from-sfm-navy to-[#030d1a] relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />

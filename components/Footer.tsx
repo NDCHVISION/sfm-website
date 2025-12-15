@@ -11,6 +11,7 @@ export default function Footer() {
     services: [
       { label: 'Membership Tiers', href: '/services' },
       { label: 'What We Treat', href: '/services/what-we-cover' },
+      { label: 'Why DPC?', href: '/compare' },
       { label: 'Pricing', href: '/services#pricing' },
     ],
     practice: [

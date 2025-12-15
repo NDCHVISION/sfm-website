@@ -397,16 +397,16 @@ export default function AboutPage() {
               aria-label="Key statistics"
             >
               <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-4xl font-display text-sfm-gold mb-2">1</p>
-                <p className="text-sm text-white/70">Physician for your entire care journey</p>
+                <p className="text-4xl font-display text-sfm-gold mb-2">1 Physician</p>
+                <p className="text-sm text-white/70">For your entire care journey</p>
               </div>
               <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-4xl font-display text-sfm-gold mb-2">100%</p>
-                <p className="text-sm text-white/70">Virtual primary care via telehealth</p>
+                <p className="text-4xl font-display text-sfm-gold mb-2">100% Virtual</p>
+                <p className="text-sm text-white/70">Primary care via telehealth</p>
               </div>
               <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-4xl font-display text-sfm-gold mb-2">0</p>
-                <p className="text-sm text-white/70">Insurance billing (transparent direct pay)</p>
+                <p className="text-4xl font-display text-sfm-gold mb-2">$0 Copays</p>
+                <p className="text-sm text-white/70">Transparent direct pay model</p>
               </div>
             </div>
           </div>
