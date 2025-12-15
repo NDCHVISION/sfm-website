@@ -7,7 +7,7 @@ export default function SpotsCounter() {
   // State to track remaining spots
   // In production, this would come from an API or CMS
   const [spotsLeft, setSpotsLeft] = useState<number | null>(null)
-  const totalSpots = 10
+  const totalSpots = 30
 
   useEffect(() => {
     // Simulate fetching from API/CMS
@@ -15,8 +15,8 @@ export default function SpotsCounter() {
     // const data = await response.json()
     // setSpotsLeft(data.remaining)
     
-    // For demo, set to 7
-    setSpotsLeft(7)
+    // All 30 spots available - none claimed yet
+    setSpotsLeft(30)
   }, [])
 
   if (spotsLeft === null) return null

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope } from 'lucide-react'
 import { Metadata } from 'next'
 import CareJourney from '@/components/CareJourney'
-import MemberStories from '@/components/MemberStories'
 import TrustStrip from '@/components/TrustStrip'
 import SpotsCounter from '@/components/SpotsCounter'
 
@@ -315,9 +314,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Member Stories - Social Proof & Testimonials */}
-      <MemberStories />
 
       {/* DPC Comparison - Why Choose Direct Primary Care */}
       <section className="py-28 bg-sfm-navy relative overflow-hidden">
