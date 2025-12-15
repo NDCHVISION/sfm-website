@@ -64,44 +64,45 @@ export default function Navigation() {
     return () => { document.body.style.overflow = 'unset' }
   }, [isOpen])
 
-  // Grouped navigation structure - SIMPLIFIED for patient journey
+  // Grouped navigation structure - FINAL LOCKED VERSION
   const navGroups = {
-    services: {
-      label: 'Services & Pricing',
+    about: {
+      label: 'About',
       columns: [
         {
-          title: 'Get Started',
+          title: 'About Us',
           items: [
-            { href: '/services', label: 'Membership Plans', desc: 'See pricing & what\'s included' },
-            { href: '/services/what-we-cover', label: 'What We Treat', desc: '100+ conditions covered' },
-            { href: '/compare', label: 'Why Choose Us?', desc: 'See how we compare' },
+            { href: '/founder', label: 'Meet Our Founder', desc: 'Founder & Family Physician' },
+            { href: '/about', label: 'How It Works', desc: 'Virtual care model' },
+            { href: '/faq', label: 'FAQs', desc: 'Common questions' },
           ],
         },
       ],
     },
-    about: {
-      label: 'About Us',
+    services: {
+      label: 'Services',
       columns: [
         {
-          title: 'Learn More',
+          title: 'Services',
           items: [
-            { href: '/about', label: 'How It Works', desc: 'Our virtual care model' },
-            { href: '/founder', label: 'Meet Dr. Nkrumah', desc: 'Your physician' },
-            { href: '/faq', label: 'FAQs', desc: 'Common questions' },
+            { href: '/compare', label: 'Our Standard', desc: 'Philosophy & safeguards' },
+            { href: '/services/what-we-cover', label: 'Conditions We Treat', desc: 'Scope of care' },
+            { href: '/services', label: 'Membership', desc: 'Pricing & tiers' },
           ],
         },
       ],
     },
   }
 
-  // Mobile navigation - SIMPLIFIED & prioritized
+  // Mobile navigation - FINAL LOCKED VERSION
   const mobileNav = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Plans & Pricing' },
-    { href: '/services/what-we-cover', label: 'What We Treat' },
+    { href: '/founder', label: 'Meet Our Founder' },
     { href: '/about', label: 'How It Works' },
-    { href: '/founder', label: 'Meet Your Doctor' },
     { href: '/faq', label: 'FAQs' },
+    { href: '/compare', label: 'Our Standard' },
+    { href: '/services/what-we-cover', label: 'Conditions We Treat' },
+    { href: '/services', label: 'Membership' },
   ]
 
   const mobileSecondary = [
@@ -157,6 +158,69 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-2" aria-label="Main navigation" ref={dropdownRef}>
+              {/* About Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleDropdownEnter('about')}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'about' ? null : 'about')}
+                  aria-haspopup="menu"
+                  aria-expanded={activeDropdown === 'about'}
+                  className={`relative flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
+                    ${activeDropdown === 'about' 
+                      ? 'text-sfm-azure' 
+                      : 'text-sfm-navy hover:text-sfm-azure'}`}
+                >
+                  About
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-sfm-azure transition-all duration-200 ${activeDropdown === 'about' ? 'w-3/4' : 'w-0'}`} />
+                </button>
+
+                {/* Bridge element to prevent gap */}
+                <div className="absolute -left-4 -right-4 h-8 top-full bg-transparent" />
+
+                <div
+                  role="menu"
+                  aria-label="About menu"
+                  onMouseEnter={() => handleDropdownEnter('about')}
+                  onMouseLeave={handleDropdownLeave}
+                  className={`absolute left-0 pt-4 w-[320px]
+                    transition-all duration-200 origin-top
+                    ${activeDropdown === 'about' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
+                >
+                  <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl p-8">
+                    <div className="grid grid-cols-1 gap-6">
+                      {navGroups.about.columns.map((column) => (
+                        <div key={column.title}>
+                          <h3 className="text-xs font-bold text-sfm-azure uppercase tracking-wider mb-4">
+                            {column.title}
+                          </h3>
+                          <ul className="space-y-1">
+                            {column.items.map((item) => (
+                              <li key={item.href}>
+                                <Link
+                                  href={item.href}
+                                  role="menuitem"
+                                  onClick={() => setActiveDropdown(null)}
+                                  className="block px-3 py-3 rounded-xl hover:bg-sfm-cream transition-all duration-200 group"
+                                >
+                                  <span className="text-sm font-semibold text-sfm-navy group-hover:text-sfm-azure transition-colors">
+                                    {item.label}
+                                  </span>
+                                  <span className="text-xs text-gray-500 block mt-0.5">{item.desc}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Services Dropdown */}
               <div
                 className="relative"
@@ -232,69 +296,6 @@ export default function Navigation() {
                       </Link>
                     </div>
                   </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* About Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleDropdownEnter('about')}
-                onMouseLeave={handleDropdownLeave}
-              >
-                <button
-                  onClick={() => setActiveDropdown(activeDropdown === 'about' ? null : 'about')}
-                  aria-haspopup="menu"
-                  aria-expanded={activeDropdown === 'about'}
-                  className={`relative flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
-                    ${activeDropdown === 'about' 
-                      ? 'text-sfm-azure' 
-                      : 'text-sfm-navy hover:text-sfm-azure'}`}
-                >
-                  About
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
-                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-sfm-azure transition-all duration-200 ${activeDropdown === 'about' ? 'w-3/4' : 'w-0'}`} />
-                </button>
-
-                {/* Bridge element to prevent gap */}
-                <div className="absolute -left-4 -right-4 h-8 top-full bg-transparent" />
-
-                <div
-                  role="menu"
-                  aria-label="About menu"
-                  onMouseEnter={() => handleDropdownEnter('about')}
-                  onMouseLeave={handleDropdownLeave}
-                  className={`absolute left-0 pt-4 w-[320px]
-                    transition-all duration-200 origin-top
-                    ${activeDropdown === 'about' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
-                >
-                  <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl p-8">
-                    <div className="grid grid-cols-1 gap-6">
-                      {navGroups.about.columns.map((column) => (
-                        <div key={column.title}>
-                          <h3 className="text-xs font-bold text-sfm-azure uppercase tracking-wider mb-4">
-                            {column.title}
-                          </h3>
-                          <ul className="space-y-1">
-                            {column.items.map((item) => (
-                              <li key={item.href}>
-                                <Link
-                                  href={item.href}
-                                  role="menuitem"
-                                  onClick={() => setActiveDropdown(null)}
-                                  className="block px-3 py-3 rounded-xl hover:bg-sfm-cream transition-all duration-200 group"
-                                >
-                                  <span className="text-sm font-semibold text-sfm-navy group-hover:text-sfm-azure transition-colors">
-                                    {item.label}
-                                  </span>
-                                  <span className="text-xs text-gray-500 block mt-0.5">{item.desc}</span>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>

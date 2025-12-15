@@ -8,15 +8,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const footerLinks = {
-    services: [
-      { label: 'Membership Plans', href: '/services' },
-      { label: 'What We Treat', href: '/services/what-we-cover' },
-      { label: 'Why Choose Us?', href: '/compare' },
-    ],
     about: [
+      { label: 'Meet Our Founder', href: '/founder' },
       { label: 'How It Works', href: '/about' },
-      { label: 'Meet Dr. Nkrumah', href: '/founder' },
       { label: 'FAQs', href: '/faq' },
+    ],
+    services: [
+      { label: 'Our Standard', href: '/compare' },
+      { label: 'Conditions We Treat', href: '/services/what-we-cover' },
+      { label: 'Membership', href: '/services' },
     ],
     legal: [
       { label: 'Privacy Policy', href: '/privacy' },
@@ -128,13 +128,13 @@ export default function Footer() {
           {/* Links Columns */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
-              {/* Services */}
+              {/* About */}
               <div>
                 <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
-                  Services
+                  About
                 </h4>
                 <ul className="space-y-3">
-                  {footerLinks.services.map((link) => (
+                  {footerLinks.about.map((link) => (
                     <li key={link.href}>
                       <Link 
                         href={link.href} 
@@ -147,13 +147,13 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* About */}
+              {/* Services */}
               <div>
                 <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
-                  About
+                  Services
                 </h4>
                 <ul className="space-y-3">
-                  {footerLinks.about.map((link) => (
+                  {footerLinks.services.map((link) => (
                     <li key={link.href}>
                       <Link 
                         href={link.href} 
