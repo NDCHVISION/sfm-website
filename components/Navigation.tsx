@@ -99,8 +99,6 @@ export default function Navigation() {
           title: 'Learn & Explore',
           items: [
             { href: '/blog', label: 'Blog', desc: 'Health insights & updates' },
-            { href: '/faq', label: 'FAQs', desc: 'Answers to common questions' },
-            { href: '/services/what-we-cover', label: 'Conditions Treated', desc: 'Scope of care' },
           ],
         },
       ],
@@ -116,7 +114,6 @@ export default function Navigation() {
     { href: '/compare', label: 'Our Standard' },
     { href: '/services/what-we-cover', label: 'Conditions We Treat' },
     { href: '/services', label: 'Membership' },
-    { href: '/blog', label: 'Blog' },
   ]
 
   const mobileSecondary = [
