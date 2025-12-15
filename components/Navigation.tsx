@@ -186,7 +186,7 @@ export default function Navigation() {
                   aria-label="Services menu"
                   onMouseEnter={() => handleDropdownEnter('services')}
                   onMouseLeave={handleDropdownLeave}
-                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[520px]
+                  className={`fixed left-1/2 -translate-x-1/2 pt-4 w-[520px] top-20
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'services' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
@@ -264,7 +264,7 @@ export default function Navigation() {
                   aria-label="About menu"
                   onMouseEnter={() => handleDropdownEnter('about')}
                   onMouseLeave={handleDropdownLeave}
-                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[320px]
+                  className={`fixed left-1/2 -translate-x-1/2 pt-4 w-[320px] top-20
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'about' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
