@@ -64,68 +64,52 @@ export default function Navigation() {
     return () => { document.body.style.overflow = 'unset' }
   }, [isOpen])
 
-  // Grouped navigation structure
+  // Grouped navigation structure - SIMPLIFIED for patient journey
   const navGroups = {
     services: {
-      label: 'Services',
+      label: 'Services & Pricing',
       columns: [
         {
-          title: 'Membership',
+          title: 'Get Started',
           items: [
-            { href: '/services', label: 'Membership Tiers', desc: 'Continuity, Precision & Legacy plans' },
-            { href: '/services/what-we-cover', label: 'Scope of Care', desc: '100+ conditions we treat virtually' },
+            { href: '/services', label: 'Membership Plans', desc: 'See pricing & what\'s included' },
+            { href: '/services/what-we-cover', label: 'What We Treat', desc: '100+ conditions covered' },
+            { href: '/compare', label: 'Why Choose Us?', desc: 'See how we compare' },
           ],
         },
         {
-          title: 'Clinical Areas',
+          title: 'Explore Care Areas',
           items: [
-            { href: '/services#cardiometabolic', label: 'Cardiometabolic Health', desc: 'Diabetes, hypertension, cholesterol' },
-            { href: '/services#weight-management', label: 'Weight Management', desc: 'Medical weight loss & GLP-1s' },
-            { href: '/services#mental-health', label: 'Mental Wellness', desc: 'Anxiety, depression, stress' },
-          ],
-        },
-        {
-          title: 'Specialty Care',
-          items: [
-            { href: '/services#mens-health', label: "Men's Health", desc: 'Hormones, sexual health, vitality' },
-            { href: '/services#womens-health', label: "Women's Health", desc: 'Menopause, HRT, contraception' },
-            { href: '/services#preventive', label: 'Preventive Care', desc: 'Screenings & wellness visits' },
+            { href: '/services#weight-management', label: 'Weight Loss', desc: 'GLP-1s & medical weight loss' },
+            { href: '/services#mental-health', label: 'Mental Health', desc: 'Anxiety, depression support' },
+            { href: '/services#preventive', label: 'Preventive Care', desc: 'Annual wellness & screenings' },
           ],
         },
       ],
     },
     about: {
-      label: 'About',
+      label: 'About Us',
       columns: [
-        {
-          title: 'Our Practice',
-          items: [
-            { href: '/about', label: 'Care Model', desc: 'How our DPC model works' },
-            { href: '/founder', label: 'Dr. Yaw Nkrumah', desc: 'Meet your physician' },
-            { href: '/compare', label: 'Why DPC?', desc: 'Evidence-based comparison' },
-            { href: '/faq', label: 'FAQs', desc: 'Common questions answered' },
-          ],
-        },
         {
           title: 'Learn More',
           items: [
-            { href: '/resources', label: 'Patient Resources', desc: 'Guides & health information' },
+            { href: '/about', label: 'How It Works', desc: 'Our virtual care model' },
+            { href: '/founder', label: 'Meet Dr. Nkrumah', desc: 'Your physician' },
+            { href: '/faq', label: 'FAQs', desc: 'Common questions' },
           ],
         },
       ],
     },
   }
 
-  // Mobile navigation
+  // Mobile navigation - SIMPLIFIED & prioritized
   const mobileNav = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Membership & Pricing' },
+    { href: '/services', label: 'Plans & Pricing' },
     { href: '/services/what-we-cover', label: 'What We Treat' },
-    { href: '/compare', label: 'Why DPC?' },
-    { href: '/about', label: 'Care Model' },
-    { href: '/founder', label: 'Our Founder' },
-    { href: '/faq', label: 'How It Works' },
-    { href: '/resources', label: 'Resources' },
+    { href: '/about', label: 'How It Works' },
+    { href: '/founder', label: 'Meet Your Doctor' },
+    { href: '/faq', label: 'FAQs' },
   ]
 
   const mobileSecondary = [
@@ -210,13 +194,13 @@ export default function Navigation() {
                   aria-label="Services menu"
                   onMouseEnter={() => handleDropdownEnter('services')}
                   onMouseLeave={handleDropdownLeave}
-                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[720px]
+                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[520px]
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'services' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
                   <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl">
                   <div className="p-8">
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-2 gap-8">
                       {navGroups.services.columns.map((column) => (
                         <div key={column.title}>
                           <h3 className="text-xs font-bold text-sfm-azure uppercase tracking-wider mb-4">
@@ -288,12 +272,12 @@ export default function Navigation() {
                   aria-label="About menu"
                   onMouseEnter={() => handleDropdownEnter('about')}
                   onMouseLeave={handleDropdownLeave}
-                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[500px]
+                  className={`absolute left-1/2 -translate-x-1/2 pt-4 w-[320px]
                     transition-all duration-200 origin-top
                     ${activeDropdown === 'about' ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
                 >
                   <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl p-8">
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 gap-6">
                       {navGroups.about.columns.map((column) => (
                         <div key={column.title}>
                           <h3 className="text-xs font-bold text-sfm-azure uppercase tracking-wider mb-4">
