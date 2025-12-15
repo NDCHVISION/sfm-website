@@ -115,7 +115,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sfm-navy font-medium mb-1">Phone</p>
                     <a 
-                      href="tel:(425) 285-7390" 
+                      href="tel:+14252857390" 
                       className="text-muted hover:text-sfm-azure transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
                     >
                       (425) 285-7390

@@ -97,7 +97,7 @@ export default function PrivacyPage() {
             </p>
             <div className="mt-4 p-4 bg-white rounded-lg border border-sfm-gold/20">
               <p><strong>Email:</strong> <a href="mailto:appointments@sankofafamilymedicine.com" className="text-sfm-azure hover:text-sfm-navy">appointments@sankofafamilymedicine.com</a></p>
-              <p><strong>Phone:</strong> <a href="tel:(425) 285-7390" className="text-sfm-azure hover:text-sfm-navy">(425) 285-7390 </a></p>
+              <p><strong>Phone:</strong> <a href="tel:+14252857390" className="text-sfm-azure hover:text-sfm-navy">(425) 285-7390</a></p>
             </div>
           </section>
 

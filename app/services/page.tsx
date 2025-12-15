@@ -131,10 +131,10 @@ export default function ServicesPage() {
         url: 'https://sankofafamilymedicine.com',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://sankofafamilymedicine.com/images/logo.png',
+          url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
         },
-        image: 'https://sankofafamilymedicine.com/images/og-image.jpg',
-        telephone: '+1-XXX-XXX-XXXX',
+        image: 'https://sankofafamilymedicine.com/images/og-image.png',
+        telephone: '+1-425-285-7390',
         email: 'info@sankofafamilymedicine.com',
         address: {
           '@type': 'PostalAddress',
