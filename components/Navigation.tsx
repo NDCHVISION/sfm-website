@@ -136,26 +136,28 @@ export default function Navigation() {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
-          ${scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-md'}`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500
+          ${scrolled 
+            ? 'bg-white/98 shadow-xl shadow-sfm-navy/5 backdrop-blur-lg' 
+            : 'bg-white/95 backdrop-blur-md'}`}
       >
         {/* Top bar - visible on desktop */}
-        <div className="hidden lg:block bg-sfm-navy text-white">
+        <div className="hidden lg:block bg-gradient-to-r from-sfm-navy via-sfm-navy to-sfm-azure/90 text-white">
           <div className="max-w-7xl mx-auto px-8 py-2.5 flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <a href="tel:+14252857390" className="flex items-center gap-2 text-sm hover:text-sfm-gold transition-colors">
-                <Phone className="w-3.5 h-3.5" />
+              <a href="tel:+14252857390" className="flex items-center gap-2 text-sm hover:text-sfm-gold transition-colors group">
+                <Phone className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
                 (425) 285-7390
               </a>
-              <a href="mailto:info@sankofafamilymedicine.com" className="flex items-center gap-2 text-sm hover:text-sfm-gold transition-colors">
-                <Mail className="w-3.5 h-3.5" />
+              <a href="mailto:info@sankofafamilymedicine.com" className="flex items-center gap-2 text-sm hover:text-sfm-gold transition-colors group">
+                <Mail className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
                 info@sankofafamilymedicine.com
               </a>
             </div>
             <div className="flex items-center gap-6 text-sm">
-              <span className="text-white/60">Serving Washington State</span>
-              <span className="w-1 h-1 rounded-full bg-sfm-gold" />
-              <span className="text-white/60">Virtual Care Available</span>
+              <span className="text-white/70">Serving Washington State</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold animate-pulse" />
+              <span className="text-white/70">Virtual Care Available</span>
             </div>
           </div>
         </div>
@@ -341,12 +343,14 @@ export default function Navigation() {
               {/* Primary CTA */}
               <Link
                 href="/contact"
-                className="ml-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sfm-gold via-amber-400 to-sfm-gold bg-[length:200%_100%] 
-                  text-sfm-navy text-sm font-bold rounded-full shadow-md shadow-sfm-gold/20
-                  hover:bg-[position:100%_0] hover:shadow-lg hover:shadow-sfm-gold/30 transition-all duration-500"
+                className="ml-6 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sfm-gold via-amber-400 to-sfm-gold bg-[length:200%_100%] 
+                  text-sfm-navy text-sm font-bold rounded-full shadow-lg shadow-sfm-gold/25
+                  hover:bg-[position:100%_0] hover:shadow-xl hover:shadow-sfm-gold/40 hover:scale-[1.02]
+                  active:scale-[0.98] transition-all duration-500 relative overflow-hidden group"
               >
-                Join Waitlist
-                <ArrowRight className="w-4 h-4" />
+                <span className="relative z-10">Join Waitlist</span>
+                <ArrowRight className="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-0.5" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               </Link>
             </nav>
 

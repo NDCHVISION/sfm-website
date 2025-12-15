@@ -80,8 +80,13 @@ export default function HomePage() {
 </section>
 
       {/* Patient Promises - Ethics as benefits */}
-      <section className="py-28 bg-gradient-to-b from-white via-sfm-cream/30 to-white">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-32 bg-gradient-to-b from-white via-sfm-cream/30 to-white relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0 pattern-dots opacity-30" />
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl -translate-y-1/2" />
+        <div className="absolute top-1/4 right-0 w-64 h-64 bg-sfm-gold/5 rounded-full blur-3xl" />
+        
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="text-center mb-20">
             <p className="text-sfm-azure text-sm tracking-[0.25em] uppercase mb-4 font-medium">Our Promise</p>
             <h2 className="font-display text-4xl md:text-5xl text-sfm-navy mb-6">
@@ -93,7 +98,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 icon: Clock,
@@ -125,15 +130,31 @@ export default function HomePage() {
                 description:
                   'No rotating providers. Dr. Nkrumah knows your history, your goals, your family.',
               },
-            ].map((promise) => (
-              <div key={promise.title} className="promise-card group">
-                <promise.icon
-                  className="w-8 h-8 text-sfm-azure mb-4 transition-transform duration-300 group-hover:scale-110"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-                <h3 className="font-display text-lg text-sfm-navy mb-2">{promise.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{promise.description}</p>
+            ].map((promise, index) => (
+              <div 
+                key={promise.title} 
+                className={`group relative bg-white rounded-2xl p-8 border border-gray-100 
+                  shadow-sm hover:shadow-xl hover:border-sfm-gold/30 
+                  transition-all duration-500 hover:-translate-y-2
+                  ${index === 4 ? 'md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none' : ''}`}
+              >
+                {/* Accent line */}
+                <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-sfm-azure via-sfm-gold to-sfm-azure rounded-b-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-2xl bg-sfm-cream flex items-center justify-center mb-6 
+                    group-hover:bg-sfm-azure/10 transition-colors duration-300">
+                    <promise.icon
+                      className="w-7 h-7 text-sfm-azure transition-transform duration-300 group-hover:scale-110"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="font-display text-xl text-sfm-navy mb-3 group-hover:text-sfm-azure transition-colors duration-300">
+                    {promise.title}
+                  </h3>
+                  <p className="text-muted text-sm leading-relaxed">{promise.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -141,29 +162,43 @@ export default function HomePage() {
       </section>
 
       {/* Trust Signals - Credentials Bar */}
-      <section className="py-12 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-16 bg-white border-y border-gray-100 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 pattern-dots opacity-50" />
+        
+        <div className="relative max-w-6xl mx-auto px-6">
+          <p className="text-center text-xs text-gray-400 uppercase tracking-[0.2em] mb-8 font-medium">
+            Trusted Care Credentials
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            <div className="flex items-center gap-3 text-gray-500">
-              <Shield className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
+            <div className="flex items-center gap-3 text-gray-600 group hover:text-sfm-navy transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-sfm-cream flex items-center justify-center group-hover:bg-sfm-azure/10 transition-colors">
+                <Shield className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
+              </div>
               <span className="text-sm font-medium">HIPAA Compliant</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-500">
-              <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
+            <div className="flex items-center gap-3 text-gray-600 group hover:text-sfm-navy transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-sfm-cream flex items-center justify-center group-hover:bg-sfm-azure/10 transition-colors">
+                <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
               <span className="text-sm font-medium">Board Certified</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-500">
-              <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+            <div className="flex items-center gap-3 text-gray-600 group hover:text-sfm-navy transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-sfm-cream flex items-center justify-center group-hover:bg-sfm-azure/10 transition-colors">
+                <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
               <span className="text-sm font-medium">Washington Licensed</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-500">
-              <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+            <div className="flex items-center gap-3 text-gray-600 group hover:text-sfm-navy transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-sfm-cream flex items-center justify-center group-hover:bg-sfm-azure/10 transition-colors">
+                <svg className="w-5 h-5 text-sfm-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
               <span className="text-sm font-medium">Same-Day Appointments</span>
             </div>
           </div>
@@ -372,32 +407,50 @@ export default function HomePage() {
       </section>
 
       {/* Founder Message */}
-      <section className="py-28 bg-gradient-to-b from-sfm-navy to-[#030d1a] relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-b from-sfm-navy via-sfm-navy to-[#030d1a] relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sfm-azure/5 rounded-full blur-3xl" />
         
         <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <div className="relative inline-block mb-10">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/40 to-sfm-gold/10 blur-2xl scale-125" />
-            <Image
-              src="/images/dr-nkrumah.png"
-              alt="Dr. Yaw Nkrumah, Founder of Sankofa Family Medicine"
-              width={192}
-              height={192}
-              className="relative w-48 h-48 rounded-full object-cover object-top border-4 border-sfm-gold/40 shadow-2xl"
-            />
+          {/* Quote mark decorative */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 text-sfm-gold/10 text-[200px] font-display leading-none select-none pointer-events-none">
+            &ldquo;
           </div>
-          <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6 font-medium">
-            Founder's Message
+          
+          <div className="relative inline-block mb-12">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/40 via-sfm-gold/20 to-sfm-azure/20 blur-2xl scale-150" />
+            <div className="relative">
+              <Image
+                src="/images/dr-nkrumah.png"
+                alt="Dr. Yaw Nkrumah, Founder of Sankofa Family Medicine"
+                width={192}
+                height={192}
+                className="relative w-48 h-48 rounded-full object-cover object-top border-4 border-sfm-gold/40 shadow-2xl"
+              />
+              {/* Online indicator */}
+              <div className="absolute bottom-4 right-4 w-6 h-6 bg-emerald-500 rounded-full border-4 border-sfm-navy shadow-lg" />
+            </div>
+          </div>
+          
+          <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-8 font-medium">
+            Founder&apos;s Message
           </p>
-          <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-white italic leading-relaxed mb-8">
+          <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-white italic leading-relaxed mb-10 relative">
             &quot;I built Sankofa Family Medicine to provide the kind of care I would want for my own family:
             care that remembers your history, respects your time, and stays with you across the years. Many
             physicians share these values; this practice gives us the structure and time to honor them.&quot;
           </blockquote>
-          <p className="text-sfm-gold font-semibold text-lg">Dr. Yaw Nkrumah, MD</p>
-          <p className="text-white/60 text-sm mt-2">Founder &amp; Medical Director</p>
+          <div className="flex flex-col items-center">
+            <p className="text-sfm-gold font-semibold text-xl">Dr. Yaw Nkrumah, MD</p>
+            <p className="text-white/60 text-sm mt-2 mb-4">Founder &amp; Medical Director</p>
+            <div className="flex items-center gap-4 text-white/40 text-sm">
+              <span>Board Certified Family Medicine</span>
+              <span className="w-1 h-1 rounded-full bg-sfm-gold" />
+              <span>Washington Licensed</span>
+            </div>
+          </div>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/founder" className="btn-secondary-white">
@@ -413,23 +466,38 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-gradient-to-b from-white to-sfm-cream/50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-display text-4xl md:text-5xl text-sfm-navy mb-6 leading-tight">
-            Ready to Experience Care That Remembers?
+      <section className="py-32 bg-gradient-to-b from-white via-sfm-cream/30 to-sfm-cream/50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-1/4 left-0 w-64 h-64 bg-sfm-gold/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
+        
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 border border-sfm-gold/20 rounded-full mb-8">
+            <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" />
+            <span className="text-sfm-gold text-sm font-medium">Now Accepting Founding Members</span>
+          </div>
+          
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-sfm-navy mb-6 leading-tight">
+            Ready to Experience Care<br className="hidden md:block" /> That Remembers?
           </h2>
-          <p className="text-muted text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-            Join our founding member waitlist for priority enrollment and exclusive benefits.
+          <p className="text-muted text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+            Join our founding member waitlist for priority enrollment and exclusive benefits. 
+            Limited spots available.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary text-base px-10 py-5">
               Join Waitlist
-              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+              <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Link>
-            <Link href="/services" className="btn-secondary">
+            <Link href="/services" className="btn-secondary text-base px-10 py-5">
               View Services &amp; Pricing
             </Link>
           </div>
+          
+          {/* Trust indicator */}
+          <p className="mt-10 text-gray-400 text-sm">
+            No commitment required • Response within 24 hours
+          </p>
         </div>
       </section>
     </>

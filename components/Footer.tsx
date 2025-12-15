@@ -40,9 +40,15 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-sfm-navy" role="contentinfo">
+    <footer className="bg-gradient-to-b from-sfm-navy to-[#020d1a] relative overflow-hidden" role="contentinfo">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-sfm-gold/5 rounded-full blur-3xl" />
+      </div>
+      
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 pt-20 pb-12">
+      <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           
           {/* Brand Column */}
@@ -183,8 +189,8 @@ export default function Footer() {
                 {/* Mini CTA */}
                 <Link 
                   href="/contact" 
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-sfm-gold text-sfm-navy text-sm font-semibold rounded-lg
-                    hover:bg-sfm-gold/90 transition-all duration-300 group"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sfm-gold to-amber-400 text-sfm-navy text-sm font-semibold rounded-lg
+                    hover:shadow-lg hover:shadow-sfm-gold/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
                 >
                   Join Waitlist
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -196,7 +202,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-xs">

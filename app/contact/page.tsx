@@ -53,14 +53,23 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-20 bg-gradient-to-b from-white to-sfm-cream/30">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="pt-40 pb-24 bg-gradient-to-b from-white via-sfm-cream/20 to-sfm-cream/50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-sfm-gold/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-sfm-azure/5 rounded-full blur-3xl" />
+        
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 border border-sfm-gold/20 rounded-full mb-6">
+            <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" />
+            <span className="text-sfm-gold text-sm font-medium">Now Accepting Founding Members</span>
+          </div>
+          
           <p className="text-sfm-azure text-sm tracking-[0.25em] uppercase mb-4 font-medium">Contact Us</p>
           <h1 className="font-display text-5xl md:text-6xl text-sfm-navy mb-8 leading-[1.1]">
             Join the Waitlist
           </h1>
           <div className="divider-gold mx-auto mb-10" />
-          <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Interested in becoming a founding member? Have questions about our services? 
             We respond within one business day.
           </p>
@@ -68,8 +77,11 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-16 bg-sfm-cream">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 bg-sfm-cream relative overflow-hidden">
+        {/* Pattern background */}
+        <div className="absolute inset-0 pattern-dots opacity-30" />
+        
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Contact Info */}
@@ -124,16 +136,24 @@ export default function ContactPage() {
               </div>
 
               {/* Founding Member Reminder */}
-              <div className="mt-10 p-6 bg-sfm-navy rounded-2xl text-white">
-                <p className="font-display text-lg mb-2">Founding Member Offer</p>
-                <p className="text-white/80 text-sm">
-                  First 30 members receive Tier 3 benefits at Tier 2 pricing, locked for life.
-                </p>
+              <div className="mt-10 p-6 bg-gradient-to-br from-sfm-navy to-sfm-azure/90 rounded-2xl text-white relative overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sfm-gold/10 rounded-full blur-2xl" />
+                <div className="relative">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" />
+                    <p className="font-display text-lg">Founding Member Offer</p>
+                  </div>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    First 30 members receive Tier 3 benefits at Tier 2 pricing, locked for life.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-lg">
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-xl relative overflow-hidden">
+              {/* Accent line at top */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sfm-gold via-sfm-azure to-sfm-gold" />
               {isSubmitted ? (
                 <div className="h-full flex flex-col items-center justify-center text-center py-12">
                   <div className="w-16 h-16 border-2 border-sfm-gold rounded-xl flex items-center justify-center mb-6">

@@ -487,3 +487,185 @@ section {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--sfm-gold), transparent);
 }
+
+/* ============================================
+   SMOOTH SCROLL & PAGE POLISH
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible improvements for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--sfm-azure);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Premium link underline animation */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--sfm-gold), var(--sfm-azure));
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(188, 152, 51, 0.3),
+              0 0 40px rgba(188, 152, 51, 0.2),
+              0 0 60px rgba(188, 152, 51, 0.1);
+}
+
+.glow-azure {
+  box-shadow: 0 0 20px rgba(5, 67, 110, 0.3),
+              0 0 40px rgba(5, 67, 110, 0.2);
+}
+
+/* Text gradient effect */
+.text-gradient {
+  background: linear-gradient(135deg, var(--sfm-gold) 0%, #d4af37 50%, var(--sfm-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover lift effect for cards */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image reveal on scroll */
+.reveal-image {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-image.revealed {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Premium border gradient */
+.border-gradient {
+  position: relative;
+  background: white;
+}
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--sfm-gold), var(--sfm-azure), var(--sfm-gold));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Shimmer loading effect */
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Number counter styling */
+.stat-number {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom bullet points */
+.custom-list li::marker {
+  color: var(--sfm-gold);
+}
+
+/* Improved blockquote styling */
+blockquote {
+  position: relative;
+  padding-left: 1.5rem;
+}
+blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--sfm-gold), var(--sfm-azure));
+  border-radius: 2px;
+}
+
+/* Page transition overlay */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--sfm-navy);
+  z-index: 100;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.page-transition.active {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+/* Hero text shadow for readability */
+.hero-text-shadow {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle pattern overlay */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(5, 28, 59, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Interactive hover states for navigation */
+.nav-link-hover {
+  position: relative;
+  overflow: hidden;
+}
+.nav-link-hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--sfm-azure);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.nav-link-hover:hover::before {
+  width: 80%;
+}
+
