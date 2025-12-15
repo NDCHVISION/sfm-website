@@ -77,14 +77,6 @@ export default function Navigation() {
             { href: '/compare', label: 'Why Choose Us?', desc: 'See how we compare' },
           ],
         },
-        {
-          title: 'Explore Care Areas',
-          items: [
-            { href: '/services#weight-management', label: 'Weight Loss', desc: 'GLP-1s & medical weight loss' },
-            { href: '/services#mental-health', label: 'Mental Health', desc: 'Anxiety, depression support' },
-            { href: '/services#preventive', label: 'Preventive Care', desc: 'Annual wellness & screenings' },
-          ],
-        },
       ],
     },
     about: {
@@ -308,14 +300,6 @@ export default function Navigation() {
               </div>
 
               {/* Direct Links */}
-              <Link
-                href="/faq"
-                className="relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200 group"
-              >
-                How It Works
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-sfm-azure group-hover:w-3/4 transition-all duration-200" />
-              </Link>
-
               <Link
                 href="/contact"
                 className="relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200 group"
