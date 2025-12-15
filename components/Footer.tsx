@@ -9,16 +9,14 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { label: 'Membership Tiers', href: '/services' },
+      { label: 'Membership Plans', href: '/services' },
       { label: 'What We Treat', href: '/services/what-we-cover' },
-      { label: 'Why DPC?', href: '/compare' },
-      { label: 'Pricing', href: '/services#pricing' },
+      { label: 'Why Choose Us?', href: '/compare' },
     ],
-    practice: [
-      { label: 'Care Model', href: '/about' },
-      { label: 'Our Founder', href: '/founder' },
-      { label: 'How It Works', href: '/faq' },
-      { label: 'Patient Resources', href: '/resources' },
+    about: [
+      { label: 'How It Works', href: '/about' },
+      { label: 'Meet Dr. Nkrumah', href: '/founder' },
+      { label: 'FAQs', href: '/faq' },
     ],
     legal: [
       { label: 'Privacy Policy', href: '/privacy' },
@@ -149,13 +147,13 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Practice */}
+              {/* About */}
               <div>
                 <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
-                  Practice
+                  About
                 </h4>
                 <ul className="space-y-3">
-                  {footerLinks.practice.map((link) => (
+                  {footerLinks.about.map((link) => (
                     <li key={link.href}>
                       <Link 
                         href={link.href} 
