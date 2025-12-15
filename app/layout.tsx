@@ -41,6 +41,12 @@ export const metadata: Metadata = {
     description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers: solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
     images: [
       {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sankofa Family Medicine - Virtual Direct Primary Care',
+      },
+      {
         url: '/images/sfm-logo.png',
         width: 800,
         height: 800,
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sankofa Family Medicine | Virtual Direct Primary Care | Washington State',
     description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers: solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
-    images: ['/images/sfm-logo.png'],
+    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,
