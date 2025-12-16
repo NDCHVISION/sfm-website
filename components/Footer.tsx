@@ -55,11 +55,11 @@ export default function Footer() {
               <div className="flex items-center gap-4">
                 <div className="relative">
                   <Image 
-                    src="/images/sfm-logo.png" 
+                    src="/images/sankofa-bird.png" 
                     alt="Sankofa Family Medicine" 
                     width={64}
                     height={64}
-                    className="h-16 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-col">

@@ -22,57 +22,60 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Understanding Your Genetic Testing Results',
+    title: 'Why Skipping Primary Care Feels Rational (And Why It Quietly Costs People Years)',
     excerpt:
-      'Genetic testing can reveal valuable insights about your health predispositions. Learn how to interpret your results and work with your physician to create a personalized prevention plan.',
-    category: 'Genetics',
+      'Most people avoid primary care because their reasoning makes sense to them. But reactive thinking in a system that punishes delay has hidden costs. Learn why prevention is measured in years, not visits.',
+    category: 'Primary Care',
     readTime: 8,
     author: 'Dr. Yaw Nkrumah',
-    date: '2025-12-10',
-    slug: 'genetic-testing-guide',
+    date: '2025-12-15',
+    slug: 'why-skipping-primary-care-costs-years',
   },
   {
     id: 2,
-    title: 'Cardiometabolic Health: The Foundation of Wellness',
+    title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less',
     excerpt:
-      'Your cardiometabolic health is central to long-term wellness. Discover what metabolic markers matter, why they matter, and how precision medicine optimizes them for your unique biology.',
-    category: 'Cardiometabolic Health',
-    readTime: 10,
+      'There is a common assumption that virtual medicine is impersonal. After years of practicing both in-person and virtual primary care, I have found the opposite is often true. When done correctly, virtual care deepens the relationship.',
+    category: 'Virtual Care',
+    readTime: 7,
     author: 'Dr. Yaw Nkrumah',
-    date: '2025-12-05',
-    slug: 'cardiometabolic-health',
+    date: '2025-12-22',
+    slug: 'virtual-care-more-personal',
   },
   {
     id: 3,
-    title: 'Direct Primary Care vs. Traditional Healthcare: What\'s the Difference?',
+    title: 'What Genetic Testing Actually Tells You (And What It Does Not)',
     excerpt:
-      'Confused about DPC? Learn how direct primary care differs from insurance-based medicine, what you can expect, and why many patients report better health outcomes with this model.',
-    category: 'Direct Care',
-    readTime: 7,
+      'Genetic testing is not about predicting the future. It is about adding context to the present. Learn when testing adds value, when it does not, and why precision without continuity is just fragmentation with better marketing.',
+    category: 'Genetics',
+    readTime: 9,
     author: 'Dr. Yaw Nkrumah',
-    date: '2025-11-28',
-    slug: 'dpc-explained',
-  },
-  {
-    id: 4,
-    title: 'Chronic Fatigue Decoded: A Systems-Based Approach',
-    excerpt:
-      'Chronic fatigue is often a symptom of deeper imbalances. Explore how comprehensive testing and personalized protocols address the root causes rather than just the fatigue itself.',
-    category: 'Conditions',
-    readTime: 12,
-    author: 'Dr. Yaw Nkrumah',
-    date: '2025-11-20',
-    slug: 'chronic-fatigue',
+    date: '2025-12-29',
+    slug: 'genetic-testing-what-it-tells-you',
   },
 ]
 
+// Filter to only show published posts (date <= today)
+function getPublishedPosts(): BlogPost[] {
+  const today = new Date()
+  today.setHours(23, 59, 59, 999) // End of today
+  
+  return blogPosts
+    .filter(post => new Date(post.date) <= today)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+}
+
 export default function BlogPage() {
+  const publishedPosts = getPublishedPosts()
+  
   const categoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
       'Genetics': 'bg-blue-100 text-blue-700 border-blue-200',
       'Cardiometabolic Health': 'bg-red-100 text-red-700 border-red-200',
       'Direct Care': 'bg-emerald-100 text-emerald-700 border-emerald-200',
       'Conditions': 'bg-amber-100 text-amber-700 border-amber-200',
+      'Primary Care': 'bg-purple-100 text-purple-700 border-purple-200',
+      'Virtual Care': 'bg-cyan-100 text-cyan-700 border-cyan-200',
     }
     return colors[category] || 'bg-gray-100 text-gray-700 border-gray-200'
   }
@@ -106,35 +109,35 @@ export default function BlogPage() {
       <section className="py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           {/* Featured Post */}
-          {blogPosts.length > 0 && (
+          {publishedPosts.length > 0 && (
             <div className="mb-16">
               <h2 className="font-display text-2xl text-sfm-navy mb-8">Latest Article</h2>
               <div className="grid lg:grid-cols-2 gap-10 items-center bg-sfm-cream rounded-3xl p-8 border border-gray-100">
                 <div>
-                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-6 ${categoryColor(blogPosts[0].category)}`}>
-                    {blogPosts[0].category}
+                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-6 ${categoryColor(publishedPosts[0].category)}`}>
+                    {publishedPosts[0].category}
                   </div>
                   <h3 className="font-display text-3xl text-sfm-navy mb-4 leading-tight">
-                    {blogPosts[0].title}
+                    {publishedPosts[0].title}
                   </h3>
                   <p className="text-muted text-lg mb-6 leading-relaxed">
-                    {blogPosts[0].excerpt}
+                    {publishedPosts[0].excerpt}
                   </p>
                   <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8">
                     <div className="flex items-center gap-2">
                       <User className="w-4 h-4" />
-                      <span>{blogPosts[0].author}</span>
+                      <span>{publishedPosts[0].author}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      <span>{new Date(blogPosts[0].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                      <span>{new Date(publishedPosts[0].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
-                      <span>{blogPosts[0].readTime} min read</span>
+                      <span>{publishedPosts[0].readTime} min read</span>
                     </div>
                   </div>
-                  <Link href={`/blog/${blogPosts[0].slug}`} className="btn-primary">
+                  <Link href={`/blog/${publishedPosts[0].slug}`} className="btn-primary">
                     Read Article
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -148,11 +151,12 @@ export default function BlogPage() {
             </div>
           )}
 
-          {/* Other Posts Grid */}
+          {/* Other Posts Grid - only show if more than 1 post */}
+          {publishedPosts.length > 1 && (
           <div>
             <h2 className="font-display text-2xl text-sfm-navy mb-8">More Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.slice(1).map((post) => (
+              {publishedPosts.slice(1).map((post) => (
                 <article key={post.id} className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-sfm-gold/30 transition-all duration-300 group flex flex-col h-full">
                   <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-4 w-fit ${categoryColor(post.category)}`}>
                     {post.category}
@@ -188,6 +192,7 @@ export default function BlogPage() {
               ))}
             </div>
           </div>
+          )}
         </div>
       </section>
 
