@@ -225,7 +225,7 @@ const structuredData = {
       familyName: 'Nkrumah',
       honorificSuffix: 'MD',
       jobTitle: 'Founder & Medical Director',
-      description: 'Board-certified family medicine physician specializing in virtual primary care, cardiometabolic health, and precision medicine. Founder of Sankofa Family Medicine.',
+      description: 'Board-eligible family medicine physician specializing in virtual primary care, cardiometabolic health, and precision medicine. Founder of Sankofa Family Medicine.',
       image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
       url: 'https://sankofafamilymedicine.com/founder',
       worksFor: {

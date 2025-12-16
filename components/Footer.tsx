@@ -206,11 +206,11 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <Image 
-                src="/images/sankofa-bird.png" 
+                src="/images/sfm-logo.png" 
                 alt="Sankofa" 
                 width={24}
                 height={24}
-                className="h-6 w-auto brightness-0 invert opacity-60"
+                className="h-6 w-auto opacity-60"
               />
               <p className="text-gray-500 text-xs">
                 © {currentYear} Sankofa Family Medicine™. All rights reserved.

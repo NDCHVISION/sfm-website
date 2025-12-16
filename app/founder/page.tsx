@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
-  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. Board-certified family physician specializing in genetic testing, precision medicine, cardiometabolic health, and Medicine That Remembers.',
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. Board-eligible family physician specializing in genetic testing, precision medicine, cardiometabolic health, and Medicine That Remembers.',
   keywords: ['Dr. Yaw Nkrumah', 'family physician Washington', 'DPC founder', 'Sankofa Family Medicine', 'genetic testing', 'precision medicine', 'cardiometabolic health'],
   openGraph: {
     title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
