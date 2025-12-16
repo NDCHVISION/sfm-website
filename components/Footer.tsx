@@ -38,9 +38,10 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gradient-to-b from-sfm-navy to-[#020d1a] relative overflow-hidden" role="contentinfo">
+    <footer className="bg-gradient-to-b from-sfm-navy to-[#020d1a] relative overflow-hidden z-10" role="contentinfo">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-sfm-navy to-[#020d1a]" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-sfm-gold/5 rounded-full blur-3xl" />
       </div>
@@ -203,9 +204,18 @@ export default function Footer() {
       <div className="relative border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 text-xs">
-              © {currentYear} Sankofa Family Medicine™. All rights reserved.
-            </p>
+            <div className="flex items-center gap-3">
+              <Image 
+                src="/images/sankofa-bird.png" 
+                alt="Sankofa" 
+                width={24}
+                height={24}
+                className="h-6 w-auto opacity-70"
+              />
+              <p className="text-gray-500 text-xs">
+                © {currentYear} Sankofa Family Medicine™. All rights reserved.
+              </p>
+            </div>
             <p className="text-gray-500 text-xs text-center md:text-right max-w-xl">
               This website is for informational purposes only and does not constitute medical advice. 
               Always consult a qualified healthcare provider.
