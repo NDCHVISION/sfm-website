@@ -312,7 +312,15 @@ export default function Navigation() {
                 </div>
               </div>
 
-              {/* Blog - Direct Link */}\n              <Link\n                href=\"/blog\"\n                className=\"relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200\"\n              >\n                Blog\n              </Link>\n\n              {/* Direct Links */}
+              {/* Blog - Direct Link */}
+              <Link
+                href="/blog"
+                className="relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200"
+              >
+                Blog
+              </Link>
+
+              {/* Direct Links */}
               <Link
                 href="/contact"
                 className="relative px-4 py-2 text-sm font-medium text-sfm-navy hover:text-sfm-azure rounded-lg transition-colors duration-200 group"

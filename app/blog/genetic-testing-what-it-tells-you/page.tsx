@@ -227,6 +227,29 @@ export default function BlogPost() {
         </div>
       </article>
 
+      {/* Guide CTA */}
+      <section className="py-12 bg-gradient-to-r from-sfm-azure/10 to-sfm-gold/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <h3 className="font-display text-xl text-sfm-navy mb-2">
+              Is anyone actually watching your health?
+            </h3>
+            <p className="text-muted mb-6">
+              Download the free guide to find out if your primary care relationship is working for you.
+            </p>
+            <Link 
+              href="/resources/dpc-guide" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-gold hover:bg-sfm-gold-light text-sfm-navy font-semibold rounded-lg transition-all"
+            >
+              Get the Guide
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-sfm-cream">
         <div className="max-w-4xl mx-auto px-6 text-center">

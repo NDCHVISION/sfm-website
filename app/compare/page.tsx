@@ -327,21 +327,21 @@ export default function ComparePage() {
                 </svg>
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="font-display text-xl text-white mb-2">Not Ready to Join Yet?</h3>
+                <h3 className="font-display text-xl text-white mb-2">Not Sure If DPC Is Right for You?</h3>
                 <p className="text-white/60 text-sm mb-4">
-                  Download our free 1-page guide: <strong className="text-white">"Why Direct Primary Care?"</strong> — The evidence-based case for a better healthcare model.
+                  Read our free guide: <strong className="text-white">"How Healthy Is Your Relationship With Your Primary Care Doctor?"</strong> — An interactive self-assessment to discover what kind of care you&apos;re getting.
                 </p>
               </div>
               <div className="flex-shrink-0">
-                <a 
-                  href="mailto:info@sankofafamilymedicine.com?subject=Send%20me%20the%20DPC%20Guide&body=Please%20send%20me%20the%20free%20Why%20Direct%20Primary%20Care%20guide.%0A%0AMy%20name%3A%20%0AMy%20email%3A%20"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium rounded-lg transition-all"
+                <Link 
+                  href="/resources/dpc-guide"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-gold hover:bg-sfm-gold-light text-sfm-navy font-medium rounded-lg transition-all"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  Get Free Guide
-                </a>
+                  Read Free Guide
+                </Link>
               </div>
             </div>
           </div>
