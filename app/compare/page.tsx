@@ -187,13 +187,13 @@ export default function ComparePage() {
                     Category
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-white/40 bg-white/[0.02]">
-                    <span className="block">Traditional Care</span>
+                    <span className="block text-white/60">Typical Insurance-Based Clinic</span>
                     <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white/50 mt-2">
                       The Norm
                     </span>
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-sfm-gold bg-sfm-gold/[0.08]">
-                    <span className="block">Sankofa Care</span>
+                    <span className="block">Sankofa Direct Primary Care</span>
                     <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white mt-2">
                       The Standard
                     </span>
@@ -271,7 +271,7 @@ export default function ComparePage() {
                 </div>
                 <div className="grid grid-cols-2">
                   <div className="p-4 bg-white/[0.02] text-center border-r border-white/[0.04]">
-                    <div className="text-xs uppercase tracking-wider text-white/30 mb-2">Traditional</div>
+                    <div className="text-xs uppercase tracking-wider text-white/30 mb-2">Insurance-Based</div>
                     <div className="flex items-center justify-center gap-2">
                       {row.traditional.isNegative && (
                         <X className="w-4 h-4 text-white/25" strokeWidth={2.5} />
@@ -289,7 +289,7 @@ export default function ComparePage() {
                     </div>
                   </div>
                   <div className="p-4 bg-sfm-gold/[0.08] text-center">
-                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">Sankofa</div>
+                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">Sankofa DPC</div>
                     <div className="flex items-center justify-center gap-2">
                       {row.sankofa.isPositive && !row.sankofa.value && (
                         <Check className="w-4 h-4 text-sfm-gold" strokeWidth={2.5} />
@@ -316,6 +316,34 @@ export default function ComparePage() {
             <p className="text-white/40 text-sm leading-relaxed">
               Statistics sourced from PMC, AAFP, AMN Healthcare, Society of Actuaries, and the Health Tracking Household Survey.
             </p>
+          </div>
+
+          {/* Lead Magnet - Download Guide */}
+          <div className="mt-8 p-8 bg-gradient-to-r from-sfm-gold/10 to-sfm-azure/10 rounded-2xl border border-sfm-gold/20">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              <div className="flex-shrink-0 w-16 h-16 bg-sfm-gold/20 rounded-xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-sfm-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="font-display text-xl text-white mb-2">Not Ready to Join Yet?</h3>
+                <p className="text-white/60 text-sm mb-4">
+                  Download our free 1-page guide: <strong className="text-white">"Why Direct Primary Care?"</strong> — The evidence-based case for a better healthcare model.
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <a 
+                  href="mailto:info@sankofafamilymedicine.com?subject=Send%20me%20the%20DPC%20Guide&body=Please%20send%20me%20the%20free%20Why%20Direct%20Primary%20Care%20guide.%0A%0AMy%20name%3A%20%0AMy%20email%3A%20"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium rounded-lg transition-all"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Get Free Guide
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

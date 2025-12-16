@@ -44,6 +44,14 @@ export default function HomePage() {
         Remembers<span className="tm">™</span>
       </h1>
 
+      {/* Ultra-concrete promise */}
+      <div className="flex items-center gap-3 mb-6 py-3 px-4 bg-white/5 rounded-lg border border-white/10">
+        <Clock className="w-5 h-5 text-sfm-gold flex-shrink-0" />
+        <p className="text-white/90 text-sm md:text-base font-medium">
+          Most members seen within 24 hours • 45-minute visits • Direct text access to Dr. Nkrumah
+        </p>
+      </div>
+
       <p className="text-base md:text-lg text-white/85 mb-10 leading-relaxed">
         Virtual-first direct primary care (DPC) for patients across Washington State. We solve healthcare
         fragmentation - one physician who knows your history, every visit. Genetic testing, precision
