@@ -48,7 +48,7 @@ export default function CareJourney() {
     {
       number: 4,
       title: 'Ongoing Care & Support',
-      description: 'Regular check-ins, goal tracking, and adjustments—we stay with you every step of the way.',
+      description: 'Regular check-ins, goal tracking, and adjustments. We stay with you every step of the way.',
     },
   ]
 

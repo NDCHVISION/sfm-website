@@ -53,7 +53,7 @@ export default function DPCGuideLandingPage() {
           
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Most people think they have a primary care doctor.<br />
-            <strong className="text-sfm-gold">Fewer have one who tracks their trends, remembers their story, and catches what others miss.</strong>
+            <strong className="text-sfm-gold">Fewer have one who tracks their trends, remembers their history, and catches what others miss.</strong>
           </p>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function DPCGuideLandingPage() {
         <div className="relative max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-lg text-white/80 leading-relaxed mb-6">
-              I wrote a guide to help you understand what good primary care actually looks like—and how to tell if your current doctor is a <strong className="text-white">true partner</strong>, <strong className="text-white">stretched too thin</strong>, or simply <strong className="text-white">not the right fit</strong>.
+              I wrote a guide to help you understand what good primary care actually looks like, and how to tell if your current doctor is a <strong className="text-white">true partner</strong>, <strong className="text-white">stretched too thin</strong>, or simply <strong className="text-white">not the right fit</strong>.
             </p>
             <p className="text-sfm-gold font-medium">
               It includes a self-assessment you can use today.

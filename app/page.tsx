@@ -312,7 +312,7 @@ export default function HomePage() {
               </h2>
               <div className="divider-gold mb-10" />
 
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-4 mb-10 list-disc list-inside marker:text-sfm-gold">
                 {[
                   'Comprehensive virtual primary care',
                   'Genetic testing and interpretation',
@@ -320,12 +320,8 @@ export default function HomePage() {
                   'Mental health and wellness support',
                   'Same physician every visit',
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-4">
-                    <div
-                      className="w-2.5 h-2.5 bg-gradient-to-br from-sfm-gold to-sfm-gold-light rounded-full flex-shrink-0 shadow-sm"
-                      aria-hidden="true"
-                    />
-                    <span className="text-muted text-lg">{item}</span>
+                  <li key={item} className="text-muted text-lg">
+                    {item}
                   </li>
                 ))}
               </ul>

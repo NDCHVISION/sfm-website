@@ -702,24 +702,10 @@ export default function ServicesPage() {
                     
                     {/* Features */}
                     <div className="p-8 pt-6 flex-grow">
-                      <ul className="space-y-4" role="list">
+                      <ul className="space-y-3 list-disc list-inside marker:text-gray-300" role="list">
                         {tier.features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-3">
-                            <span className={`flex-shrink-0 mt-0.5 w-5 h-5 rounded-full 
-                              ${tier.accentColor === 'sfm-azure' ? 'bg-sfm-azure/10' : ''} 
-                              ${tier.accentColor === 'sfm-gold' ? 'bg-sfm-gold/10' : ''} 
-                              ${tier.accentColor === 'sfm-navy' ? 'bg-sfm-navy/10' : ''} 
-                              flex items-center justify-center`}>
-                              <Check 
-                                className={`w-3 h-3 
-                                  ${tier.accentColor === 'sfm-azure' ? 'text-sfm-azure' : ''} 
-                                  ${tier.accentColor === 'sfm-gold' ? 'text-sfm-gold' : ''} 
-                                  ${tier.accentColor === 'sfm-navy' ? 'text-sfm-navy' : ''}`} 
-                                strokeWidth={3}
-                                aria-hidden="true" 
-                              />
-                            </span>
-                            <span className="text-gray-600 text-sm leading-relaxed font-body">{feature}</span>
+                          <li key={feature} className="text-gray-600 text-sm leading-relaxed font-body">
+                            {feature}
                           </li>
                         ))}
                       </ul>

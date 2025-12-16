@@ -329,7 +329,7 @@ export default function ComparePage() {
               <div className="flex-1 text-center md:text-left">
                 <h3 className="font-display text-xl text-white mb-2">Not Sure If DPC Is Right for You?</h3>
                 <p className="text-white/60 text-sm mb-4">
-                  Read our free guide: <strong className="text-white">"How Healthy Is Your Relationship With Your Primary Care Doctor?"</strong> — An interactive self-assessment to discover what kind of care you&apos;re getting.
+                  Read our free guide: <strong className="text-white">"How Healthy Is Your Relationship With Your Primary Care Doctor?"</strong> An interactive self-assessment to discover what kind of care you&apos;re getting.
                 </p>
               </div>
               <div className="flex-shrink-0">

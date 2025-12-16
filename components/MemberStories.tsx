@@ -116,7 +116,7 @@ export default function MemberStories() {
                       {story.attribution.charAt(0)}
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-sfm-navy">— {story.attribution}</p>
+                      <p className="text-sm font-medium text-sfm-navy">{story.attribution}</p>
                       <p className="text-xs text-muted">
                         {story.category === 'testimonial' ? 'Member Testimonial' : 'Case Study'}
                       </p>
