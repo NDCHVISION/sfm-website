@@ -53,7 +53,7 @@ export default function DPCGuideLandingPage() {
           
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Most people think they have a primary care doctor.<br />
-            <strong className="text-sfm-gold">Fewer actually have someone watching.</strong>
+            <strong className="text-sfm-gold">Fewer have one who tracks their trends, remembers their story, and catches what others miss.</strong>
           </p>
         </div>
       </section>
