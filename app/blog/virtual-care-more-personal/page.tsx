@@ -39,7 +39,7 @@ export default function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/70">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
-              <span>Dr. Yaw Nkrumah</span>
+              <span>Yaw Nkrumah, MD</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -69,129 +69,129 @@ export default function BlogPost() {
 
       {/* Article Content */}
       <article className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6 prose prose-lg prose-sfm">
-          <p className="text-xl text-muted leading-relaxed">
+        <div className="max-w-3xl mx-auto px-6 prose prose-lg prose-slate">
+          <p className="text-xl text-sfm-navy leading-relaxed mb-8 font-medium">
             There is a common assumption that virtual medicine is impersonal.
             A screen instead of a handshake. Pixels instead of presence.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             I understand the instinct. But after years of practicing both in-person and virtual primary care, I have found the opposite is often true.
           </p>
 
-          <p>
-            <strong>When done correctly, virtual care does not reduce the relationship. It deepens it.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">When done correctly, virtual care does not reduce the relationship. It deepens it.</strong>
           </p>
 
-          <h2>The Real Barrier to Good Primary Care</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">The Real Barrier to Good Primary Care</h2>
 
-          <p>For most people, the problem with primary care is not quality. It is friction.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">For most people, the problem with primary care is not quality. It is friction.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             The 45-minute commute. The waiting room. The half-day blocked for a 12-minute visit. The slow realization that seeing your doctor requires so much effort that you only do it when something is already wrong.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Friction delays follow-up. Delayed follow-up breaks continuity. Broken continuity means your physician is always working from a snapshot instead of a full picture.
           </p>
 
-          <p>The issue is not that people do not value their health.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">The issue is not that people do not value their health.</p>
 
-          <p>
-            <strong>The issue is that the system makes consistent engagement unreasonably hard.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">The issue is that the system makes consistent engagement unreasonably hard.</strong>
           </p>
 
-          <h2>What Changes When Access Is Easy</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">What Changes When Access Is Easy</h2>
 
-          <p>When I can see a patient virtually within days instead of weeks, something shifts.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">When I can see a patient virtually within days instead of weeks, something shifts.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             They reach out earlier. Not just when symptoms are severe, but when something feels slightly off. When sleep has been disrupted for a week. When stress is affecting their body in ways they cannot name. When they notice a change and want to talk it through before it becomes a problem.
           </p>
 
-          <p>
-            <strong>This is not convenience medicine. This is medicine the way it should work.</strong>
+          <p className="text-lg leading-relaxed mb-6 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">This is not convenience medicine. This is medicine the way it should work.</strong>
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Frequency builds context. Context builds trust. Trust builds honesty. Honesty builds accuracy.
           </p>
 
-          <p>That sequence matters more than whether we are in the same room.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">That sequence matters more than whether we are in the same room.</p>
 
-          <h2>A Different Kind of Visit</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">A Different Kind of Visit</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             I had a patient message me on a Thursday evening. She had been having headaches for a few days. Not the worst of her life, but persistent in a way that felt unfamiliar.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             In a traditional model, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a provider with no context would have started from zero.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Instead, we talked for ten minutes that night. I knew her history. I knew she had been under significant stress at work. I knew her blood pressure had been creeping up over the past year.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             We adjusted her management. The headaches resolved. No urgent care. No ER. No unnecessary imaging. Just continuity doing what it is supposed to do.
           </p>
 
-          <h2>What Virtual Care Is Not</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">What Virtual Care Is Not</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             I am not arguing that virtual medicine replaces all in-person care. Some things require hands-on examination. Some diagnoses need imaging, labs, or procedures.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             But the majority of primary care is not procedural. It is conversational. It is pattern recognition. It is listening carefully, asking the right questions, and knowing what to do with the answers.
           </p>
 
-          <p>
-            <strong>Virtual care fails when it replaces judgment. It succeeds when it removes friction around it.</strong>
+          <p className="text-lg leading-relaxed mb-6 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">Virtual care fails when it replaces judgment. It succeeds when it removes friction around it.</strong>
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             The danger is not the screen. The danger is care without memory, without context, without someone who knows your story and can interpret new information against everything that came before.
           </p>
 
-          <h2>Why the Physician Still Matters</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">Why the Physician Still Matters</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Virtual care has expanded access. That is a good thing. But it has also flooded the market with episodic, transactional encounters that feel like customer service, not medicine.
           </p>
 
-          <p>The differentiator is not technology. It is who is on the other side.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">The differentiator is not technology. It is who is on the other side.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             A physician trained to manage uncertainty. To hold broad differentials even when symptoms are vague. To treat when appropriate and refer when necessary, but not reflexively. To integrate mental, metabolic, and lifestyle factors rather than siloing each into a separate specialty visit.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             That kind of thinking does not come from an algorithm or a protocol. It comes from years of training and accumulated judgment.
           </p>
 
-          <p>
-            <strong>When that is present, virtual care becomes an amplifier. When it is absent, virtual care becomes a vending machine.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">When that is present, virtual care becomes an amplifier. When it is absent, virtual care becomes a vending machine.</strong>
           </p>
 
-          <h2>What This Looks Like in Practice</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">What This Looks Like in Practice</h2>
 
-          <p>The best care I have delivered combines:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">The best care I have delivered combines:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>Continuity over time</li>
             <li>Physician-level clinical reasoning</li>
             <li>Reduced friction through virtual access</li>
             <li>Responsiveness that matches how people actually live</li>
           </ul>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Primary care should not feel rushed, reactive, or transactional. It should feel steady, contextual, and responsive.
           </p>
 
-          <p>
-            <strong>If you have been settling for less, you do not have to.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">If you have been settling for less, you do not have to.</strong>
           </p>
         </div>
       </article>

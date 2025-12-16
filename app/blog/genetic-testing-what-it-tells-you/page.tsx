@@ -39,7 +39,7 @@ export default function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/70">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
-              <span>Dr. Yaw Nkrumah</span>
+              <span>Yaw Nkrumah, MD</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -69,37 +69,37 @@ export default function BlogPost() {
 
       {/* Article Content */}
       <article className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6 prose prose-lg prose-sfm">
-          <p className="text-xl text-muted leading-relaxed">
+        <div className="max-w-3xl mx-auto px-6 prose prose-lg prose-slate">
+          <p className="text-xl text-sfm-navy leading-relaxed mb-8 font-medium">
             There is a version of genetic testing that sounds like fortune-telling.
             Spit in a tube. Get a report. Learn your destiny.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             That is not how it works. And when people expect prophecy, they either over-react to the results or dismiss them entirely.
           </p>
 
-          <p>Both responses miss the point.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">Both responses miss the point.</p>
 
-          <p>
-            <strong>Genetic testing, used correctly, is not about predicting the future. It is about adding context to the present.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">Genetic testing, used correctly, is not about predicting the future. It is about adding context to the present.</strong>
           </p>
 
-          <h2>What Genetics Can Clarify</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">What Genetics Can Clarify</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Your genes do not tell you what will happen. They tell you what might be more likely to happen, given certain conditions.
           </p>
 
-          <p>That distinction matters.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">That distinction matters.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             A genetic variant associated with cardiovascular disease does not mean you will have a heart attack. It means that the standard advice to &ldquo;watch your cholesterol&rdquo; might be more urgent for you than for someone without that variant. It means your threshold for intervention might be lower. It means your clinician should be paying closer attention, earlier.
           </p>
 
-          <p>Genetics helps explain:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">Genetics helps explain:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>Why disease sometimes appears earlier than expected</li>
             <li>Why certain medications cause side effects in some people and not others</li>
             <li>Why standard treatments work unevenly across patients</li>
@@ -107,45 +107,45 @@ export default function BlogPost() {
             <li>Why two people with identical lifestyles can have different outcomes</li>
           </ul>
 
-          <p>
-            <strong>It is not destiny. It is dimensionality.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">It is not destiny. It is dimensionality.</strong>
           </p>
 
-          <h2>A Case Where Testing Changed the Approach</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">A Case Where Testing Changed the Approach</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             I had a patient in his early fifties. No major health issues. Exercised regularly. Ate reasonably well. His labs were unremarkable year after year.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             But his father had died of a heart attack at 58. His uncle had a stroke at 61. The family pattern was hard to ignore.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Standard risk calculators said he was low risk. The math did not account for what his family had already shown him.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             We did targeted genetic testing. It revealed a variant associated with elevated lipoprotein(a), a cardiovascular risk factor that standard lipid panels do not measure directly and that does not respond to lifestyle changes.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Knowing this changed everything. Not because he was doomed, but because we could act with precision instead of guessing. Earlier imaging. Appropriate medication. A plan that matched his actual risk, not the population average.
           </p>
 
-          <p>
-            <strong>He is not a statistic. He is a person with a specific biology. The testing helped us treat him that way.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">He is not a statistic. He is a person with a specific biology. The testing helped us treat him that way.</strong>
           </p>
 
-          <h2>When Genetic Testing Makes Sense</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">When Genetic Testing Makes Sense</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Genetic testing is not something I recommend for everyone. It adds value when it meaningfully changes decisions.
           </p>
 
-          <p>That typically includes:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">That typically includes:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>Strong family history of early disease (cardiovascular, cancer, neurological)</li>
             <li>Unexpected medication reactions or failures</li>
             <li>Ambiguous symptoms that do not fit a clear pattern</li>
@@ -153,76 +153,76 @@ export default function BlogPost() {
             <li>Situations where standard risk tools seem to underestimate true risk</li>
           </ul>
 
-          <p>
-            <strong>Testing without context is just data. Testing within a continuous care relationship becomes actionable intelligence.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">Testing without context is just data. Testing within a continuous care relationship becomes actionable intelligence.</strong>
           </p>
 
-          <h2>When It Does Not Help</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">When It Does Not Help</h2>
 
-          <p>Genetic testing is not useful when:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">Genetic testing is not useful when:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>There is no plan to act on the results</li>
             <li>The findings would not change clinical management</li>
             <li>It is driven by anxiety rather than clinical reasoning</li>
             <li>It replaces rather than complements the basics (lifestyle, labs, physical exam, history)</li>
           </ul>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Genetics is a layer. It is not a shortcut. And it is not a substitute for the fundamentals of good care.
           </p>
 
-          <h2>The Risk of Testing Outside a Relationship</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">The Risk of Testing Outside a Relationship</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Direct-to-consumer genetic tests are widely available now. Some of them are reasonably accurate. But accuracy is not the same as usefulness.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Without clinical interpretation, results can mislead. A &ldquo;risk variant&rdquo; sounds terrifying until you understand its actual penetrance. A &ldquo;normal&rdquo; result sounds reassuring until you realize the test only covered a fraction of relevant genes.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Genetic data without context creates noise. Sometimes it creates unnecessary fear. Sometimes it creates false confidence.
           </p>
 
-          <p>
-            <strong>The testing matters less than what happens after the testing.</strong>
+          <p className="text-lg leading-relaxed mb-6 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">The testing matters less than what happens after the testing.</strong>
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             That is why I only use genetic information within an ongoing relationship, where I can interpret results against everything else I know about a patient: their history, their labs, their family, their life.
           </p>
 
-          <p>
-            <strong>Precision without continuity is just fragmentation with better marketing.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">Precision without continuity is just fragmentation with better marketing.</strong>
           </p>
 
-          <h2>The Future of Primary Care Is Layered</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">The Future of Primary Care Is Layered</h2>
 
-          <p>Modern primary care is becoming more precise. That is a good thing.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">Modern primary care is becoming more precise. That is a good thing.</p>
 
-          <p>But precision is not a replacement for relationship. It is an enhancement.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">But precision is not a replacement for relationship. It is an enhancement.</p>
 
-          <p>The most effective model combines:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">The most effective model combines:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>Longitudinal knowledge of the patient</li>
             <li>Strong clinical reasoning</li>
             <li>Genetic and metabolic data used selectively</li>
             <li>A willingness to update the plan as new information emerges</li>
           </ul>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             This is how care moves from population averages to individualized strategy. Not by testing everything, but by testing the right things at the right time for the right reasons.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             If you have been curious about whether genetic testing makes sense for you, the answer depends on your history, your goals, and what we are trying to understand.
           </p>
 
-          <p>
-            <strong>That is a conversation worth having.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">That is a conversation worth having.</strong>
           </p>
         </div>
       </article>

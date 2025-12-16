@@ -756,3 +756,96 @@ button:focus-visible,
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* ============================================
+   BLOG ARTICLE TYPOGRAPHY
+   ============================================ */
+
+article p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--sfm-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+article h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--sfm-navy);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  article h2 {
+    font-size: 2rem;
+  }
+}
+
+article h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--sfm-navy);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+article ul, article ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+article li {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--sfm-text-muted);
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+article ul li {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+article ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, var(--sfm-gold), var(--sfm-gold-light));
+  border-radius: 50%;
+}
+
+article ol {
+  list-style: decimal;
+  padding-left: 1.75rem;
+}
+
+article strong {
+  color: var(--sfm-navy);
+  font-weight: 600;
+}
+
+article blockquote {
+  border-left: 3px solid var(--sfm-gold);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--sfm-navy);
+}
+
+/* Lead paragraph styling */
+article > div > p:first-of-type {
+  font-size: 1.25rem;
+  color: var(--sfm-navy);
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}

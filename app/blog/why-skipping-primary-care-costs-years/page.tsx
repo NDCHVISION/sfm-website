@@ -39,7 +39,7 @@ export default function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/70">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
-              <span>Dr. Yaw Nkrumah</span>
+              <span>Yaw Nkrumah, MD</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -69,139 +69,139 @@ export default function BlogPost() {
 
       {/* Article Content */}
       <article className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6 prose prose-lg prose-sfm">
-          <p className="text-xl text-muted leading-relaxed">
+        <div className="max-w-3xl mx-auto px-6 prose prose-lg prose-slate">
+          <p className="text-xl text-sfm-navy leading-relaxed mb-8 font-medium">
             Most people do not avoid primary care because they are careless.
             They avoid it because their reasoning makes sense to them.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             From a social psychology perspective, primary care has a visibility problem. When it works, nothing dramatic happens. No emergency. No hospital stay. No crisis story. Humans consistently undervalue systems that prevent problems they never see.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             That logic feels efficient.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             It is also costly.
           </p>
 
-          <h2>The Mental Model That Fails People</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">The Mental Model That Fails People</h2>
 
-          <p>Many people run some version of this internal script:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">Many people run some version of this internal script:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>&ldquo;I feel fine.&rdquo;</li>
             <li>&ldquo;I&apos;ll go if something is actually wrong.&rdquo;</li>
             <li>&ldquo;Doctors just refer you anyway.&rdquo;</li>
             <li>&ldquo;I don&apos;t want to waste time or money.&rdquo;</li>
           </ul>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             This reasoning feels independent and practical. In reality, it is reactive thinking in a system that punishes delay.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Primary care is not about fixing what is broken. It is about identifying what is forming before it becomes expensive, dangerous, or irreversible.
           </p>
 
-          <p>
-            <strong>By the time symptoms are obvious, leverage has already been lost.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">By the time symptoms are obvious, leverage has already been lost.</strong>
           </p>
 
-          <h2>Why Humans Undervalue Prevention</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">Why Humans Undervalue Prevention</h2>
 
-          <p>People are wired to respond to pain, not probability.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">People are wired to respond to pain, not probability.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Preventive care deals in trends, risk gradients, and slow shifts. Humans prefer certainty and immediacy. That mismatch leads people to overvalue urgent care and undervalue continuity.
           </p>
 
-          <p>The paradox is simple:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">The paradox is simple:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>When primary care works, you never feel rescued.</li>
             <li>When it fails or is absent, the consequences arrive late and all at once.</li>
           </ul>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             This delay masks causality. People associate the crisis with bad luck rather than years of missed opportunities to intervene earlier.
           </p>
 
-          <h2>What Primary Care Actually Does</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">What Primary Care Actually Does</h2>
 
-          <p>Primary care is not a single visit. It is longitudinal pattern recognition.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">Primary care is not a single visit. It is longitudinal pattern recognition.</p>
 
-          <p>A clinician who knows you over time notices changes that no one visit can capture:</p>
+          <p className="text-lg text-muted leading-relaxed mb-4"><strong className="text-sfm-navy">A clinician who knows you over time notices changes that no one visit can capture:</strong></p>
 
-          <ul>
+          <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>Blood pressure that is &ldquo;acceptable&rdquo; but rising every year</li>
             <li>Labs that remain in range while steadily drifting toward a threshold</li>
             <li>Weight changes that signal metabolic shifts before diabetes appears</li>
             <li>Fatigue that keeps resurfacing under different explanations</li>
           </ul>
 
-          <p>None of these trigger alarms on their own. Together, they tell a story.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">None of these trigger alarms on their own. Together, they tell a story.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             I think of a patient I saw recently. Forty-six years old. Felt fine. Annual labs looked &ldquo;normal&rdquo; by standard reference ranges. But compared to his results from three years prior, his fasting glucose had risen 14 points, his triglycerides had climbed steadily, and his blood pressure had shifted from low-normal to high-normal.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             No single value was flagged. But the direction was clear.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             We made changes. Diet, movement, stress. Six months later, the trend reversed. He never became diabetic. He never needed medication. He never knew how close he was.
           </p>
 
-          <p>
-            <strong>That is what continuity catches.</strong>
+          <p className="text-lg leading-relaxed mb-6 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">That is what continuity catches.</strong>
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Emergency departments manage events. Specialists manage organs. Primary care manages the longer arc: the patterns that only reveal themselves over time.
           </p>
 
-          <h2>The Real Cost of Avoiding Primary Care</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">The Real Cost of Avoiding Primary Care</h2>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             Urgent care and emergency medicine answer one question well: &ldquo;Is this immediately dangerous right now?&rdquo;
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             They are not designed to answer why something keeps happening, what risk is accumulating, or how to prevent recurrence. Episodic care resets context every visit. No memory. No baseline. No narrative.
           </p>
 
-          <p>The cost of skipping primary care is not the missed appointment.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">The cost of skipping primary care is not the missed appointment.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             The cost is the delayed diagnosis. The preventable hospitalization. The irreversible complication. The moment someone says, &ldquo;I should have come in earlier.&rdquo;
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             I hear that sentence more often than I would like. And nearly every time, the signs were there. They just were not tracked.
           </p>
 
-          <p>
-            <strong>Primary care is not for people who are sick. It is for people who want to stay functional, independent, and ahead of problems rather than reacting to them under pressure.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">Primary care is not for people who are sick. It is for people who want to stay functional, independent, and ahead of problems rather than reacting to them under pressure.</strong>
           </p>
 
-          <h2>A Final Note</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">A Final Note</h2>
 
-          <p>You do not need to see me specifically.</p>
+          <p className="text-lg text-muted leading-relaxed mb-6">You do not need to see me specifically.</p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             But you do need someone who remembers your story, tracks your direction over time, and treats prevention as a clinical discipline rather than a slogan.
           </p>
 
-          <p>
+          <p className="text-lg text-muted leading-relaxed mb-6">
             If that kind of relationship sounds like what has been missing from your care, that is exactly what I do. Not rushed. Not transactional. Just steady attention to the things that matter before they become urgent.
           </p>
 
-          <p>
-            <strong>That difference is measured in years.</strong>
+          <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
+            <strong className="text-sfm-navy">That difference is measured in years.</strong>
           </p>
         </div>
       </article>

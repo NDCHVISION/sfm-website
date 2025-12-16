@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Calendar, User, Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
@@ -17,6 +18,7 @@ interface BlogPost {
   author: string
   date: string
   slug: string
+  image: string
 }
 
 const blogPosts: BlogPost[] = [
@@ -27,9 +29,10 @@ const blogPosts: BlogPost[] = [
       'Most people avoid primary care because their reasoning makes sense to them. But reactive thinking in a system that punishes delay has hidden costs. Learn why prevention is measured in years, not visits.',
     category: 'Primary Care',
     readTime: 8,
-    author: 'Dr. Yaw Nkrumah',
+    author: 'Yaw Nkrumah, MD',
     date: '2025-12-15',
     slug: 'why-skipping-primary-care-costs-years',
+    image: '/images/blog-primary-care.png',
   },
   {
     id: 2,
@@ -38,9 +41,10 @@ const blogPosts: BlogPost[] = [
       'There is a common assumption that virtual medicine is impersonal. After years of practicing both in-person and virtual primary care, I have found the opposite is often true. When done correctly, virtual care deepens the relationship.',
     category: 'Virtual Care',
     readTime: 7,
-    author: 'Dr. Yaw Nkrumah',
+    author: 'Yaw Nkrumah, MD',
     date: '2025-12-22',
     slug: 'virtual-care-more-personal',
+    image: '/images/blog-virtual-care.png',
   },
   {
     id: 3,
@@ -49,9 +53,10 @@ const blogPosts: BlogPost[] = [
       'Genetic testing is not about predicting the future. It is about adding context to the present. Learn when testing adds value, when it does not, and why precision without continuity is just fragmentation with better marketing.',
     category: 'Genetics',
     readTime: 9,
-    author: 'Dr. Yaw Nkrumah',
+    author: 'Yaw Nkrumah, MD',
     date: '2025-12-29',
     slug: 'genetic-testing-what-it-tells-you',
+    image: '/images/blog-genetic-testing.png',
   },
 ]
 
@@ -142,9 +147,15 @@ export default function BlogPage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <div className="hidden lg:flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-2xl bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 flex items-center justify-center text-4xl text-sfm-gold/30">
-                    📖
+                <div className="hidden lg:block">
+                  <div className="rounded-2xl overflow-hidden shadow-lg">
+                    <Image
+                      src={publishedPosts[0].image}
+                      alt={publishedPosts[0].title}
+                      width={600}
+                      height={338}
+                      className="w-full h-auto object-cover"
+                    />
                   </div>
                 </div>
               </div>
