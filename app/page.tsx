@@ -250,16 +250,32 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-sfm-cream to-white p-8 shadow-2xl border border-sfm-gold/20 group">
+              {/* Ambient glow effect */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 via-sfm-azure/10 to-sfm-gold/20 rounded-[2rem] blur-2xl opacity-60 animate-pulse-slow" />
+              
+              {/* Secondary glow ring */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-sfm-gold/30 to-sfm-azure/20 rounded-3xl blur-md" />
+              
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-sfm-cream via-white to-sfm-cream p-8 shadow-2xl border border-sfm-gold/30 group">
+                {/* Shimmer overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                
+                {/* Inner shadow for depth */}
+                <div className="absolute inset-0 shadow-[inset_0_2px_20px_rgba(0,0,0,0.05)] rounded-3xl pointer-events-none" />
+                
                 <Image
                   src="/images/sankofa-bird.png"
                   alt="Wooden Sankofa bird sculpture symbolizing learning from the past"
                   width={600}
                   height={500}
                   loading="lazy"
-                  className="w-full h-auto rounded-2xl transition-transform duration-700 group-hover:scale-[1.02]"
+                  className="relative w-full h-auto rounded-2xl transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105 drop-shadow-lg"
                 />
               </div>
+              
+              {/* Decorative accent dots */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sfm-gold/10 rounded-full blur-xl" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-sfm-azure/10 rounded-full blur-xl" />
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Shield, Dna, CreditCard, Lock } from 'lucide-react'
 
 export default function TrustStrip() {
@@ -34,7 +35,7 @@ export default function TrustStrip() {
           {trustItems.map((item) => {
             const Icon = item.icon
             return (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className="group flex items-center gap-3 text-sfm-navy hover:text-sfm-gold transition-colors duration-300 cursor-pointer"
@@ -50,7 +51,7 @@ export default function TrustStrip() {
                 <span className="text-sm font-medium hidden sm:inline whitespace-nowrap">
                   {item.label}
                 </span>
-              </a>
+              </Link>
             )
           })}
         </div>

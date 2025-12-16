@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 
 export default function CareJourney() {
@@ -124,9 +125,9 @@ export default function CareJourney() {
           <p className="text-muted mb-6">
             Ready to start your journey?
           </p>
-          <a href="/contact" className="btn-primary">
+          <Link href="/contact" className="btn-primary">
             Join the Waitlist
-          </a>
+          </Link>
         </div>
       </div>
     </section>

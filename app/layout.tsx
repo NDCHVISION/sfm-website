@@ -29,6 +29,14 @@ export const metadata: Metadata = {
   authors: [{ name: 'Dr. Yaw Nkrumah, MD' }],
   creator: 'Sankofa Family Medicine',
   publisher: 'Sankofa Family Medicine',
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   verification: {
     google: 'U2dIh49_8poa8rcQgoKH6Gr2RZBr-6q_XFLCFelN8XY',
   },
@@ -277,8 +285,15 @@ export default function RootLayout({
       </head>
       
       <body className="antialiased">
+        {/* Skip to content link for accessibility */}
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sfm-gold focus:text-sfm-navy focus:rounded-lg focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <Navigation />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <MobileCTA />
       </body>
