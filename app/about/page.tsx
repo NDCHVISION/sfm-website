@@ -809,7 +809,7 @@ export default function AboutPage() {
             <p className="text-muted mb-8 max-w-xl mx-auto">
               Board-eligible family medicine physician, researcher, and the vision behind 
               Sankofa Family Medicine. Dr. Nkrumah is licensed in Washington State and 
-              dedicated to delivering virtual-first primary care that remembers.
+              dedicated to delivering virtual-first Medicine That Remembers™.
             </p>
             <Link 
               href="/founder" 
@@ -832,7 +832,7 @@ export default function AboutPage() {
               id="cta-heading"
               className="font-display text-4xl md:text-5xl text-sfm-navy mb-6 leading-tight"
             >
-              Ready to Experience Care That Remembers?
+              Ready to Experience Medicine That Remembers™?
             </h2>
             <p className="text-muted text-lg md:text-xl mb-12">
               Join our founding member waitlist for priority enrollment into virtual

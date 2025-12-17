@@ -358,7 +358,7 @@ export default function ComparePage() {
             
             <div className="relative">
               <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-                Ready for Healthcare That Remembers?
+                Ready for Medicine That Remembers™?
               </h2>
               <p className="text-white/60 text-lg mb-8">
                 Founding members receive Tier 3 benefits at Tier 2 pricing, locked for life.

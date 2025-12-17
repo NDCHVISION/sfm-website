@@ -88,7 +88,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mb-6">Get In Touch</h2>
               <p className="text-muted leading-relaxed mb-12 text-lg">
-                Ready to experience primary care that remembers? Reach out to learn more 
+                Ready to experience Medicine That Remembers™? Reach out to learn more 
                 about membership, programs, or partnership opportunities.
               </p>
 

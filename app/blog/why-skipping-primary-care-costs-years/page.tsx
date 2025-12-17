@@ -233,7 +233,7 @@ export default function BlogPost() {
       <section className="py-16 bg-sfm-cream">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mb-4">
-            Ready for Primary Care That Remembers?
+            Ready for Medicine That Remembers™?
           </h2>
           <p className="text-muted mb-8 max-w-2xl mx-auto">
             Experience the difference of continuity-based care with a physician who tracks your health over time.

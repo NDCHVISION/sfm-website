@@ -248,7 +248,7 @@ export default function FAQPage() {
             Ready to Get Started?
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-            Join the founding member waitlist and experience care that remembers.
+            Join the founding member waitlist and experience Medicine That Remembers™.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="btn-primary">

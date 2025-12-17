@@ -462,7 +462,7 @@ export default function HomePage() {
           </p>
           <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-white italic leading-relaxed mb-10 relative">
             &quot;I built Sankofa Family Medicine to provide the kind of care I would want for my own family:
-            care that remembers your history, respects your time, and stays with you across the years. Many
+            Medicine That Remembers™ your history, respects your time, and stays with you across the years. Many
             physicians share these values; this practice gives us the structure and time to honor them.&quot;
           </blockquote>
           <div className="flex flex-col items-center">

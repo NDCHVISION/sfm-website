@@ -323,7 +323,7 @@ export default function FounderPage() {
         
         <div className="max-w-4xl mx-auto px-6 text-center relative">
           <h2 className="font-display text-4xl md:text-5xl text-white mb-8 leading-tight">
-            Ready to Experience Care That Remembers?
+            Ready to Experience Medicine That Remembers™?
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
             Join the founding member waitlist and become one of the first patients of Sankofa Family Medicine.

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ['patient testimonials', 'doctor reviews', 'Sankofa reviews', 'Dr. Nkrumah reviews', 'virtual care testimonials'],
   openGraph: {
     title: 'Patient Reviews & Testimonials | Sankofa Family Medicine',
-    description: 'Real stories from patients about care that remembers.',
+    description: 'Real stories from patients experiencing Medicine That Remembers™.',
   },
 }
 
@@ -16,7 +16,7 @@ export default function TestimonialsPage() {
   return (
     <ComingSoon
       title="Patient Stories"
-      description="Real stories from our patients about their experience with care that remembers. We'll share testimonials once we've had the privilege of serving our founding members."
+      description="Real stories from our patients experiencing Medicine That Remembers™. We'll share testimonials once we've had the privilege of serving our founding members."
       icon={<MessageSquare size={48} strokeWidth={1.5} />}
       expectedDate="After Launch"
     />
