@@ -651,7 +651,7 @@ export default function ServicesPage() {
 
                       {/* Conditions Grid */}
                       <div className="lg:w-2/3 lg:pl-8 lg:border-l border-sfm-azure/10">
-                        <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+                        <ul className="list-none grid md:grid-cols-2 gap-x-8 gap-y-3">
                           {service.conditions.map((condition) => (
                             <li
                               key={condition}
@@ -706,7 +706,7 @@ export default function ServicesPage() {
                   <h3 className="font-display text-lg text-sfm-navy mb-4">
                     {service.title}
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="list-none space-y-2">
                     {service.items.map((item) => (
                       <li
                         key={item}

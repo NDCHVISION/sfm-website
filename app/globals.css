@@ -820,7 +820,7 @@ article ul li {
   padding-left: 1.5rem;
 }
 
-article ul li::before {
+article ul:not(.list-none) li::before {
   content: '';
   position: absolute;
   left: 0;
@@ -829,6 +829,11 @@ article ul li::before {
   height: 6px;
   background: linear-gradient(135deg, var(--sfm-gold), var(--sfm-gold-light));
   border-radius: 50%;
+}
+
+/* Don't add padding or bullets when using custom bullet divs */
+article ul.list-none li {
+  padding-left: 0;
 }
 
 article ol {
