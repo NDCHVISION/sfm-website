@@ -72,7 +72,7 @@ export default function Navigation() {
         {
           title: 'About Us',
           items: [
-            { href: '/founder', label: 'Meet Our Founder', desc: 'Founder & Family Physician' },
+            { href: '/founder', label: 'Meet Our Founder', desc: 'Board Certified Family Physician' },
             { href: '/about', label: 'How It Works', desc: 'Virtual care model' },
             { href: '/faq', label: 'FAQs', desc: 'Common questions' },
           ],

@@ -207,7 +207,7 @@ export default function DPCGuideLandingPage() {
             <div>
               <h3 className="font-display text-xl text-sfm-navy mb-2">Yaw Nkrumah, MD</h3>
               <p className="text-muted leading-relaxed">
-                Board-eligible family medicine physician and founder of Sankofa Family Medicine. Dr. Nkrumah practices direct primary care because he believes medicine works best when your doctor actually knows you.
+                Board Certified family medicine physician and founder of Sankofa Family Medicine. Dr. Nkrumah practices direct primary care because he believes medicine works best when your doctor actually knows you.
               </p>
             </div>
           </div>
