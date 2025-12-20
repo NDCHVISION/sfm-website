@@ -143,29 +143,28 @@ export default function FounderPage() {
           
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              Dr. Yaw Nkrumah is a family physician, founder of Sankofa Family Medicine, and Founder & CEO
-              of The Nkrumah Doctrine Cultural Holdings (NDCH), a cultural-systems and applied-AI studio.
+              Dr. Yaw Nkrumah is a <strong className="text-sfm-navy">Board Certified family physician</strong>, founder of Sankofa Family Medicine, and Founder & CEO of The Nkrumah Doctrine Cultural Holdings (NDCH).
             </p>
+            
             <p>
-              He believes great care begins with <strong className="text-sfm-navy">presence, clarity, and continuity</strong>. 
-              His clinical approach is steady and attentive, helping patients feel guided while ensuring their 
-              health history is remembered with accuracy and respect.
+              His clinical philosophy centers on three principles:
             </p>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li><strong className="text-sfm-navy">Presence</strong> — giving patients undivided attention</li>
+              <li><strong className="text-sfm-navy">Clarity</strong> — explaining health in understandable terms</li>
+              <li><strong className="text-sfm-navy">Continuity</strong> — remembering your history across every visit</li>
+            </ul>
+            
             <p>
-              Dr. Nkrumah integrates frontline medical training with modern digital workflows and AI support. 
-              Across both medicine and NDCH, his work centers on building systems that hold memory, reduce friction, 
-              and protect dignity at scale.
+              Dr. Nkrumah integrates frontline medical training with modern digital workflows and AI support, building systems that hold memory, reduce friction, and protect dignity at scale.
             </p>
-            <p>
-              His perspective is shaped by training in diverse clinical environments and by clinicians who modeled 
-              what compassionate, focused care could look like when time and structure allowed it.
-            </p>
-            <p className="text-sfm-navy font-medium">
+            
+            <p className="text-sfm-navy font-medium bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
               Sankofa Family Medicine reflects what becomes possible when those values are supported instead of constrained.
             </p>
+            
             <p>
-              Outside his clinical and founder roles, he values time with family, strength training, travel, 
-              and the ongoing study of focus, clarity, and legacy.
+              Outside his clinical and founder roles, he values time with family, strength training, travel, and the ongoing study of focus, clarity, and legacy.
             </p>
           </div>
         </div>
@@ -183,7 +182,17 @@ export default function FounderPage() {
             <h2 className="font-display text-4xl md:text-5xl text-white mb-6">Education & Licensure</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Board Certification - Featured */}
+            <div className="bg-gradient-to-br from-sfm-gold/20 to-sfm-gold/5 backdrop-blur p-8 border border-sfm-gold/30 rounded-2xl hover:border-sfm-gold/50 transition-all duration-300 hover:-translate-y-1">
+              <svg className="w-10 h-10 text-sfm-gold mb-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              </svg>
+              <h3 className="font-display text-xl text-white mb-3">Board Certified</h3>
+              <p className="text-white/80">Family Medicine</p>
+              <p className="text-sfm-gold text-sm mt-2 font-medium">ABFM</p>
+            </div>
+
             <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
               <GraduationCap className="w-10 h-10 text-sfm-gold mb-6" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="font-display text-xl text-white mb-3">Medical School</h3>
@@ -193,7 +202,7 @@ export default function FounderPage() {
             <div className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
               <Stethoscope className="w-10 h-10 text-sfm-gold mb-6" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="font-display text-xl text-white mb-3">Residency</h3>
-              <p className="text-white/80">Kadlec Family Medicine Residency</p>
+              <p className="text-white/80">Kadlec Family Medicine</p>
               <p className="text-white/50 text-sm mt-2">Washington State</p>
             </div>
             

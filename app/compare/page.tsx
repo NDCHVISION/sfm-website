@@ -312,10 +312,31 @@ export default function ComparePage() {
           </div>
 
           {/* Evidence Footer */}
-          <div className="mt-12 p-8 bg-white/[0.02] rounded-xl border border-white/[0.04] text-center">
-            <p className="text-white/40 text-sm leading-relaxed">
-              Statistics sourced from PMC, AAFP, AMN Healthcare, Society of Actuaries, and the Health Tracking Household Survey.
-            </p>
+          <div className="mt-12 p-8 bg-white/[0.02] rounded-xl border border-white/[0.04]">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <p className="text-white/60 text-sm mb-2">
+                  <strong className="text-white">Evidence-based statistics</strong> from peer-reviewed sources:
+                </p>
+                <p className="text-white/40 text-xs leading-relaxed">
+                  PMC, AAFP, AMN Healthcare, Society of Actuaries, Health Tracking Household Survey
+                </p>
+              </div>
+              <div className="flex items-center gap-4 text-white/50 text-sm">
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                  </svg>
+                  <span>Board Certified</span>
+                </div>
+                <span>•</span>
+                <span>HIPAA Compliant</span>
+                <span>•</span>
+                <Link href="/founder#publications" className="text-sfm-gold hover:text-white transition-colors">
+                  View Publications
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Lead Magnet - Download Guide */}

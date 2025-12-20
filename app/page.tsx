@@ -185,6 +185,15 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
             <div className="flex items-center gap-3 text-gray-600 group hover:text-sfm-navy transition-colors">
               <div className="w-10 h-10 rounded-xl bg-sfm-cream flex items-center justify-center group-hover:bg-sfm-azure/10 transition-colors">
+                <svg className="w-5 h-5 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+              </div>
+              <span className="text-sm font-medium">Board Certified</span>
+            </div>
+
+            <div className="flex items-center gap-3 text-gray-600 group hover:text-sfm-navy transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-sfm-cream flex items-center justify-center group-hover:bg-sfm-azure/10 transition-colors">
                 <Shield className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
               </div>
               <span className="text-sm font-medium">HIPAA Compliant</span>
@@ -469,6 +478,13 @@ export default function HomePage() {
             <p className="text-sfm-gold font-semibold text-xl">Dr. Yaw Nkrumah, MD</p>
             <p className="text-white/60 text-sm mt-2 mb-4">Founder &amp; Medical Director</p>
             <div className="flex items-center gap-4 text-white/40 text-sm">
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                Board Certified
+              </span>
+              <span>•</span>
               <span>Washington Licensed</span>
             </div>
           </div>
