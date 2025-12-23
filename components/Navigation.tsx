@@ -170,6 +170,12 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-2" aria-label="Main navigation" ref={dropdownRef}>
+              <Link
+                href="/"
+                className="text-sfm-navy hover:text-sfm-azure transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure focus-visible:ring-offset-2 rounded px-1 py-1"
+              >
+                Home
+              </Link>
               {/* About Dropdown */}
               <div
                 className="relative"
